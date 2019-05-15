@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
     color: black;
 }
 
@@ -16,7 +17,7 @@ body {
 }
 
 h1 {
-    font-size: 33px;
+    font-size: 2.0625em;
     line-height: 150%;
     margin-bottom: 1em;
     max-width: 292px;
@@ -111,7 +112,8 @@ h4 {
 .view-work-container {
     display: flex;
     flex-direction: row;
-    width: 180px;
+    width: 144px;
+    cursor: pointer;
 }
 .project {
     border: 1px solid #B8B8B8;
@@ -164,7 +166,8 @@ h4 {
 @media screen and (min-width: 768px) {
 
     h1 {
-        font-size: 48px;
+        /*font-size: 48px;*/
+        font-size: 3em;
         max-width: 932px;
     }
     h4 {
@@ -174,7 +177,8 @@ h4 {
     }
 
     .container {
-        margin: 0 175px 25em 175px;
+        /*margin: 0 175px 25em 175px;*/
+        margin: 0 11em 25em 11em;
     }
 
     .navbar {

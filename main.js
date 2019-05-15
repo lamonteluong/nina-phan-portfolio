@@ -5,12 +5,14 @@ let navLinks = document.querySelectorAll('.nav-link');
 let themeToggle = document.querySelector('.theme-toggle');
 let darkMode = false;
 
-/* FIX: Class added, display: block overriden by display: none */ 
+let viewWork = document.querySelector('.view-work-container');
+
+/* FIXME: Class added, display: block overriden by display: none */ 
 navbarToggle.addEventListener('click', () => {
     mainNav.classList.toggle('show');
-    console.log(mainNav);
 });
 
+/* Toggle for Light/Dark Mode */
 themeToggle.addEventListener('click', () => {
     document.querySelector('body').classList.toggle('dark-theme');
     if (darkMode == false) {
@@ -28,6 +30,7 @@ themeToggle.addEventListener('click', () => {
     });
 });
 
+/* Change navbar link colour based on the current theme */
 navLinks.forEach((link) => {
     link.addEventListener('mouseenter', () => {
         link.style.color = '#33B8A8';
@@ -39,4 +42,10 @@ navLinks.forEach((link) => {
             link.style.color = 'black';
         }
     });
+});
+
+/* 'view my work' scroll down to projects */
+/* TODO: animate to make smooth */
+viewWork.addEventListener('click', () => {
+    document.querySelector('.project').scrollIntoView();
 });
