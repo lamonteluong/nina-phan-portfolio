@@ -48,7 +48,7 @@ h4 {
     margin-top: 10px;
 }
 
-.active {
+.show {
     display: block;
 }
 
@@ -60,8 +60,8 @@ h4 {
 }
 
 .main-nav {
-    display: none;
     list-style-type: none;
+    display: none;
     margin-right: 40px;
 }
 
@@ -75,6 +75,12 @@ h4 {
     font-size: 24px;
     text-decoration: none;
     color: black;
+    padding-bottom: 10px;
+}
+
+.active-nav {
+    font-weight: 300;
+    border-bottom: 3px solid #33B8A8;
 }
 
 .text-highlight {
@@ -103,11 +109,11 @@ h4 {
 @media screen and (min-width: 768px) {
 
     h1 {
-        font-size: 56px;
-        max-width: 1000px;
+        font-size: 48px;
+        max-width: 932px;
     }
     h4 {
-        font-size: 24px;
+        font-size: 18px;
         margin-bottom: 4em;
     }
 
@@ -138,7 +144,7 @@ h4 {
         display: none;
         margin-top: 0;
     }
-   .navbar-toggle {
+    .navbar-toggle {
        display: none;
     }
     .logo:hover,
@@ -148,7 +154,7 @@ h4 {
 
     #view-work {
         width: 150px;
-        font-size: 24px;
+        font-size: 18px;
     }
 
 }
