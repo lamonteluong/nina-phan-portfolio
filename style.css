@@ -84,6 +84,9 @@ h4 {
     padding-bottom: 10px;
     color: black;
 }
+.nav-link:hover {
+    color: #33B8A8;
+}
 
 .active-nav {
     font-weight: 300;

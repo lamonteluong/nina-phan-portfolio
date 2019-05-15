@@ -1,8 +1,9 @@
 let mainNav = document.querySelector('.main-nav');
 let navbarToggle = document.querySelector('.navbar-toggle');
+let navLinks = document.querySelectorAll('.nav-link');
 
 let themeToggle = document.querySelector('.theme-toggle');
-let navLinks = document.querySelectorAll('.nav-link');
+let darkMode = false;
 
 /* FIX: Class added, display: block overriden by display: none */ 
 navbarToggle.addEventListener('click', () => {
@@ -10,12 +11,32 @@ navbarToggle.addEventListener('click', () => {
     console.log(mainNav);
 });
 
-
-/* FIX: Class added, color: white overriden by color: black */ 
 themeToggle.addEventListener('click', () => {
     document.querySelector('body').classList.toggle('dark-theme');
+    if (darkMode == false) {
+        darkMode = true;
+    } else {
+        darkMode = false;
+    }
+
     navLinks.forEach((link) => {
-        link.classList.toggle('dark-theme');
-        console.log(link); 
+        if (link.style.color != 'white') {
+            link.style.color = 'white';
+        } else {
+            link.style.color = 'black';
+        }
+    });
+});
+
+navLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => {
+        link.style.color = '#33B8A8';
+    });
+    link.addEventListener('mouseleave', () => {
+        if (darkMode == true) {
+            link.style.color = 'white';
+        } else {
+            link.style.color = 'black';
+        }
     });
 });
