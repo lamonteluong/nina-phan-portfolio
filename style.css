@@ -12,7 +12,6 @@ body {
 h1 {
     font-size: 33px;
     line-height: 150%;
-    margin-top: 3em;
     margin-bottom: 1em;
     max-width: 292px;
 }
@@ -27,15 +26,17 @@ h4 {
 }
 
 /* Classes */
-.main-container {
+.container {
     display: flex;
     flex-direction: column;
     margin-left: 40px;
     margin-right: 43px;
+    margin-bottom: 20em;
 }
 
 .navbar {
     margin-top: 31px;
+    margin-bottom: 5em;
 }
 
 .logo {
@@ -102,6 +103,38 @@ h4 {
     flex-direction: row;
     width: 180px;
 }
+.project {
+    border: 1px solid #B8B8B8;
+    border-radius: 10px;
+    margin: 25px 22px;
+    padding: 40px 21px 328px 17px; 
+}
+.project-skill {
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.project-name {
+    margin: 13px 0;
+}
+.project-desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 175%;
+    max-width: 280px;
+    margin-bottom: 26px;
+}
+.process-btn {
+    max-width: 145px;
+    color: #33B8A8;
+    background-color: white;
+    font-size: 15px;
+    line-height: 175%;
+    padding: 8px 5px;
+    text-align: center;
+    border: 1px solid #33B8A8;
+    border-radius: 5px;
+}
 
 /* IDs */
 #view-work {
@@ -130,14 +163,15 @@ h4 {
         max-width: 600px;
     }
 
-    .main-container {
-        margin: auto 175px;
+    .container {
+        margin: 0 175px 25em 175px;
     }
 
     .navbar {
         display: flex;
         justify-content: flex-end;
         padding-bottom: 0;
+        margin-bottom: 10em;
         height: 89px;
         align-items: center;
     }
@@ -171,6 +205,26 @@ h4 {
         overflow-x: hidden;
         bottom: 50%;
         right: 2%;
+    }
+    .project {
+        margin: 51px 44px;
+        padding: 182px 36px 197px 141px;
+    }
+    .project-skill {
+        font-size: 20px;
+    }
+    .project-name {
+        margin: 38px 0;
+    }
+    .project-desc {
+        font-size: 20px;
+        max-width: 320px;
+        margin-bottom: 43px;
+    }
+    .process-btn {
+        max-width: 250px;
+        height: 68px;
+        font-size: 22px;
     }
 
     #view-work {
