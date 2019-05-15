@@ -22,7 +22,7 @@ h4 {
     font-size: 15px;
     font-weight: 300;
     line-height: 200%;
-    max-width: 775px;
+    max-width: 295px;
     margin-bottom: 5em;
 }
 
@@ -95,14 +95,24 @@ h4 {
     bottom: 5%;
 }
 
+.view-work-container {
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+}
+
 /* IDs */
 #view-work {
-    width: 118px;
     font-size: 14px;
-    border-bottom: 2px solid #33B8A8;
+    border-bottom: 1px solid #33B8A8;
     text-align: center;
     padding-bottom: 5px;
-    margin-bottom: 5em;
+    margin-right: 18px;
+}
+
+#arrow-down {
+    align-self: center;
+    height: 12px;
 }
 
 /* Media queries */
@@ -115,6 +125,7 @@ h4 {
     h4 {
         font-size: 18px;
         margin-bottom: 4em;
+        max-width: 600px;
     }
 
     .main-container {
@@ -128,6 +139,10 @@ h4 {
         height: 89px;
         align-items: center;
     }
+    .logo {
+        display: none;
+        margin-top: 0;
+    }
     .main-nav {
         display: flex;
         margin-right: 125px;
@@ -140,10 +155,6 @@ h4 {
     .nav-link {
         margin-left: 63px;
     }
-    .logo {
-        display: none;
-        margin-top: 0;
-    }
     .navbar-toggle {
        display: none;
     }
@@ -151,10 +162,22 @@ h4 {
     .nav-link:hover {
         font-weight: 300;
     }
+    .theme-toggle {
+        transform: rotate(90deg);
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        bottom: 50%;
+        right: 2%;
+    }
 
     #view-work {
-        width: 150px;
+        width: 111px;
         font-size: 18px;
+        border-bottom: 3px solid #33B8A8;
+    }
+    #arrow-down {
+        height: 18px;
     }
 
 }
