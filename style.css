@@ -160,7 +160,7 @@ h4 {
     }
     .logo:hover,
     .nav-link:hover {
-        font-weight: 300;
+        color: #33B8A8;
     }
     .theme-toggle {
         transform: rotate(90deg);
