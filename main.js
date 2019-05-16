@@ -6,6 +6,7 @@ let themeToggle = document.querySelector('.theme-toggle');
 let darkMode = false;
 
 let viewWork = document.querySelector('.view-work-container');
+let arrowDown = document.getElementById('arrow-down');
 
 /* FIXME: Class added, display: block overriden by display: none */ 
 navbarToggle.addEventListener('click', () => {
@@ -17,8 +18,10 @@ themeToggle.addEventListener('click', () => {
     document.querySelector('body').classList.toggle('dark-theme');
     if (darkMode == false) {
         darkMode = true;
+        arrowDown.style.fill = 'white';
     } else {
         darkMode = false;
+        arrowDown.style.fill = 'black';
     }
 
     navLinks.forEach((link) => {

@@ -159,7 +159,7 @@ h4 {
 
 #arrow-down {
     align-self: center;
-    height: 12px;
+    transform: scale(.8, .8);
 }
 
 /* Media queries */
@@ -247,7 +247,7 @@ h4 {
         border-bottom: 3px solid #33B8A8;
     }
     #arrow-down {
-        height: 18px;
+        transform: scale(1, 1);
     }
 
 }
