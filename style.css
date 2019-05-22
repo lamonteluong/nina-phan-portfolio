@@ -217,11 +217,11 @@ footer {
     }
     footer {
         font-size: 1em;
-        margin: 10em 0 2em 13%;
+        width: 70%;
+        margin: 10em auto 2em auto;
     }
 
     .container {
-        /*margin: 0 175px 25em 175px;*/
         width: 65%;
         margin: 0 auto 25em auto;
     }
@@ -284,7 +284,6 @@ footer {
     }
 
     .contact-list {
-        padding-right: 15%;
     }
     .contact-link {
         margin: 0 2em;

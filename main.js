@@ -13,10 +13,20 @@ let backTopBtn = document.getElementById('back-top-btn');
 let backTop1 = document.getElementById('back-top-1');
 let backTop2 = document.getElementById('back-top-2');
 
-/* FIXME: Class added, display: block overriden by display: none */ 
+
+/* Display navbar links for Desktop size */
+window.onresize = function(event) {
+    if (document.body.clientWidth > 768) {
+        mainNav.style.display = 'flex';
+    } else {
+        mainNav.style.display = 'none';
+    }
+}
+/* FIXME: Desktop resize to mobile -> open dropdown -> resize desktop
+        -> resize mobile => need to double-click nav toggle */
+
 navbarToggle.addEventListener('click', () => {
     //mainNav.classList.toggle('show');
-    /* FIXME: Desktop resize to mobile & back => links disappear */
     if (dropDown == false) {
         mainNav.style.display = 'block';
         dropDown = true;
