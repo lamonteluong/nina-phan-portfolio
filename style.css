@@ -24,7 +24,7 @@ h1 {
 h4 {
     font-family: 'Lato', sans-serif;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 250%;
     max-width: 295px;
     margin-bottom: 5em;
@@ -39,6 +39,9 @@ footer {
 }
 
 /* Classes */
+.show {
+    display: block;
+}
 .dark-theme {
     background-color: #181818;
     color: white;
@@ -55,7 +58,6 @@ footer {
     margin-top: 31px;
     margin-bottom: 5em;
 }
-
 .logo {
     display: inline-block;
     text-decoration: none;
@@ -65,29 +67,21 @@ footer {
     margin-left: 40px;
     margin-top: 10px;
 }
-
-.show {
-    display: block;
-}
-
 .navbar-toggle {
     position: absolute;
     top: 43px;
     right: 40px;
     cursor: pointer;
 }
-
 .main-nav {
     list-style-type: none;
     display: none;
     margin-right: 40px;
 }
-
 .main-nav li {
     text-align: center;
     margin: 15px auto;
 }
-
 .nav-link {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
@@ -99,7 +93,6 @@ footer {
 .nav-link:hover {
     color: #33B8A8;
 }
-
 .active-nav {
     border-bottom: 3px solid #33B8A8;
 }
@@ -117,6 +110,12 @@ footer {
     right: 1%;
     transform: scale(.5, .5);
     cursor: pointer;
+}
+
+.work-title {
+    color: #555555;
+    padding-bottom: .25em;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
 }
 
 .view-work-container {
@@ -188,7 +187,6 @@ footer {
     padding-bottom: 5px;
     margin-right: 18px;
 }
-
 #arrow-down {
     align-self: center;
     transform: scale(.8, .8);
@@ -213,9 +211,9 @@ footer {
         max-width: 932px;
     }
     h4 {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 4em;
-        max-width: 600px;
+        max-width: 650px;
     }
     footer {
         font-size: 1em;
@@ -260,9 +258,6 @@ footer {
     }
     .theme-toggle {
         transform: rotate(90deg) scale(.7, .7);
-        position: fixed;
-        overflow-y: scroll;
-        overflow-x: hidden;
         bottom: 50%;
         right: 1px;
     }
