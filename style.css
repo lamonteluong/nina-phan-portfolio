@@ -42,6 +42,9 @@ footer {
 .show {
     display: block;
 }
+.grey {
+    color: #cacaca;
+}
 .dark-theme {
     background-color: #181818;
     color: white;
@@ -116,6 +119,10 @@ footer {
     color: #555555;
     padding-bottom: .25em;
     border-bottom: 2px solid rgba(0, 0, 0, .3);
+}
+.work-title-dark {
+    color: #cacaca;
+    border-bottom: 2px solid rgba(185, 185, 185, 0.5);
 }
 
 .view-work-container {
