@@ -135,7 +135,8 @@ footer {
     border: 1px solid #B8B8B8;
     border-radius: 10px;
     margin: 25px 22px;
-    padding: 40px 21px 328px 17px; 
+    padding: 40px 21px 328px 17px;
+    align-items: flex-end;
 }
 .project-skill {
     font-size: 15px;
@@ -271,7 +272,7 @@ footer {
     .project {
         width: 75%;
         margin: 51px auto;
-        padding: 182px 0 197px 48%;
+        padding: 182px 10% 197px 0;
     }
     .project-skill {
         font-size: 20px;
