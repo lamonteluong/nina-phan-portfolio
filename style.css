@@ -208,7 +208,7 @@ footer {
     cursor: pointer;
 }
 
-
+/* TODO: tablet/mid-size: 1200px, mobile: <768 */
 /* Media queries */
 @media screen and (min-width: 768px) {
 

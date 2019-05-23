@@ -21,7 +21,7 @@ let contactLinks = document.querySelectorAll('.contact-link');
 
 /* Display navbar links for Desktop size */
 window.onresize = () => {
-    if (document.body.clientWidth > 768) {
+    if (document.body.clientWidth >= 768) {
         mainNav.style.display = 'flex';
     } else {
         mainNav.style.display = 'none';
