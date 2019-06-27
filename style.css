@@ -92,6 +92,7 @@ footer {
     text-decoration: none;
     padding-bottom: 10px;
     color: black;
+    border-bottom: 3px solid #EEEEEE;
 }
 .nav-link:hover {
     color: #33B8A8;
@@ -102,6 +103,12 @@ footer {
 
 .text-highlight {
     color: #33B8A8;
+    padding-bottom: .12em;
+    border-bottom: 1px solid #33B8A8;
+}
+.text-highlight:hover {
+    text-decoration: line-through;
+    border-bottom: none;
 }
 
 .theme-toggle {
@@ -187,9 +194,9 @@ footer {
 }
 
 /* IDs */
+
 #view-work {
     font-size: 14px;
-    border-bottom: 1px solid #33B8A8;
     text-align: center;
     padding-bottom: 5px;
     margin-right: 18px;
@@ -215,7 +222,8 @@ footer {
     h1 {
         /*font-size: 48px;*/
         font-size: 56px;
-        max-width: 932px;
+        max-width: 700px;
+        margin: 0;
     }
     h4 {
         font-size: 20px;
@@ -263,11 +271,18 @@ footer {
     .nav-link:hover {
         color: #33B8A8;
     }
+
+    .view-work-container {
+        margin-top: 14em;
+        width: 200px;
+    }
+
     .theme-toggle {
         transform: rotate(90deg) scale(.7, .7);
         bottom: 50%;
         right: 1px;
     }
+
     .project {
         width: 75%;
         margin: 51px auto;
@@ -296,10 +311,34 @@ footer {
         margin: 0 2em;
     }
 
+    #hero-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #hero-text {
+        padding-top: 2em;
+    }
+
+    /* TODO: Add responsiveness */
+    #nina-img {
+        max-width: 500px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+    #blueprint-img {
+        max-width: 500px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
     #view-work {
-        width: 111px;
-        font-size: 18px;
-        border-bottom: 3px solid #33B8A8;
+        font-size: 22px;
     }
     #arrow-down {
         transform: scale(1, 1);

@@ -12,6 +12,8 @@ let workTitles = document.querySelectorAll('.work-title');
 let viewWork = document.querySelector('.view-work-container');
 let arrowDown = document.getElementById('arrow-down');
 
+let textHighlight = document.querySelectorAll('.text-highlight');
+
 let backTopBtn = document.getElementById('back-top-btn');
 let backTop1 = document.getElementById('back-top-1');
 let backTop2 = document.getElementById('back-top-2');
@@ -59,6 +61,22 @@ navLinks.forEach((link) => {
             link.style.color = 'black';
         }
     });
+});
+
+/* Display 'Hero' images when text is hovered */
+// NINA IMAGE
+textHighlight[0].addEventListener('mouseenter', () => {
+    document.getElementById('nina-img').style.display = "block";
+});
+textHighlight[0].addEventListener('mouseleave', () => {
+    document.getElementById('nina-img').style.display = "none";
+});
+//BLUEPRINT IMAGE
+textHighlight[2].addEventListener('mouseenter', () => {
+    document.getElementById('blueprint-img').style.display = "block";
+});
+textHighlight[2].addEventListener('mouseleave', () => {
+    document.getElementById('blueprint-img').style.display = "none";
 });
 
 /* 'view my work' scroll down to projects */
