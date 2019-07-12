@@ -28,6 +28,40 @@ window.onresize = () => {
     } else {
         mainNav.style.display = 'none';
     }
+
+    /* Display 'Hero' images when text is hovered */
+    if (document.body.clientWidth > 1024) {
+        // NINA IMAGE
+        textHighlight[0].addEventListener('mouseenter', () => {
+            document.getElementById('nina-img').style.display = "block";
+        });
+        textHighlight[0].addEventListener('mouseleave', () => {
+            document.getElementById('nina-img').style.display = "none";
+        });
+        //BLUEPRINT IMAGE
+        textHighlight[2].addEventListener('mouseenter', () => {
+            document.getElementById('blueprint-img').style.display = "block";
+        });
+        textHighlight[2].addEventListener('mouseleave', () => {
+            document.getElementById('blueprint-img').style.display = "none";
+        });
+    } else {
+        // NINA IMAGE
+        textHighlight[0].addEventListener('mouseenter', () => {
+            document.getElementById('nina-img').style.display = "none";
+        });
+        textHighlight[0].addEventListener('mouseleave', () => {
+            document.getElementById('nina-img').style.display = "none";
+        });
+        //BLUEPRINT IMAGE
+        textHighlight[2].addEventListener('mouseenter', () => {
+            document.getElementById('blueprint-img').style.display = "none";
+        });
+        textHighlight[2].addEventListener('mouseleave', () => {
+            document.getElementById('blueprint-img').style.display = "none";
+        });
+    }
+
 }
 /* FIXME: Desktop resize to mobile -> open dropdown -> resize desktop
         -> resize mobile => need to double-click nav toggle */
@@ -63,21 +97,6 @@ navLinks.forEach((link) => {
     });
 });
 
-/* Display 'Hero' images when text is hovered */
-// NINA IMAGE
-textHighlight[0].addEventListener('mouseenter', () => {
-    document.getElementById('nina-img').style.display = "block";
-});
-textHighlight[0].addEventListener('mouseleave', () => {
-    document.getElementById('nina-img').style.display = "none";
-});
-//BLUEPRINT IMAGE
-textHighlight[2].addEventListener('mouseenter', () => {
-    document.getElementById('blueprint-img').style.display = "block";
-});
-textHighlight[2].addEventListener('mouseleave', () => {
-    document.getElementById('blueprint-img').style.display = "none";
-});
 
 /* 'view my work' scroll down to projects */
 /* TODO: animate to make smooth */
