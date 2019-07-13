@@ -1,3 +1,4 @@
+let navbar = document.querySelector('.navbar');
 let mainNav = document.querySelector('.main-nav');
 let navbarToggle = document.querySelector('.navbar-toggle');
 let navLinks = document.querySelectorAll('.nav-link');
@@ -146,6 +147,8 @@ backTopBtn.addEventListener('click', () => {
 function changeColours() {
     if (darkMode == false) {
         darkMode = true;
+
+        navbar.style.backgroundColor = '#181818';
         logo.style.color = 'white'; // 'Nina Phan' logo
 
         /* Work titles */
@@ -164,6 +167,7 @@ function changeColours() {
     } else {
         darkMode = false;
 
+        navbar.style.backgroundColor = 'white';
         logo.style.color = "#555555"; // 'Nina Phan' logo
         /* Work titles */
         workTitles.forEach((title) => {
