@@ -57,8 +57,15 @@ footer {
 }
 
 .navbar {
-    margin-top: 31px;
+    padding: 31px 0;
     margin-bottom: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: white;
 }
 .logo {
     display: inline-block;
@@ -67,13 +74,14 @@ footer {
     font-size: 18px;
     font-weight: 300;
     margin-left: 40px;
-    margin-top: 10px;
 }
 .navbar-toggle {
-    position: absolute;
+    /* position: absolute;
     top: 43px;
-    right: 40px;
+    right: 40px; */
     cursor: pointer;
+    display: inline-block;
+    margin-right: 2em;
 }
 .main-nav {
     list-style-type: none;
@@ -222,8 +230,27 @@ footer {
     cursor: pointer;
 }
 
+#hero-container {
+    padding-top: 8em;
+}
 #hero-container img {
     display: none;
+}
+#nina-img {
+    display: none;
+    font-size: 16px;
+    line-height: 175%;
+}
+#nina-img p {
+    margin-left: 2em;
+}
+#blueprint-img {
+    display: none;
+    font-size: 16px;
+    line-height: 175%;
+}
+#blueprint-img p {
+    color: #555555;
 }
 
 /* Media queries */
@@ -261,6 +288,7 @@ footer {
     }
     .logo {
         margin-left: 17.5%;
+        margin-top: 10px;
     }
     .main-nav {
         display: flex;
@@ -327,6 +355,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding-top: 14em;
     }
 
     #hero-text {
@@ -353,16 +382,15 @@ footer {
 @media screen and (min-width: 1024.5px) {
 
     #hero-text {
-        max-width: 50%;
+        max-width: 60%;
     }
 
-    /* FIXME: Text moves when image appears (due to flex) i.e. wonky hover */
-    /* TODO: Use CSS Grid to 'lock in' text position */
     #hero-container img {
         max-width: 350px;
         max-height: 350px;
         width: 100%;
         height: auto;
+        margin-bottom: 22px;
     }
 
 }
@@ -375,6 +403,10 @@ footer {
 
     #view-work {
         font-size: 22px;
+    }
+
+    #hero-container {
+        padding-top: 18em;
     }
 
     #hero-container img {

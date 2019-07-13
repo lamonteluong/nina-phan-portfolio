@@ -13,6 +13,7 @@ let viewWork = document.querySelector('.view-work-container');
 let arrowDown = document.getElementById('arrow-down');
 
 let textHighlight = document.querySelectorAll('.text-highlight');
+let heroImage = document.querySelectorAll('.hero-img');
 
 let backTopBtn = document.getElementById('back-top-btn');
 let backTop1 = document.getElementById('back-top-1');
@@ -20,6 +21,28 @@ let backTop2 = document.getElementById('back-top-2');
 
 let footer = document.querySelector('footer');
 let contactLinks = document.querySelectorAll('.contact-link');
+
+// Display 'Hero images when text is hovered
+window.onload = () => {
+    if (textHighlight.length > 0) {
+        // NINA IMAGE
+        textHighlight[0].addEventListener('mouseenter', () => {
+            document.getElementById('nina-img').style.display = "block";
+            heroImage[0].style.display = "block";
+        });
+        textHighlight[0].addEventListener('mouseleave', () => {
+            document.getElementById('nina-img').style.display = "none";
+        });
+        //BLUEPRINT IMAGE
+        textHighlight[2].addEventListener('mouseenter', () => {
+            document.getElementById('blueprint-img').style.display = "block";
+            heroImage[1].style.display = "block";
+        });
+        textHighlight[2].addEventListener('mouseleave', () => {
+            document.getElementById('blueprint-img').style.display = "none";
+        });
+    }
+}
 
 /* Display navbar links for Desktop size */
 window.onresize = () => {
@@ -29,7 +52,7 @@ window.onresize = () => {
         mainNav.style.display = 'none';
     }
 
-    /* Display 'Hero' images when text is hovered */
+    // Remove 'Hero' images on tablets and mobile
     if (document.body.clientWidth > 1024) {
         // NINA IMAGE
         textHighlight[0].addEventListener('mouseenter', () => {
@@ -68,6 +91,7 @@ window.onresize = () => {
 
 navbarToggle.addEventListener('click', () => {
     //mainNav.classList.toggle('show');
+    // TODO: Make position = absolute; create style class for mobile navbar view and toggle
     if (dropDown == false) {
         mainNav.style.display = 'block';
         dropDown = true;
