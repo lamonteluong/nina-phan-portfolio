@@ -72,7 +72,7 @@ footer {
     text-decoration: none;
     color: #555555;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     margin-left: 40px;
 }
 .navbar-toggle {
@@ -150,16 +150,16 @@ footer {
     border-radius: 10px;
     margin: 25px 22px;
     padding: 40px 21px 328px 17px;
+    max-width: 1560px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.project-landing-img {
-    justify-self: flex-start;
-    max-width: 800px;
-    height: auto;
+.project img {
+    display: none;
 }
+
 .project-skill {
     font-size: 15px;
     font-weight: 300;
@@ -177,6 +177,7 @@ footer {
 }
 .process-btn {
     color: #33B8A8;
+    text-decoration: none;
     background: none;
     font-size: 15px;
     line-height: 175%;
@@ -255,6 +256,7 @@ footer {
 
 /* Media queries */
 
+/* iPad/Tablets */
 @media screen and (min-width: 768px) {
 
     h1 {
@@ -324,9 +326,14 @@ footer {
     .project {
         width: 75%;
         margin: 51px auto;
-        padding: 182px 10% 197px 0;
+        padding: 182px 5% 197px 0;
         flex-direction: row;
         justify-content: flex-end;
+    }
+    .project img {
+        display: block;
+        width: 300px;
+        height: auto;
     }
     .project-skill {
         font-size: 20px;
@@ -337,12 +344,13 @@ footer {
     .project-desc {
         font-size: 20px;
         max-width: 320px;
-        margin-bottom: 43px;
+        margin-bottom: 4em;
     }
     .process-btn {
         width: 250px;
         height: 68px;
         font-size: 22px;
+        padding: .8em 2em;
     }
 
     .contact-list {
@@ -379,6 +387,7 @@ footer {
 
 }
 
+/* Small desktops */
 @media screen and (min-width: 1024.5px) {
 
     #hero-text {
@@ -393,8 +402,16 @@ footer {
         margin-bottom: 22px;
     }
 
+    .project img {
+        width: 500px;
+        height: auto;
+    }
+
 }
 
+/* TODO: Add another media query for project image scaling */
+
+/* Widescreen desktops */
 @media screen and (min-width: 1600px) {
 
     h1 {
@@ -416,6 +433,11 @@ footer {
 
     .navbar {
         margin-bottom: 11em;
+    }
+
+    .project img {
+        width: 750px;
+        margin-right: 5em;
     }
 
 }
