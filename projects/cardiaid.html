@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nina Phan | Cardiaid</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/project.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">np.</a>
+        <span class="navbar-toggle">
+            <img src="../assets/menu.png">
+        </span>
+        <ul class="main-nav">
+            <!-- <li>
+                <a href="#" class="nav-link active-nav">work</a>
+            </li> -->
+            <li>
+                <a href="#" class="nav-link">about</a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">resume</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="hero-container">
+            <h1>Cardiaid</h1>
+            <p class="hero-subtitle">Improving vital monitoring of patients with Dementia in long term care units.</p>
+        </div>
+
+        <img class="wide-img" src="../assets/images/cardiaid/cardiaid_mockup.png">
+
+        <div class="project-summary">
+            <div class="project-info">
+                <p class="teal">TIMEFRAME</p> <br>
+                <p>Jan 2019 - Mar 2019</p>
+            </div>
+            <div class="project-info">
+                <p class="teal">ROLE</p> <br>
+                <p>Designer and researcher</p>
+            </div>
+            <div class="project-info">
+                <p class="teal">TOOLS AND METHODS</p> <br>
+                <p>Figma, Adobe XD, user interviews, usability testing</p>
+            </div>
+            <div class="project-info">
+                <p class="teal">COMPANY</p> <br>
+                <p>
+                    3 hardware engineers,<br>2 software engineers,<br>1 designer (me)
+                </p>
+            </div>  
+        </div>
+
+        <div class="section">
+            <h2>Role</h2>
+            <p>
+                In my third year biomedical engineering design course, we were instructed to solve any problem within the domain of Dementia. The only requirements given were that the end product had to incorporate at least two disciplines of engineering (i.e. software, mechanical, electrical, etc.). <br><br>
+                On this particular project, I was responsible for project scoping, secondary research, product ideation and the design and testing of our user interface. 
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Project Scoping</h2>
+            <p>
+                Before project scoping, we set out to obtain necessary domain knowledge to understand the problem space of dementia. We had discussions with subject matter experts who work with patients with dementia in Grand River Hospital, and subject matter experts who work for the Alzheimer Society of Canada. Following the Google SPRINT methodology, the team and I started project scoping by setting our long-term goal to “address health conditions of patients with dementia”. Later, the team conducted <span><strong>user interviews with a geriatric nurse and resident physician</strong></span> from the Grand River Hospital. The research notes from the meeting were then reviewed by the team to generate “How Might We” (HMW) questions. After classifying the HMW questions into focused problem spaces, all team members voted on the spaces that they were most interested in. We selected our focused problem space to be “recognition loss of declining health conditions”. 
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Sprint Map</h2>
+            <p>
+                Using research findings gathered from our interview with the geriatric nurse from Grand River Hospital, we modified our sprint map as shown below. 
+            </p>
+            <br><br>
+            <img class="wide-img" src="../assets/images/cardiaid/sprint-map.png">
+        </div>
+
+        <div class="section">
+            <h3>Persona</h3>
+            <p>
+                I created a fictional persona based off of research findings from our user interview with the geriatric nurse from Grand River Hospital and discussions with subject matter experts. This persona embodies a great number of caregivers who care for patients with dementia in long term care facilities and hospitals.
+            </p>
+        </div>
+        
+        <div class="section">
+            <img src="../assets/images/cardiaid/persona.png" class="wide-img">
+        </div>
+
+        <div class="section">
+            <h2>Problem</h2>
+            <p>
+                Individuals with dementia often have trouble with recognition [1]; this can lead them to be unable to identify when their personal health begins to decline. Caregivers have the tough task of determining when their patients’ health begins to decrease and the cause. If patient health declines and remains unchecked for a long period of time, it could lead to severe health implications. <br><br>
+                The system we design will aim to allow caregivers to continuously monitor vital signs of their patients and detect changes in vitals. Since the design and development of the system is to be completed in a three month timespan and the budget for the project is approximately $200, the scope of this project was to develop a proof of concept for a single system that offers continuous vital monitoring to caregivers.                     
+            </p>
+
+            <div class="block-quote">
+                How might we help caregivers recognize when their patients' health begins to decline?
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Secondary Research</h2>
+            <p>
+                We looked into <strong>existing vital monitoring technologies</strong> on the market or in the research phase. This helped us identify features taht we could realistically implement within out solution. We went on to do extensive secondary research in <strong>metrics</strong> for our designed solution.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="product-container">
+                <div>
+                    <h3>VitalJacket</h3>
+                    <p>
+                        VitalJacket is a heart monitor placed into a t-shirt [2].  One full charge lasts up to 72 hours for continuous monitoring,  allowing healthcare professionals to efficiently and effectively diagnose possible heart problems [2] 
+                    </p>
+                </div>
+                <div>
+                    <img src="../assets/images/cardiaid/vitaljacket.png">
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="grey-bg">
+        <div class="container">
+            <div class="findings-container">
+                <div>
+                    <h4>Positive Findings</h4>
+                    <ul>
+                        <li>
+                            Sends ECG signals remotely in real time to another location via a computer with internet connection
+                        </li>
+                        <li>
+                            Vitals can be transmitted through wireless channels, stored and processed to generate alarms, and results can be shown to healthcare providers
+                        </li>
+                        <li>
+                            Comfortable and t-shirt is washable
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Negative Findings</h4>
+                    <ul>
+                        <li>
+                            Non-discrete as patients are forced to wear the t-shirt that houses the sensors
+                        </li>
+                        <li>
+                            Expensive for hospitals and long-term care facilities to purchase and replace
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+  
+        <div class="section">
+            <div class="product-container">
+
+                <div>
+                    <h3>VitalPatch</h3>
+                    <p>
+                        VitalPatch, a small, accurate, FDA-cleared clinical-grade biosensor allows for continuous patient monitoring for patients with chronic conditions in and out of the hospital [3]. 
+                    </p>
+                </div>
+
+                <div>
+                    <img src="../assets/images/cardiaid/vitalpatch.png">
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grey-bg">
+        <div class="container">
+            <div class="findings-container">
+                <div>
+                    <h4>Positive Findings</h4>
+                    <ul>
+                        <li>
+                            Unobtrusive, lightweight and adhesive to skin
+                        </li>
+                        <li>
+                            Real-time monitoring and recording of heart vitals
+                        </li>
+                        <li>
+                            Alerts physician of heart rate and rhythm changes
+                        </li>
+                        <li>
+                            FDA approved - Class II
+                        </li>
+                        <li>
+                            Cheaper than VitalJacket
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Negative Findings</h4>
+                    <ul>
+                        <li>
+                            Need to be replaced every 5 days
+                        </li>
+                        <li>
+                            Could easily be removed by patients
+                        </li>
+                        <li>
+                            Measures surface temperature as opposed to body temperature
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h3>Quality Function Deployment</h3>
+            <p>
+                Quality function deployment was created using prior primary research collected during user interviews and talks given by subject matter experts, and extensive secondary research to transform the voice of our users into engineering specifications for our product. 
+            </p>
+        </div>
+
+        <iframe src="../assets/images/cardiaid/Cardiaid_QFD.pdf" width="100%" height="950px"></iframe>
+
+        <div class="section">
+            <button>Read about derivation of metrics<span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
+
+            <div id="hidden-metric">
+                <p>
+                    The caregivers are the primary users of the product as they are responsible for attaching the sensor to the patient and monitoring the application for changes in vital signs. The solution must be easy to remove and attach for the primary users, and it should stay in place via an adhesion factor. Since the primary user is interacting with the application interface they require the UI to be have great usability based on its learnability, consistency, autonomy, latency reduction, simplicity, accessibility and general aesthetics. Also, it is vital for the alerting system and sensors to be accurate, reliable, quick, and recognizable. The secondary user is the individual with dementia residing in either a long term care home or a specialized hospital wing. Since the device is worn for an extended period of time, it is important for the solution to be comfortable, which is based on multiple criteria such as size, weight, breathability and biocompatibility. Biocompatibility pertains to comfort as it is important for the device to not elicit an adverse skin reaction. Furthermore, it is necessary for the user data to be secure and confidential. The data criteria were reflected in the software section of the QFD. The hospital or long term care home would purchase the device for its patients and their criteria must be considered. As the tertiary users, they would want the designed solution to be as robust as possible including resistant to water, long lifespan, long battery life, have cross platform compatibility all while minimizing the overall cost. <br><br><br><br>
+                    To design a practical system, the aforementioned criteria were translated into engineering specifications with corresponding metrics to guide the design process. As a rule of thumb, the team determined target values for the criteria under the “how” section by doubling or halving the researched threshold values depending on whether the value should be increased or decreased [3, 4, 5, 6, 7, 8].
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Designed Solution</h3>
+
+            <div class="block-quote">
+                Design a product that detects changes in blood oxygen and heart rate to allow caregivers to continuously monitor vital signs of their patients.
+            </div>
+            
+            <p>
+                We met with a <strong>resident physician</strong> from Grand River Hospital to discuss our sketched designs. We decided to design a reflectance pulse oximeter wearable device for patients with dementia, which will be used by caregivers to monitor blood oxygen percentage and heart rate of these patients. Heart rate and blood oxygen were chosen from all vitals because they were possible with our skillset, and they also indicate valuable information about a patient’s state of health.  Pulse oximeters can estimate the oxygen saturation by measuring the absorbance of light in wavelength ranges that correspond to Hb and HbO  concentrations [9]. Pulse oximetry has also been found to accurately estimate heart rate at rest and during submaximal exercise [10]. Caregivers will be assisting patients put the wearable device on their chest. Blood oxygen percentage and heart rate data will be sent from the pulse oximeter sensor on the device to a computer via Bluetooth. Caregivers will be interacting with the computer interface that displays the collected data and alerts. The designed solution can be viewed as three separate subsystems of hardware, backend, and frontend as shown below. 
+            </p>
+
+            <div class="img-container">
+                <img id="system-diagram" class="wide-img" src="../assets/images/cardiaid/systemdiagram.png">
+            </div>
+            
+        </div>
+
+        <div class="section">
+            <h2>User Research</h2>
+
+            <p>
+                Our professor scheduled user interviews and usability testing for our team with <strong>3 university students</strong>. With a tight deadline to prepare for testing, we decided to pull together the first iteration of our user interface for testing. I worked with the team to create paper wireframes, and transform those into digital wireframes in Figma.  <br><br>
+                User interview questions probed into our users’ familiarity with existing health monitoring wearable technology, painpoints they experience with these techonologies, and areas for improvement they would like to see. 
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Low Fidelity Prototype</h3>
+
+            <img src="../assets/images/cardiaid/LF_1_cardiaid.gif" class="wide-img">
+            <p>
+                Patient board list all patients with dementia, indicating which patients are  experiencing a decline in health. Patient cards expand for a quick view of important information, with the option of viewing patients’ entire profile. 
+            </p>
+        </div>
+        
+        <div class="section">
+            <img src="../assets/images/cardiaid/LF_2_cardiaid.gif" class="wide-img">
+            <p>
+                Nurses are able to search for a specific patient using the default alphabetical ordering, search bar or by filtering the patient list by assigned nurse. 
+            </p>
+        </div>
+
+        <div class="section">
+            <img src="../assets/images/cardiaid/LF_3_cardiaid.gif" class="wide-img">
+            <p>
+                Nurses are able to add devices to the web application by entering the correct device ID and linking this device with the patient’s medical file. 
+            </p>
+        </div>
+
+    </div>
+
+    <div class="grey-bg">
+        <div class="container">
+            <div class="findings-container">
+
+                <div>
+                    <h4>Positive Findings</h4>
+                    <ul>
+                        <li>
+                            Clean and simple user interface with high degree of user-friendliness
+                        </li>
+                        <li>
+                            Information on each screen was easy to digest and was meaningful, specifically the data visualizatons that illustrated patients' heart rated
+                        </li>
+                        <li>
+                            Users praised the note-taking feature in the patient profile that allows nurses to add notes regarding their patients' care in chronological order. The users expressed that they believe nurses would find this useful for patient handoffs.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Negative Findings</h4>
+                    <ul>
+                        <li>
+                            The colour contrast needs optimizing as the user interface's current state is difficult to read
+                        </li>
+                        <li>
+                            Users noted that the interaction design of the data visualizations may need simplifying to accommodate for nurses who are not technology savvy.
+                        </li>
+                        <li>
+                            Users expressed the desire for the icon buttons to be accompanied with text to increase user efficiency.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h3>Moving Forward</h3>
+
+            <p>
+                The majority of the user interface related suggestions will be implemented in the next version of the prototype. Most suggestions revolved around designing for accessibility. For example, increasing contrast, having buttons accompanied with text, and decreasing the number of touch-points required to view certain patient information. However, the suggestion regarding the addition of a diagnosis feature will not be implemented. This is due to the limited time and scope of the project. 
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Solution</h2>
+
+            <p>
+                The number of touch points in the interface was decreased for simplification by 20%, the visual contrast was addressed, and text was added to some buttons to clarify their functions. The UI should be tested again, with the improvements implemented, to ensure that they are adequate and producing the expected results. Furthermore, the UI should also be tested with nurses of diverse age groups to ensure that the design is not biased toward a specific age group. To recall, the user testing sessions were conducted with university students of age 20. 
+            </p>
+
+            <button>Explore medium fidelity prototype<span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
+        </div>
+
+        <div class="section">
+            <h3>Medium Fidelity Prototype</h3>
+
+            <img src="../assets/images/cardiaid/HF_1_cardiaid.gif" class="wide-img">
+            <p>
+                Patient board list all patients with dementia, indicating which patients are  experiencing a decline in health. Colour was added to indicate priority of care. Side navigation bar was made sticky so nurses could traverse back to the patient board easily if they ventured into a patient profile or into devices. 
+            </p>
+
+        </div>
+
+        <div class="section">
+            <img src="../assets/images/cardiaid/HF_2_cardiaid.gif" class="wide-img">
+            <p>
+                Data visualizations were brought to the forefront of patient profiles, since they were expressed as the most important information to our tested users and subject matter experts. Nurses can navigate to patient information and notes, which were deemed less useful. 
+            </p>
+        </div>
+
+        <div class="section">
+            <img src="../assets/images/cardiaid/HF_3_cardiaid.gif" class="wide-img">
+            <p>
+                The device management page was redesigned to achieve a simpler design. Nurses can edit and delete device entries efficiently. 
+            </p>
+        </div>
+
+        <div class="section">
+            <img src="../assets/images/cardiaid/cardiaid.png" class="wide-img">
+            <p>
+                This is the first iteration of the device that needs to be attached to the patient’s chest for heart rate and blood oxygen monitoring. In the future, we would aim to decrease the size of the battery since it is accounting for 75% of the device’s container. 
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Design Limitations</h3>
+            <div class="bullet-list">
+                <ul>
+                    <li>
+                        The accuracy and precision of the integrated circuit is limited because reflectance pulse oximetry technologies are fairly new
+                    </li>
+                    <li>
+                        Bluetooth is susceptible to noise and physical impedance. Unless the Bluetooth was optimized, this may present a long-term limitation in that data may become inaccurate or the datastream may become lost.
+                    </li>
+                    <li>
+                        The hardware does not contain an ECG sensor. If ECG data was provided, more advanced analysis methods could be used. For example, people experiencing heart attacks have elevated ST segments in their ECG scans [11]. 
+                    </li>
+                    <li>
+                        The software algorithm only had basic heart rate data to analyze means that the only detection methods implemented were threshold checks. These threshold checks cannot conclusively identify what conditions are causing the increased or decreased heart rate. This problem also applies to the blood oxygen saturation model. 
+                    </li>
+                    <li>
+                        All patient data should be encrypted in order to assure users that their data is secure. Due to the time limitations of this project, no encryption was implemented, and data was directly stored in the database. This leaves data potentially exposed to people without proper access credentials.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Recommendations for Future Steps</h3>
+
+            <div>
+                <ol class="num-list">
+                    <li>
+                        Implement ECG sensors to allow for more advanced algorithms that can detect issues other than elevated or lowered heart-rate and blood oxygen levels, such as atrial fibrillation and heart attacks. This would widen the use cases for the device and allow for higher monitoring accuracy.
+                    </li>
+                    <li>
+                        Implement better database scaling.  The current database is non-scalable and local, which limits  the amount of data that can be stored. Hosting the database on a cloud server would greatly increase the storage efficiency and size. Hosting fees would have to be paid, but this may be a necessary cost to pay.
+                    </li>
+                    <li>
+                        Implement database encryption in order to increase patient data security. This recommendation is necessary if the design becomes more widely used as the current design has no safeguards against attacks as long as the hacker bypasses the login page.
+                    </li>
+                    <li>
+                        Implement a better connection between the device and computer to improve the consistency of the datastream and viable range of the design. Alternative connections to the current Bluetooth low energy shield include Ultra Wideband, which has a more stable signal [12]. 
+                    </li>
+                    <li>
+                        The device along with the iterated UI should undergo multiple rounds of testing with nurses who care for patients with dementia. Nurses should be instructed not to heavily rely on the product. They should still follow their usual routine and check up on the patient’s vitals using their usual methods.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Retrospect</h2>
+            <div>
+                <ol class="num-list">
+                    <li>
+                        We could not control the number of user interviews we had since it was set by our professor. However, I should have taken the time to better prepare for the user interview to gain better research insights (i.e. preparing a more extensive script and practicing with friends and family).
+                    </li>
+                    <li>
+                        Designing products to be integrated into the current way healthcare professionals work is difficult and lengthy. One needs in-depth domain knowledge regarding the current system and invest resources into recruiting these busy users for useful insights to validate design decisions. 
+                    </li>
+                    <li>
+                        If our team was given more time for this project and access to more users (i.e. physicians, nurses, other caregivers, etc.), I would have liked to explore other user research methodologies, such as participatory design to actively pick the brains of nurses and other caregivers. 
+                    </li>
+                </ol>
+            </div>
+
+            <button>REFERENCES<span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
+
+            <div class="ref-container">
+                
+                <div class="refs">
+                    <div>[1]</div>
+                    <div>
+                        R. J. Branconnier et al., “Recall and recognition as diagnostic indices of Malignant Memory loss in senile dementia : A bayesian analysis Recall and Recognition as Diagnostic Indices of Malignant Memory Loss in Senile Dementia : A Bayesian Analysis,” vol. 4657, 2007.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[2]</div>
+                    <div>
+                        “VitalJacket Holter,” Biodevices, 02-Jan-2019. [Online]. Available: http://www.vitaljacket.com/en/vitaljacket-holter-2/.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[3]</div>
+                    <div>
+                        “VitalPatch - VitalConnect.” [Online]. Available: https://vitalconnect.com/solutions/vitalpatch/. [Accessed: 21-Mar-2019].
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[4]</div>
+                    <div>
+                        M. Waring, M. Rippon, S. Beilfeldt, and M. Brandt, “Cell attachment to adhesive dressings: Qualitative and quantitative analysis,” Wounds UK, vol. 4, no. 3, pp. 35–47, 2008.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[5]</div>
+                    <div>
+                        K. Kaewkannate and S. Kim, “A comparison of wearable fitness devices,” BMC Public Health, vol. 16, no. 1, p. 433, Dec. 2016.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[6]</div>
+                    <div>
+                        M. G. Signorini, G. Magenes, S. Cerutti and D. Arduini, "Linear and nonlinear parameters for the analysis of fetal heart rate signal from cardiotocographic recordings," in IEEE Transactions on Biomedical Engineering, vol. 50, no. 3, pp. 365-374, March 2003.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[7]</div>
+                    <div>
+                        H. L. Petrie, F. Hamilton, H. Petrie, and N. King, “Tension, what tension?: Website accessibility and visual design. IDCnet: Inclusive Design Curriculum Network View project SignTeach View project Tension, what tension? Website accessibility and visual design,” 2004.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[8]</div>
+                    <div>
+                        “BAND-AID® Brand Adhesive Bandages | Wound Care &amp; Healing.” [Online]. Available: https://www.bandaid.ca/. [Accessed: 21-Mar-2019].
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[9]</div>
+                    <div>
+                        J. E. Sinex, “Pulse Oximetry: Principles and Limitations,” 1999.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[10]</div>
+                    <div>
+                        Y. Iyriboz, S. Powers Edd, J. Morrow, D. Ayers, and G. Landry, “Accuracy of pulse oximeters in estimating heart rate at rest and during exercise,” Br J Sp Med, vol. 25, no. 3, 1991.
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[11]</div>
+                    <div>
+                        P. Leijdekkers and V. Gay, "A Self-Test to Detect a Heart Attack Using a Mobile Phone and Wearable Sensors", 2008 21st IEEE International Symposium on Computer-Based Medical Systems, 2008. [Accessed 11 March 2019].
+                    </div>
+                </div>
+                <div class="refs">
+                    <div>[12]</div>
+                    <div>
+                        D. Porcino and W. Hirt, “Ultra-wideband radio technology: Potential and challenges ahead,” IEEE Commun. Mag., vol. 41, no. 7, pp. 66–74, Jul. 2003.
+                    </div>
+                </div>
+                
+            </div>
+
+            
+        </div>
+
+        <div id="end-container">
+            <a id="back-index" href="../index.html">
+                <span><img src="../assets/symbols/black-arrow-up.png"></span> Back to <strong>Index</strong>
+            </a>
+            
+
+            <a id="explore-btn" href="./flip.html">
+                Explore <strong>Family Law Information Program</strong> <span><img src="../assets/symbols/black-arrow-right.png"></span>
+            </a>
+            
+        </div>
+
+    </div>
+    
+    <script type="text/javascript" src="../scripts/cardiaid.js"></script>
+</body>
+</html>

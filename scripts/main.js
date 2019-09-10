@@ -23,6 +23,12 @@ let backTop2 = document.getElementById('back-top-2');
 let footer = document.querySelector('footer');
 let contactLinks = document.querySelectorAll('.contact-link');
 
+let slideContainers = document.querySelectorAll('.slideshow-container');
+let slides = document.querySelectorAll('.slide');
+let tabs = document.querySelectorAll('.next-img');
+
+hideSlides();
+
 // Display 'Hero images when text is hovered
 window.onload = () => {
     if (textHighlight.length > 0) {
@@ -103,10 +109,10 @@ navbarToggle.addEventListener('click', () => {
 });
 
 /* Toggle for Light/Dark Mode */
-themeToggle.addEventListener('click', () => {
+/* themeToggle.addEventListener('click', () => {
     document.querySelector('body').classList.toggle('dark-theme');
     changeColours();
-});
+}); */
 
 /* Change navbar link colour:hover based on the current theme */
 navLinks.forEach((link) => {
@@ -128,6 +134,120 @@ navLinks.forEach((link) => {
 viewWork.addEventListener('click', () => {
     document.querySelector('.project').scrollIntoView();
 });
+
+function hideSlides() {
+    let i = 0;
+    slides.forEach((slide) => {
+        if (i != 0 || i != 3 || i != 6) {
+            slide.style.display = "none";
+        }
+        i++;
+    });
+    
+    slides[0].style.display = "block";
+    slides[3].style.display = "block";
+    slides[6].style.display = "block";
+    tabs[0].classList.add("active-img");
+    tabs[3].classList.add("active-img");
+    tabs[6].classList.add("active-img");
+}
+
+
+
+tabs[0].addEventListener('click', () => {
+    if (tabs[0].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[0].style.display = "block";
+        slides[1].style.display = "none";
+        slides[2].style.display = "none";
+        tabs[0].classList.add('active-img');
+        tabs[1].classList.remove('active-img');
+        tabs[2].classList.remove('active-img');
+    }
+});
+tabs[1].addEventListener('click', () => {
+    if (tabs[1].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[0].style.display = "none";
+        slides[1].style.display = "block";
+        slides[2].style.display = "none";
+        tabs[0].classList.remove('active-img');
+        tabs[1].classList.add('active-img');
+        tabs[2].classList.remove('active-img');
+
+    }
+});
+tabs[2].addEventListener('click', () => {
+    if (tabs[2].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[0].style.display = "none";
+        slides[1].style.display = "none";
+        slides[2].style.display = "block";
+        tabs[0].classList.remove('active-img');
+        tabs[1].classList.remove('active-img');
+        tabs[2].classList.add('active-img');
+    }
+});
+tabs[3].addEventListener('click', () => {
+    if (tabs[3].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[3].style.display = "block";
+        slides[4].style.display = "none";
+        slides[5].style.display = "none";
+        tabs[3].classList.add('active-img');
+        tabs[4].classList.remove('active-img');
+        tabs[5].classList.remove('active-img');
+    }
+});
+tabs[4].addEventListener('click', () => {
+    if (tabs[4].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[3].style.display = "none";
+        slides[4].style.display = "block";
+        slides[5].style.display = "none";
+        tabs[3].classList.remove('active-img');
+        tabs[4].classList.add('active-img');
+        tabs[5].classList.remove('active-img');
+    }
+});
+tabs[5].addEventListener('click', () => {
+    if (tabs[5].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[3].style.display = "none";
+        slides[4].style.display = "none";
+        slides[5].style.display = "block";
+        tabs[3].classList.remove('active-img');
+        tabs[4].classList.remove('active-img');
+        tabs[5].classList.add('active-img');
+    }
+});
+tabs[6].addEventListener('click', () => {
+    if (tabs[6].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[6].style.display = "block";
+        slides[7].style.display = "none";
+        tabs[6].classList.add('active-img');
+        tabs[7].classList.remove('active-img');
+    }
+});
+tabs[7].addEventListener('click', () => {
+    if (tabs[7].classList.contains("active-img")) {
+        return;
+    } else {
+        slides[6].style.display = "none";
+        slides[7].style.display = "block";
+        tabs[6].classList.remove('active-img');
+        tabs[7].classList.add('active-img');
+    }
+});
+
 
 /* Button to scroll back to top */
 window.onscroll = () => {

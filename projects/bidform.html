@@ -29,13 +29,13 @@
 
     <div class="container">
 
-        <div id="hero-container">
+        <div class="hero-container">
             <h1>Bid Form</h1> <br>
-            <p id="hero-subtitle">Transforming bid submissions for vendors of the Ministry of Government and Consumer Services.</p>
+            <p class="hero-subtitle">Transforming bid submissions for vendors of the Ministry of Government and Consumer Services.</p>
         </div>
-        <img src="../assets/images/bidform/macbook-form.png">
+        <img class="wide-img" src="../assets/images/bidform/bidform-mockup-1.png">
 
-        <div id="project-summary">
+        <div class="project-summary">
             <div class="project-info">
                 <p class="teal">TIMEFRAME</p> <br>
                 <p>May 13-27, 2019</p>
@@ -109,13 +109,77 @@
         </div>
 
         <div class="img-container">
-            <img src="../assets/images/bidform/pdf-form.png"> <br> 
+            <img id="pdf-form" src="../assets/images/bidform/pdf-form-4x.png"> <br> 
             <img src="../assets/images/bidform/error.png"> <br>
         </div>
 
     </div>
 
-    <img class="wide-img" src="../assets/images/bidform/table.png">
+    <div class="grey-bg">
+        <div class="container">
+
+            <div class="table-container">
+
+                <table>
+                    <tr>
+                        <th>System status visibility</th>
+                        <th>Match between system and real world</th>
+                        <th>User control and freedom</th>
+                        <th>Error<br>prevention</th>
+                        <th>Consistency and standards</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Bolded red text boxes give clear indication of empty mandatory fields that need to be filled; file name is displayed upon uploading a file, but no visual or auditory cues are given to the user regarding how far along the upload is.
+                        </td>
+                        <td>
+                            Some field labels are wordier than needed causing confusion.
+                        </td>
+                        <td>
+                            Good use of save, clear and print buttons at the bottom of the form; However, clear button is right beside submit, which is a pain-point for users who accidentally click clear instead of submit.
+                        </td>
+                        <td>
+                            Poor; No instructions visible for other mandatory fields, which could lead to constant error pop-ups with instructions; Text boxes that require number entry do not allow for text.
+                        </td>
+                        <td>
+                            Quote table has confusing headings that are not easily differentiable from each other; goes against the navigation scheme mental model of users to scan in one direction as opposed to zig-zag; length of date fields are inconsistent.
+                        </td>
+                    </tr>
+                </table>
+    
+                <table>
+                    <tr>
+                        <th>Recognition rather than recall</th>
+                        <th>Flexibility and efficiency of use</th>
+                        <th>Aesthetic and minimalist design</th>
+                        <th>Help users recognize, diagnose and recover from errors</th>
+                        <th>Help and documentation</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Users have to recall information from a seperate specification document to answer questions regarding the ability to meet the delivery date, provide correct stock and various quotes.
+                        </td>
+                        <td>
+                            Tailored toward new vendors, which is problematic because the ministry rarely adds new vendors to their VOR; no auto-population of unvarying field entries for regular vendors.
+                        </td>
+                        <td>
+                            Forms fields to not match appropriate size of input text; Text indicating that fields marked with an asterisk are mandatory is overshadowed by bold red field outlines; <br>Specification of date format is irrelevant due to calendar feature; Lack of typographical hierarchy; Very little whitespace creates for poor readability.
+                        </td>
+                        <td>
+                            Error messages are clear and provide constructive solution. For example, incorrect email address prompts the error message "Invalid e-mail address. Please enter a valid e-mail address."
+                        </td>
+                        <td>
+                            Poor; system is extremely unusable without instructions; several fields are difficult to understand and the quotation table is unintuitive when filling out alone for the first time; no further instructions given regarding certain sections or fields leading to vendors having to contact their Print Coordinator.
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- <img class="wide-img" src="../assets/images/bidform/table.png"> -->
 
     <div class="container">
 
@@ -142,12 +206,15 @@
                 In terms of sharing this webform with vendors, an OSS member would provide a link to this form in the body of an email that has an attached specification document and unique job details. <br><br>
                 Our goal for week 1 was to understand problems that vendors face in their user journey and <strong>determine which fields could be removed. Four vendors</strong> were recruited for user interviews and usability testing.
             </p>
-            <a href="#">view usability testing script</a>
+
+            <button>view usability testing script <span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
+
+            <iframe id="script1" class="userScripts" src="../assets/images/bidform/user-testing-script-may16.pdf" width="100%" height="930px"></iframe>
         </div>
 
-        <div class="img-container">
+        <!-- <div class="img-container">
             <img src="../assets/images/bidform/testing-script-1.png">
-        </div>
+        </div> -->
 
         <div class="section">
             <h5>Vendor Journey Map</h5>
@@ -165,11 +232,51 @@
     <div class="container">
         <div class="section">
             <h5>Low Fidelity Prototype</h5>
-            <iframe src="https://player.vimeo.com/video/343945008" width="1325" height="740" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="frame-container">
+                <iframe src="https://player.vimeo.com/video/343945008" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
-    <img class="wide-img" src="../assets/images/bidform/lofi-findings.png">
+    <div class="grey-bg">
+        <div class="container">
+            <div class="findings-container">
+
+                <div>
+                    <h4>Positive Findings</h4>
+                    <ul>
+                        <li>
+                            Vendors voiced content over receiving a confirmation email that summarized their bid submission. With the original process, there is no confirmation email sent verifying that their submission had been received with a summary of their bid.
+                        </li>
+                        <li>
+                            Most vendors were happy that they would have the option of filling out bids on their mobile device if they happened to be out of the office.
+                        </li>
+                        <li>
+                            This prototype could be build in Adobe Experience Manager to mee thte Accessibility for Ontarians with Disabilities Act.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Negative Findings</h4>
+                    <ul>
+                        <li>
+                            Vendors expressed that some mandatory fields on the Vendor Contact Information and Quote Information pages are unnecessary. They believe that more fields correspond to a higher chance of human error.
+                        </li>
+                        <li>
+                            There was confusion surrounding the Quote Information page. Vendors did not recognize the difference between adding a product versus adding an option. Options consist of the same product(s) with the only difference being characteristics, such as colour, material, quantity, etc.
+                        </li>
+                        <li>
+                            As there is no storage of data in Adobe Experience Manager, the OSS team will have to pass parameters through the bid form URL, which is time-costly and inefficient.
+                        </li>
+                        <li>
+                            There is a development cost that needs to be addressed by the OSS to bulld this custom web form in AEM.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
     <div class="container">
 
@@ -192,12 +299,11 @@
                 </ol>
             </div>
 
+            <button>view usability testing script <span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
+
+            <iframe id="script2" class="userScripts" src="../assets/images/bidform/user-testing-script-may23.pdf" width="100%" height="930px"></iframe>
         </div>
         
-        <a href="#">view usability testing script</a>
-        <div class="img-container">
-            <img src="../assets/images/bidform/testing-script-1.png">
-        </div>
 
         <div class="section">
 
@@ -210,12 +316,50 @@
 
         <div class="section">
             <h5>Email Prototype</h5>
-            <iframe src="https://player.vimeo.com/video/343867054" width="1325" height="740" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="frame-container">
+                <iframe src="https://player.vimeo.com/video/343867054" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
         </div>
 
     </div>
 
-    <img src="../assets/images/bidform/email-findings.png" class="wide-img">
+    <div class="grey-bg">
+        <div class="container">
+            <div class="findings-container">
+
+                <div>
+                    <h4>Positive Findings</h4>
+                    <ul>
+                        <li>
+                            Vendors appreciated the reduction of mandatory fields and the confirmation email received after submission.
+                        </li>
+                        <li>
+                            A few vendors, who often are on the road, were extremely happy with this mobile friendly alternative.
+                        </li>
+                        <li>
+                            Additionally, this email alternative has no cost for the business. Members of the OSS would not have an overly increased workload, and the OSS would not have to pay for any software or development costs.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Negative Findings</h4>
+                    <ul>
+                        <li>
+                            A few vendors were concerned about their bids being processed as incomplete, since this email template cannot catch their erros.
+                        </li>
+                        <li>
+                            Some vendors expressed dissatisfaction about the lack of radio buttons in this template when answering closed questions. They would prefer having radio buttons rather than typing <i>Y</i> or <i>N</i>.
+                        </li>
+                        <li>
+                            This email template allows for substantial user autonomy in answering questions, which is returned to the OSS team as unstructured data.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 
     <div class="container">
 
@@ -229,7 +373,11 @@
 
         <div class="section">
             <h5>Drupal CMS Webform Prototype</h5>
-            <iframe src="https://player.vimeo.com/video/343585599" width="1325" height="740" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+            <div class="frame-container">
+                <iframe src="https://player.vimeo.com/video/343585599" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+
             <div id="note">
                 <strong>Note:</strong>
                 <p>
@@ -239,8 +387,47 @@
         </div>
 
     </div>
+    
+    <div class="grey-bg">
+        <div class="container">
+            <div class="findings-container">
 
-    <img src="../assets/images/bidform/drupal-findings.png" class="wide-img">
+                <div>
+                    <h4>Positive Findings</h4>
+                    <ul>
+                        <li>
+                            Vendors appreciated the form's ability to recognize field errors and provide guidance to correct these errors.
+                        </li>
+                        <li>
+                            Vendors were pleased with the high degree of user friendliness and cross-platform accessibility.
+                        </li>
+                        <li>
+                            There is no cost associated with building the form within Ontario.ca's CMS.
+                        </li>
+                        <li>
+                            The OSS team appreciate that the form submissions can be exported as a .csv file for better organization of data.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Negative Findings</h4>
+                    <ul>
+                        <li>
+                            Vendors were displeased with this method because it cannot send confirmation emails detailing their form responses.
+                        </li>
+                        <li>
+                            Vendors were dissatisfied about filling out the job information fields at the beginning of the form. They would rather those fields be prepopulated for them.
+                        </li>
+                        <li>
+                            There are some minor accessibility issues with this form.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 
     <div class="container">
 
@@ -259,9 +446,9 @@
         </div>
 
         <div class="grid-container">
-            <img src="../assets/images/bidform/mobile-options.png">
-            <img src="../assets/images/bidform/mobile-options.png">
-            <img src="../assets/images/bidform/mobile-options.png">
+            <img class="wide-img" src="../assets/images/bidform/attachdoc.gif">
+            <img class="wide-img" src="../assets/images/bidform/option deselection.gif">
+            <img class="wide-img" src="../assets/images/bidform/errormessage.gif">
             <p>Attach document</p>
             <p>Option deselection</p>
             <p>Error message</p>
@@ -278,7 +465,11 @@
 
         <div class="section">
             <h5>High Fidelity Prototype</h5>
-            <iframe src="https://player.vimeo.com/video/344709667" width="1325" height="740" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+            <div class="frame-container">
+                <iframe src="https://player.vimeo.com/video/344709667" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+
         </div>
 
         <div class="section">
@@ -305,12 +496,20 @@
             </ol>
         </div>
 
-        <div>
-            <a href="#">Back to <strong>Index</strong></a>
-            <a href="#">Explore <strong>Cardiaid</strong></a>
+        <div id="end-container">
+            <a id="back-index" href="../index.html">
+                <span><img src="../assets/symbols/black-arrow-up.png"></span> Back to <strong>Index</strong>
+            </a>
+
+            <a id="explore-btn" href="./cardiaid.html">
+                Explore <strong>Cardiaid</strong> <span><img src="../assets/symbols/black-arrow-right.png"></span>
+            </a>
         </div>
+
+        <hr>
 
     </div>
 
+    <script type="text/javascript" src="../scripts/bidform.js"></script>
 </body>
 </html>
