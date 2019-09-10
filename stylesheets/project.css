@@ -731,6 +731,10 @@ td {
 /* Widescreen desktops */
 @media screen and (min-width: 1600px) {
 
+    .container {
+        max-width: 1325px;
+    }
+
     h1 {
         font-family: serif;
         font-size: 64px;
