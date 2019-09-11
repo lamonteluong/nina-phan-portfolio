@@ -40,6 +40,7 @@ window.onload = () => {
         textHighlight[0].addEventListener('mouseleave', () => {
             document.getElementById('nina-img').style.display = "none";
         });
+
         //BLUEPRINT IMAGE
         textHighlight[2].addEventListener('mouseenter', () => {
             document.getElementById('blueprint-img').style.display = "block";
@@ -47,6 +48,14 @@ window.onload = () => {
         });
         textHighlight[2].addEventListener('mouseleave', () => {
             document.getElementById('blueprint-img').style.display = "none";
+        });
+
+        //SOUNDCLOUD PLAYER
+        textHighlight[1].addEventListener('mouseenter', () => {
+            document.getElementById('soundcloud-img').style.display = "block";
+        });
+        textHighlight[1].addEventListener('mouseleave', () => {
+            // document.getElementById('soundcloud-img').style.display = "none";
         });
     }
 }
@@ -68,12 +77,21 @@ window.onresize = () => {
         textHighlight[0].addEventListener('mouseleave', () => {
             document.getElementById('nina-img').style.display = "none";
         });
+
         //BLUEPRINT IMAGE
         textHighlight[2].addEventListener('mouseenter', () => {
             document.getElementById('blueprint-img').style.display = "block";
         });
         textHighlight[2].addEventListener('mouseleave', () => {
             document.getElementById('blueprint-img').style.display = "none";
+        });
+
+        //SOUNDCLOUD PLAYER
+        textHighlight[1].addEventListener('mouseenter', () => {
+            document.getElementById('soundcloud-img').style.display = "block";
+        });
+        textHighlight[1].addEventListener('mouseleave', () => {
+            // document.getElementById('soundcloud-img').style.display = "none";
         });
     } else {
         // NINA IMAGE
@@ -83,6 +101,7 @@ window.onresize = () => {
         textHighlight[0].addEventListener('mouseleave', () => {
             document.getElementById('nina-img').style.display = "none";
         });
+
         //BLUEPRINT IMAGE
         textHighlight[2].addEventListener('mouseenter', () => {
             document.getElementById('blueprint-img').style.display = "none";
@@ -90,7 +109,16 @@ window.onresize = () => {
         textHighlight[2].addEventListener('mouseleave', () => {
             document.getElementById('blueprint-img').style.display = "none";
         });
-    }
+
+        //SOUNDCLOUD PLAYER
+        textHighlight[1].addEventListener('mouseenter', () => {
+            document.getElementById('soundcloud-img').style.display = "none";
+        });
+        textHighlight[1].addEventListener('mouseleave', () => {
+            document.getElementById('soundcloud-img').style.display = "none";
+        });
+
+    } 
 
 }
 /* FIXME: Desktop resize to mobile -> open dropdown -> resize desktop

@@ -231,6 +231,9 @@ ol li::before {
 }
 
 .section .wide-img {
+    
+}
+.drop-shadow {
     -webkit-box-shadow: 0px 2px 6px 1px rgb(185, 185, 185);
     -moz-box-shadow: 0px 2px 6px 1px rgb(185, 185, 185);
     box-shadow: 0px 2px 6px 1px rgb(185, 185, 185);
@@ -379,10 +382,10 @@ td {
     flex-direction: column;
 }
 .flip-posters img {
-    -webkit-box-shadow: 2px 2px 12px 2px rgba(120,120,120,0.75);
+    /* -webkit-box-shadow: 2px 2px 12px 2px rgba(120,120,120,0.75);
     -moz-box-shadow: 2px 2px 12px 2px rgba(120,120,120,0.75);
     box-shadow: 2px 2px 12px 2px rgba(120,120,120,0.75);
-    margin: 1em 0;
+    margin: 1em 0; */
 }
 
 #end-container {
@@ -488,6 +491,10 @@ td {
         max-width: 270px;
         margin-top: 5em;
         margin-bottom: 23em;
+    }
+
+    .table-container {
+        overflow-x: hidden;
     }
 
     table, th, td {
@@ -728,6 +735,14 @@ td {
 
 }
 
+@media screen and (min-width: 1325px) {
+
+    .container {
+        max-width: 1325px;
+    }
+    
+}
+
 /* Widescreen desktops */
 @media screen and (min-width: 1600px) {
 
@@ -748,6 +763,7 @@ td {
         margin-bottom: 5em;
     }
     .hero-container h1 {
+        font-size: 64px;
         line-height: 135%;
         margin-bottom: 1em;
     }

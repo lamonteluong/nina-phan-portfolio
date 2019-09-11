@@ -7,7 +7,7 @@ let scriptBtn = document.querySelectorAll('.script-btn');
 
 scriptBtn[1].style.display = 'none';
 scriptBtn[3].style.display = 'none';
-scriptBtn[5].style.display = 'none';
+// scriptBtn[5].style.display = 'none';
 
 
 btn[0].addEventListener('click', () => {

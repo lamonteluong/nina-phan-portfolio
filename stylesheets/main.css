@@ -285,9 +285,7 @@ footer {
     font-size: 16px;
     line-height: 175%;
 }
-#nina-img p {
-    margin-left: 2em;
-}
+
 #blueprint-img {
     display: none;
     font-size: 16px;
@@ -295,6 +293,10 @@ footer {
 }
 #blueprint-img p {
     color: #555555;
+}
+
+#soundcloud-img {
+    display: none;
 }
 
 /* Media queries */
@@ -461,6 +463,14 @@ footer {
     .project img {
         width: 500px;
         height: auto;
+    }
+
+}
+
+@media screen and (min-width: 1325px) {
+
+    .container {
+        max-width: 1325px;
     }
 
 }
