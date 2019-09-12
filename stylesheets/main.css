@@ -74,7 +74,7 @@ footer {
     display: inline-block;
     text-decoration: none;
     color: #555555;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     margin-left: 40px;
 }
@@ -458,11 +458,16 @@ footer {
     .project {
         flex-direction: row;
         justify-content: space-around;
+        align-content: center;
     }
 
     .project img {
         width: 500px;
         height: auto;
+    }
+
+    .project-name {
+        font-size: 48px;
     }
 
 }
