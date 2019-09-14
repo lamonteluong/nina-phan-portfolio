@@ -140,6 +140,7 @@ ol li::before {
     font-weight: 400;
     color: #1A1A1A;
     margin-bottom: 1em;
+    font-family: serif;
 }
 .hero-subtitle {
     font-size: 17px;
@@ -151,6 +152,10 @@ ol li::before {
 .hero-container hr {
     margin: 2em 0;
     color: #CCCCCC;
+}
+
+.project-summary {
+    margin: 2em 0;
 }
 
 .project-info p:nth-of-type(even) {
@@ -202,7 +207,7 @@ ol li::before {
     line-height: 175%;
     color: #777777;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 .section h3 {
     font-size: 22px;
@@ -230,9 +235,6 @@ ol li::before {
     font-family: 'Lato', sans-serif;
 }
 
-.section .wide-img {
-    
-}
 .drop-shadow {
     -webkit-box-shadow: 0px 2px 6px 1px rgb(185, 185, 185);
     -moz-box-shadow: 0px 2px 6px 1px rgb(185, 185, 185);
@@ -256,7 +258,7 @@ ol li::before {
     font-size: 22px;
     font-weight: 400 !important;
     line-height: 175%;
-    margin-bottom: .5em;
+    margin-top: 7em;
 }
 
 .grey-bg {
@@ -273,6 +275,12 @@ ol li::before {
 .findings-container div {
     margin: 2em 0;
 }
+.findings-container div:nth-of-type(1) {
+    float: left;
+}
+.findings-container div:nth-of-type(2) {
+    float: right;
+}
 .findings-container div h4 {
     color: #2F2F2F;
     margin-bottom: 1em;
@@ -286,7 +294,7 @@ ol li::before {
 }
 
 .bullet-list {
-    margin: 2em 0;
+    margin: 1em 0;
 }
 .bullet-list ul li {
     margin: .5em 0;
@@ -484,13 +492,12 @@ td {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .project-info {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 175%;
         max-width: 270px;
-        margin-top: 5em;
-        margin-bottom: 23em;
     }
 
     .table-container {
@@ -537,7 +544,7 @@ td {
         margin-bottom: 1em;
     }
     .section {
-        margin-bottom: 10em;
+        /* margin-bottom: 10em; */
     }
     #note {
         font-size: 22px;
@@ -552,9 +559,8 @@ td {
 
     .section p {
         font-family: 'Lato', sans-serif;
-        font-size: 22px;
         line-height: 175%;
-        max-width: 760px;
+        max-width: 800px;
     }
 
     .section button {
@@ -594,31 +600,22 @@ td {
         text-align: center;
     }
 
-    .section h3 {
-        font-size: 32px;
-    }
     /* TODO: Add Lato bold font weight */
     .section h4 {
         font-family: 'Lato', sans-serif;
-        font-size: 24px;
         line-height: 175%;
         font-weight: 500;
         color: #777777;
-        margin-top: 2em;
-        margin-bottom: 1em;
+        margin-top: 3em;
+        margin-bottom: 1.5em;
     }
-    .section h5 {
-        font-family: 'Lato', sans-serif;
-        font-size: 28px;
-        color: #777777;
-        margin-bottom: 1em;
-    }
+
 
     .findings-container {
         width: 100%;
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-around; */
     }
    .findings-container div {
        width: 40%;
@@ -700,12 +697,11 @@ td {
     .bullet-list {
         font-size: 22px;
         line-height: 175%;
-        max-width: 750px;
+        max-width: 800px;
         width: 100%;
         padding-left: 1em;
     }
     .bullet-list ul li {
-        margin: 2em 0;
         padding-left: 1em;
     }
     .section h5 {
@@ -713,17 +709,50 @@ td {
         font-size: 22px;
         line-height: 175%;
         font-weight: 700;
-        margin-top: 3em;
-    }
-
-    .flip-posters {
-        margin: 4em 0;
-        flex-direction: row;
-        justify-content: space-between;
+        font-family: 'Lato', sans-serif;
     }
 
     .refs div {
         font-size: 22px !important;
+    }
+
+    /* Font Sizes */
+    .section h2 {
+        font-size: 30px;
+        margin-top: 7em;
+    }
+    .section h3 {
+        font-size: 28px;
+    }
+    .section h4 {
+        font-size: 22px;
+    }
+
+    .section p, .section a, .block-quote, .num-list li {
+        font-size: 18px;
+    }
+
+    .findings-container div h4 {
+        font-size: 18px;
+    }
+    .findings-container div ul li {
+        font-size: 18px;
+    }
+
+    .bullet-list {
+        font-size: 18px;
+    }
+
+    #end-container {
+        margin-top: 10em;
+    }
+
+    #back-index {
+        font-size: 26px;
+    }
+
+    #explore-btn {
+        font-size: 26px;
     }
 
 }
@@ -731,9 +760,27 @@ td {
 /* Small desktops */
 @media screen and (min-width: 1024.5px) {
 
+    #hidden-metric p {
+        max-width: 925px;
+    }
+
+    .flip-posters {
+        margin: 4em 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .flip-posters img {
+        max-width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+
     
 
 }
+
 
 @media screen and (min-width: 1325px) {
 
@@ -782,7 +829,42 @@ td {
     }
 
     .grey-bg {
-        margin-bottom: 14em;
+        margin-bottom: 5em;
+    }
+
+    .project-info {
+        font-size: 20px;
+        margin-top: 5em;
+        margin-bottom: 10em;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+    .section h3 {
+        font-size: 32px;
+    }
+    .section h4 {
+        font-size: 24px;
+    }
+
+    .section p, .block-quote, .num-list li {
+        font-size: 22px;
+    }
+
+    .findings-container div h4 {
+        font-size: 20px;
+    }
+    .findings-container div ul li {
+        font-size: 20px;
+    }
+
+    .bullet-list {
+        font-size: 22px;
+    }
+
+    .num-list li {
+        font-size: 22px;
     }
 
     #end-container {

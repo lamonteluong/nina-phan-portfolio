@@ -28,6 +28,7 @@ let slides = document.querySelectorAll('.slide');
 let tabs = document.querySelectorAll('.next-img');
 
 hideSlides();
+changeImageCarousel();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
@@ -36,6 +37,9 @@ window.onload = () => {
         textHighlight[0].addEventListener('mouseenter', () => {
             document.getElementById('nina-img').style.display = "block";
             heroImage[0].style.display = "block";
+            if (document.getElementById('soundcloud-img').style.display == "block") {
+                document.getElementById('soundcloud-img').style.display = "none";
+            }
         });
         textHighlight[0].addEventListener('mouseleave', () => {
             document.getElementById('nina-img').style.display = "none";
@@ -45,6 +49,9 @@ window.onload = () => {
         textHighlight[2].addEventListener('mouseenter', () => {
             document.getElementById('blueprint-img').style.display = "block";
             heroImage[1].style.display = "block";
+            if (document.getElementById('soundcloud-img').style.display == "block") {
+                document.getElementById('soundcloud-img').style.display = "none";
+            }
         });
         textHighlight[2].addEventListener('mouseleave', () => {
             document.getElementById('blueprint-img').style.display = "none";
@@ -53,9 +60,6 @@ window.onload = () => {
         //SOUNDCLOUD PLAYER
         textHighlight[1].addEventListener('mouseenter', () => {
             document.getElementById('soundcloud-img').style.display = "block";
-        });
-        textHighlight[1].addEventListener('mouseleave', () => {
-            // document.getElementById('soundcloud-img').style.display = "none";
         });
     }
 }
@@ -89,9 +93,6 @@ window.onresize = () => {
         //SOUNDCLOUD PLAYER
         textHighlight[1].addEventListener('mouseenter', () => {
             document.getElementById('soundcloud-img').style.display = "block";
-        });
-        textHighlight[1].addEventListener('mouseleave', () => {
-            // document.getElementById('soundcloud-img').style.display = "none";
         });
     } else {
         // NINA IMAGE
@@ -163,6 +164,25 @@ viewWork.addEventListener('click', () => {
     document.querySelector('.project').scrollIntoView();
 });
 
+// Rotate image carousel every 3 seconds
+function changeImageCarousel() {
+
+    setInterval(() => {
+        checkImageClick();
+
+        let i = 0;
+        for (i = 0; i < 8; i++) {
+            if (slides[i].style.display == "block") {
+                console.log(i);
+                // slides[i].style.display = "none";
+            }
+        }
+
+    }, 3000);
+
+}
+
+// Sets product images to default (1st image) of each project
 function hideSlides() {
     let i = 0;
     slides.forEach((slide) => {
@@ -181,100 +201,103 @@ function hideSlides() {
 }
 
 
+function checkImageClick() {
 
-tabs[0].addEventListener('click', () => {
-    if (tabs[0].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[0].style.display = "block";
-        slides[1].style.display = "none";
-        slides[2].style.display = "none";
-        tabs[0].classList.add('active-img');
-        tabs[1].classList.remove('active-img');
-        tabs[2].classList.remove('active-img');
-    }
-});
-tabs[1].addEventListener('click', () => {
-    if (tabs[1].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[0].style.display = "none";
-        slides[1].style.display = "block";
-        slides[2].style.display = "none";
-        tabs[0].classList.remove('active-img');
-        tabs[1].classList.add('active-img');
-        tabs[2].classList.remove('active-img');
+    tabs[0].addEventListener('click', () => {
+        if (tabs[0].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[0].style.display = "block";
+            slides[1].style.display = "none";
+            slides[2].style.display = "none";
+            tabs[0].classList.add('active-img');
+            tabs[1].classList.remove('active-img');
+            tabs[2].classList.remove('active-img');
+        }
+    });
+    tabs[1].addEventListener('click', () => {
+        if (tabs[1].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[0].style.display = "none";
+            slides[1].style.display = "block";
+            slides[2].style.display = "none";
+            tabs[0].classList.remove('active-img');
+            tabs[1].classList.add('active-img');
+            tabs[2].classList.remove('active-img');
+    
+        }
+    });
+    tabs[2].addEventListener('click', () => {
+        if (tabs[2].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[0].style.display = "none";
+            slides[1].style.display = "none";
+            slides[2].style.display = "block";
+            tabs[0].classList.remove('active-img');
+            tabs[1].classList.remove('active-img');
+            tabs[2].classList.add('active-img');
+        }
+    });
+    tabs[3].addEventListener('click', () => {
+        if (tabs[3].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[3].style.display = "block";
+            slides[4].style.display = "none";
+            slides[5].style.display = "none";
+            tabs[3].classList.add('active-img');
+            tabs[4].classList.remove('active-img');
+            tabs[5].classList.remove('active-img');
+        }
+    });
+    tabs[4].addEventListener('click', () => {
+        if (tabs[4].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[3].style.display = "none";
+            slides[4].style.display = "block";
+            slides[5].style.display = "none";
+            tabs[3].classList.remove('active-img');
+            tabs[4].classList.add('active-img');
+            tabs[5].classList.remove('active-img');
+        }
+    });
+    tabs[5].addEventListener('click', () => {
+        if (tabs[5].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[3].style.display = "none";
+            slides[4].style.display = "none";
+            slides[5].style.display = "block";
+            tabs[3].classList.remove('active-img');
+            tabs[4].classList.remove('active-img');
+            tabs[5].classList.add('active-img');
+        }
+    });
+    tabs[6].addEventListener('click', () => {
+        if (tabs[6].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[6].style.display = "block";
+            slides[7].style.display = "none";
+            tabs[6].classList.add('active-img');
+            tabs[7].classList.remove('active-img');
+        }
+    });
+    tabs[7].addEventListener('click', () => {
+        if (tabs[7].classList.contains("active-img")) {
+            return;
+        } else {
+            slides[6].style.display = "none";
+            slides[7].style.display = "block";
+            tabs[6].classList.remove('active-img');
+            tabs[7].classList.add('active-img');
+        }
+    });
 
-    }
-});
-tabs[2].addEventListener('click', () => {
-    if (tabs[2].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[0].style.display = "none";
-        slides[1].style.display = "none";
-        slides[2].style.display = "block";
-        tabs[0].classList.remove('active-img');
-        tabs[1].classList.remove('active-img');
-        tabs[2].classList.add('active-img');
-    }
-});
-tabs[3].addEventListener('click', () => {
-    if (tabs[3].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[3].style.display = "block";
-        slides[4].style.display = "none";
-        slides[5].style.display = "none";
-        tabs[3].classList.add('active-img');
-        tabs[4].classList.remove('active-img');
-        tabs[5].classList.remove('active-img');
-    }
-});
-tabs[4].addEventListener('click', () => {
-    if (tabs[4].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[3].style.display = "none";
-        slides[4].style.display = "block";
-        slides[5].style.display = "none";
-        tabs[3].classList.remove('active-img');
-        tabs[4].classList.add('active-img');
-        tabs[5].classList.remove('active-img');
-    }
-});
-tabs[5].addEventListener('click', () => {
-    if (tabs[5].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[3].style.display = "none";
-        slides[4].style.display = "none";
-        slides[5].style.display = "block";
-        tabs[3].classList.remove('active-img');
-        tabs[4].classList.remove('active-img');
-        tabs[5].classList.add('active-img');
-    }
-});
-tabs[6].addEventListener('click', () => {
-    if (tabs[6].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[6].style.display = "block";
-        slides[7].style.display = "none";
-        tabs[6].classList.add('active-img');
-        tabs[7].classList.remove('active-img');
-    }
-});
-tabs[7].addEventListener('click', () => {
-    if (tabs[7].classList.contains("active-img")) {
-        return;
-    } else {
-        slides[6].style.display = "none";
-        slides[7].style.display = "block";
-        tabs[6].classList.remove('active-img');
-        tabs[7].classList.add('active-img');
-    }
-});
+}
 
 
 /* Button to scroll back to top */

@@ -32,9 +32,9 @@ h4 {
 footer {
     font-size: .5em;
     color: #444444;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 /* Classes */
@@ -51,6 +51,8 @@ footer {
     background-color: #181818;
     color: white;
 }
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -317,8 +319,8 @@ footer {
     }
     footer {
         font-size: 1em;
-        width: 70%;
-        margin: 10em auto 2em auto;
+        /* width: 70%; */
+        margin: 10em auto 0s auto;
     }
 
     .container {
@@ -378,7 +380,7 @@ footer {
         margin-left: 3em;
     }
     .project {
-        width: 75%;
+        width: 85%;
         margin: 51px auto;
         padding: 100px 0;
         flex-direction: column-reverse;
@@ -411,6 +413,20 @@ footer {
     
     .contact-link {
         margin: 0 2em;
+    }
+
+    #bidform-phone {
+        max-width: 400px;
+        height: 100%;
+        margin-bottom: 2em;
+    }
+    #bidform-ipad {
+        margin-top: 0;
+    }
+
+    #cardiaid-img-2 {
+        max-width: 450px;
+        height: 100%;
     }
 
     #hero-container {
@@ -450,11 +466,15 @@ footer {
 
     #hero-container img {
         max-width: 350px;
-        max-height: 350px;
+        height: 100%;
         width: 100%;
-        height: auto;
         margin-bottom: 22px;
     }
+
+    #soundcloud-img {
+        max-width: 300px;
+    }
+
     .project {
         flex-direction: row;
         justify-content: space-around;
@@ -470,13 +490,27 @@ footer {
         font-size: 48px;
     }
 
+    #flip-title {
+        font-size: 36px;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #flip-title {
+        font-size: 40px;
+    }
+
 }
 
 @media screen and (min-width: 1325px) {
 
-    .container {
-        max-width: 1325px;
+    #soundcloud-img {
+        max-width: 350px;
     }
+
 
 }
 
@@ -484,6 +518,14 @@ footer {
 
 /* Widescreen desktops */
 @media screen and (min-width: 1600px) {
+
+    .container {
+        max-width: 1560px;
+    }
+
+    .margin-right-10 {
+        margin-right: 13em;
+    }
 
     h1 {
         font-size: 3.5rem;
@@ -499,7 +541,22 @@ footer {
 
     #hero-container img {
         max-width: 450px;
-        max-height: 450px;
+        height: 100%;
+    }
+
+    #flip-title {
+        font-size: 44px;
+    }
+    #flip-desc {
+        font-size: 16px;
+    }
+
+    #bidform-phone {
+        max-width: 600px;
+    }
+
+    #cardiaid-img-2 {
+        max-width: 600px;
     }
 
     .navbar {
@@ -510,6 +567,9 @@ footer {
         font-size: 22px;
     }
 
+    .project-content {
+        margin-left: 0;
+    }
     .project-skill {
         font-size: 24px;
     }
@@ -522,10 +582,14 @@ footer {
 
     .project img {
         margin: 0;
-        width: 850px;
+        width: 800px;
     }
     .flip-desc {
-        max-width: 520px;
+        max-width: 490px;
+    }
+
+    #flip-images img {
+        /* max-width: 600px; */
     }
 
 }

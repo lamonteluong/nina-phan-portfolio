@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="./stylesheets/main.css">
 </head>
 <body>
+
     <nav class="navbar">
         <a href="./index.html" class="logo">np.</a>
         <span class="navbar-toggle">
             <img src="assets/menu.png">
         </span>
         <ul class="main-nav">
-            <!-- <li>
-                <a href="#" class="nav-link active-nav">work</a>
-            </li> -->
             <li>
                 <a href="#" class="nav-link">about</a>
             </li>
@@ -26,6 +24,8 @@
             </li>
         </ul>
     </nav>
+    
+
 
     <div id="hero-container" class="container">
 
@@ -36,7 +36,7 @@
 
             <div class="view-work-container">
                 <p id="view-work">view my work</p> 
-                <!--TODO: fine-tune positioning to center of div-->
+
                 <svg width="14" height="21" viewBox="0 0 14 21" fill="none">
                     <path id="arrow-down" d="M6.38128 20.6187C6.72299 20.9604 7.27701 20.9604 7.61872 20.6187L13.1872 15.0503C13.5289 14.7085 13.5289 14.1545 13.1872 13.8128C12.8455 13.4711 12.2915 13.4711 11.9497 13.8128L7 18.7626L2.05025 13.8128C1.70854 13.4711 1.15452 13.4711 0.812816 13.8128C0.471107 14.1545 0.471107 14.7085 0.812816 15.0503L6.38128 20.6187ZM6.125 0L6.125 20H7.875L7.875 0L6.125 0Z" fill="black"/>
                 </svg>
@@ -74,7 +74,7 @@
     
 
     <div class="container project">
-        <div class="slideshow-container">
+        <div id="flip-images" class="slideshow-container">
             <img src="assets/images/flip/flipmockup.png" class="slide fade">
             <img src="./assets/images/flip/whyareyouhere_flip.png" class="slide hide fade">
             <img src="./assets/images/flip/flip_mockup.png" class="slide hide fade">
@@ -84,9 +84,9 @@
                 <span class="next-img"></span>
             </div>
         </div>
-        <div class="project-content">
+        <div id=flip-project class="project-content">
             <h3 class="project-skill">Product Design</h3> 
-            <h1 class="project-name">Family Law<br>Information Program</h1>
+            <h1 id="flip-title" class="project-name">Family Law<br>Information Program</h1>
             <p class="project-desc flip-desc">
                 Optimizing family law information gathering and learning for Ontarians through digitizing the in-person program.
             </p>
@@ -97,8 +97,8 @@
     <div class="container project">
         <div class="slideshow-container">
             <img src="assets/images/bidform/bidform-mockup-1.png" class="slide fade">
-            <img src="./assets/images/bidform/ipad_bidform.png" class="slide fade">
-            <img src="./assets/images/bidform/phone_bidform.png" class="slide fade">
+            <img id="bidform-ipad" src="./assets/images/bidform/ipad_bidform.png" class="slide fade">
+            <img id="bidform-phone" src="./assets/images/bidform/phone_bidform.png" class="slide fade">
             <div>
                 <span class="next-img"></span>
                 <span class="next-img"></span>
@@ -119,7 +119,7 @@
     <div class="container project">
         <div class="slideshow-container">
             <img src="./assets/images/cardiaid/cardiaid_mockup.png" class="slide fade">
-            <img src="./assets/images/cardiaid/cardiaid.png" class="slide fade">
+            <img id="cardiaid-img-2" src="./assets/images/cardiaid/cardiaid.png" class="slide fade">
             <div>
                 <span class="next-img"></span>
                 <span class="next-img"></span>
@@ -136,10 +136,14 @@
     </div>
 
     <footer>
-        <div id="copyright">
-            Designed by Nina. Developed by Lamonte. ©2019
+        <div class="container">
+
+            <div id="copyright">
+                Designed by Nina. Developed by Lamonte. ©2019
+            </div>
+            
         </div>
-        <ul class="contact-list">
+        <!-- <ul class="contact-list">
             <li>
                 <a href="mailto: nt2phan@edu.uwaterloo.ca" target="_blank" class="contact-link">Email</a>
             </li>
@@ -152,7 +156,7 @@
             <li>
                 <a href="https://medium.com/@nt2phan" target="_blank" class="contact-link">Medium</a>
             </li>
-        </ul>
+        </ul> -->
     </footer>
 
     <script type="text/javascript" src="./scripts/main.js"></script>
