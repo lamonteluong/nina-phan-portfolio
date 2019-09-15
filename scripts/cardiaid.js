@@ -25,17 +25,18 @@ btn[0].addEventListener('click', () => {
 });
 
 console.log(scriptBtn);
+console.log(btn);
 
-btn[2].addEventListener('click', () => {
+btn[1].addEventListener('click', () => {
     if (displayRef == false) {
         refInfo.style.display = 'block';
-        scriptBtn[4].style.display = 'none';
-        scriptBtn[5].style.display = 'inline-block';
+        scriptBtn[2].style.display = 'none';
+        scriptBtn[3].style.display = 'inline-block';
         displayRef = true;
     } else {
         refInfo.style.display = 'none';
-        scriptBtn[4].style.display = 'inline-block';
-        scriptBtn[5].style.display = 'none';
+        scriptBtn[2].style.display = 'inline-block';
+        scriptBtn[3].style.display = 'none';
         displayRef = false;
     }
 });

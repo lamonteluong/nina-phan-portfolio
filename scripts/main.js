@@ -70,6 +70,8 @@ window.onresize = () => {
         mainNav.style.display = 'flex';
     } else {
         mainNav.style.display = 'none';
+
+        backTopBtn.style.display = "none";
     }
 
     // Remove 'Hero' images on tablets and mobile
@@ -302,11 +304,18 @@ function checkImageClick() {
 
 /* Button to scroll back to top */
 window.onscroll = () => {
-    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
-        backTopBtn.style.display = "block";
+    if (document.body.clientWidth >= 768) {
+
+        if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+            backTopBtn.style.display = "block";
+        } else {
+            backTopBtn.style.display = "none";
+        }
+
     } else {
         backTopBtn.style.display = "none";
     }
+
 };
 backTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0; // For Safari

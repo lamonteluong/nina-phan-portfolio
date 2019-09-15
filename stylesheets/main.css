@@ -29,13 +29,6 @@ h4 {
     margin-bottom: 5em;
 }
 
-footer {
-    font-size: .5em;
-    color: #444444;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
-}
 
 /* Classes */
 .show {
@@ -58,7 +51,7 @@ footer {
     flex-direction: column;
     margin-left: 40px;
     margin-right: 43px;
-    margin-bottom: 20em;
+    /* margin-bottom: 20em; */
 }
 
 .navbar {
@@ -278,6 +271,7 @@ footer {
 
 #hero-container {
     padding-top: 8em;
+    margin-bottom: 20em;
 }
 #hero-container img {
     display: none;
@@ -301,6 +295,29 @@ footer {
     display: none;
 }
 
+.footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.footer img {
+    width: 60%;
+}
+
+.footer div {
+    display: inline-block;
+}
+.footer div:nth-of-type(1) {
+    vertical-align: middle;
+    padding-top: 8px;
+}
+
+
 /* Media queries */
 
 /* iPad/Tablets */
@@ -317,15 +334,10 @@ footer {
         margin-bottom: 4em;
         max-width: 650px;
     }
-    footer {
-        font-size: 1em;
-        /* width: 70%; */
-        margin: 10em auto 0s auto;
-    }
 
     .container {
-        width: 65%;
-        margin: 0 auto 25em auto;
+        width: 70%;
+        margin: 0 auto 0 auto;
     }
 
     .navbar {
@@ -434,6 +446,7 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         padding-top: 14em;
+        margin-bottom: 25em;
     }
 
     #hero-text {
@@ -449,10 +462,12 @@ footer {
 
     #back-top-btn {
         bottom: 5%;
-        right: 4.5em;
+        right: 1em;
     }
 
-    #copyright {
+    .footer {
+        font-size: 14px;
+        margin: 1em 0 4em 0;
     }
 
 }
@@ -502,6 +517,12 @@ footer {
     #flip-title {
         font-size: 40px;
     }
+
+    #back-top-btn {
+        right: 1.5em;
+    }
+
+    
 
 }
 
@@ -590,6 +611,21 @@ footer {
 
     #flip-images img {
         /* max-width: 600px; */
+    }
+
+    #back-top-btn {
+        right: 2.5em;
+    }
+
+    .footer {
+        font-size: 18px;
+        margin: 2em 0 4em 0;
+    }
+    .footer div:nth-of-type(1) {
+        margin-top: .7em;
+    }
+    .footer img {
+        width: 100%;
     }
 
 }
