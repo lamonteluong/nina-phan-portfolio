@@ -243,6 +243,30 @@ h4 {
     to {opacity: 1}
 }
 
+@-webkit-keyframes loadbar {
+    
+}
+@keyframes loadbar {
+    
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
 /* IDs */
 
 #view-work {
@@ -252,9 +276,23 @@ h4 {
     margin-right: 18px;
     border-bottom: 2px solid #DADADA;
 }
+
+#view-work:hover {
+    animation-name: loadbar;
+    -webkit-animation-name: loadbar;
+    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+    border-bottom: 2px solid #33B8A8;
+}
+
 #arrow-down {
     align-self: center;
     transform: scale(.8, .8);
+    display: block;
+    position: relative;
+}
+#arrow-down:hover {
+    animation: bounce 1s;
 }
 
 #back-top-btn {
@@ -300,18 +338,50 @@ h4 {
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
+    align-content: center;
 }
 
 .footer img {
     width: 60%;
+    max-width: 50px;
+    justify-self: flex-end;
 }
 
 .footer div {
-    display: inline-block;
+    /* display: inline-block; */
 }
 .footer div:nth-of-type(1) {
     vertical-align: middle;
     padding-top: 8px;
+}
+
+.contact-container {
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 20px;
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+.wave-link {
+    font-size: 12px;
+    background-color: #33B8A8;
+    border-radius: 10px;
+    color: white;
+    padding: 3px 9px;
+    margin: 0 0 10px 10px;
+    text-transform: uppercase;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.contact-container:hover .wave-link {
+    opacity: 1;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    transform: translateY(-4px);
 }
 
 

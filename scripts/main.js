@@ -28,7 +28,8 @@ let slides = document.querySelectorAll('.slide');
 let tabs = document.querySelectorAll('.next-img');
 
 hideSlides();
-changeImageCarousel();
+changeImageCarousel(); 
+mailLink();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
@@ -334,6 +335,13 @@ function checkImageClick() {
         }
     });
 
+}
+
+function mailLink() {
+    let link = document.querySelector(".contact-container");
+    link.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/ntp";
+    });
 }
 
 
