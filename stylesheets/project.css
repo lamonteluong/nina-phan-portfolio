@@ -204,6 +204,7 @@ ol li::before {
     text-decoration: none;
     font-size: 18px;
     margin-top: 3em;
+    background-color: white;
 }
 .section a {
     display: block;

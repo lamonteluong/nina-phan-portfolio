@@ -32,36 +32,67 @@ changeImageCarousel();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
+    
     if (textHighlight.length > 0) {
-        // NINA IMAGE
-        textHighlight[0].addEventListener('mouseenter', () => {
-            document.getElementById('nina-img').style.display = "block";
-            heroImage[0].style.display = "block";
-            if (document.getElementById('soundcloud-img').style.display == "block") {
-                document.getElementById('soundcloud-img').style.display = "none";
-            }
-        });
-        textHighlight[0].addEventListener('mouseleave', () => {
-            document.getElementById('nina-img').style.display = "none";
-        });
 
-        //BLUEPRINT IMAGE
-        textHighlight[2].addEventListener('mouseenter', () => {
-            document.getElementById('blueprint-img').style.display = "block";
-            heroImage[1].style.display = "block";
-            if (document.getElementById('soundcloud-img').style.display == "block") {
+        if (document.body.clientWidth >= 768) {
+            // NINA IMAGE
+            textHighlight[0].addEventListener('mouseenter', () => {
+                document.getElementById('nina-img').style.display = "block";
+                heroImage[0].style.display = "block";
                 document.getElementById('soundcloud-img').style.display = "none";
-            }
-        });
-        textHighlight[2].addEventListener('mouseleave', () => {
-            document.getElementById('blueprint-img').style.display = "none";
-        });
+            });
+            textHighlight[0].addEventListener('mouseleave', () => {
+                document.getElementById('nina-img').style.display = "none";
+            });
+    
+            //BLUEPRINT IMAGE
+            textHighlight[2].addEventListener('mouseenter', () => {
+                document.getElementById('blueprint-img').style.display = "block";
+                heroImage[1].style.display = "block";
+                document.getElementById('soundcloud-img').style.display = "none";
+            });
+            textHighlight[2].addEventListener('mouseleave', () => {
+                document.getElementById('blueprint-img').style.display = "none";
+            });
+    
+            //SOUNDCLOUD PLAYER
+            textHighlight[1].addEventListener('mouseenter', () => {
+                document.getElementById('soundcloud-img').style.display = "block";
+            });
+        } else {
+            textHighlight[0].addEventListener('click', () => {
+                window.location.href = "../pages/about.html";
+            });
 
-        //SOUNDCLOUD PLAYER
-        textHighlight[1].addEventListener('mouseenter', () => {
-            document.getElementById('soundcloud-img').style.display = "block";
-        });
+            // NINA IMAGE
+            textHighlight[0].addEventListener('mouseenter', () => {
+                document.getElementById('nina-img').style.display = "none";
+            });
+            textHighlight[0].addEventListener('mouseleave', () => {
+                document.getElementById('nina-img').style.display = "none";
+            });
+
+            //BLUEPRINT IMAGE
+            textHighlight[2].addEventListener('mouseenter', () => {
+                document.getElementById('blueprint-img').style.display = "none";
+            });
+            textHighlight[2].addEventListener('mouseleave', () => {
+                document.getElementById('blueprint-img').style.display = "none";
+            });
+
+            //SOUNDCLOUD PLAYER
+            textHighlight[1].addEventListener('mouseenter', () => {
+                document.getElementById('soundcloud-img').style.display = "none";
+            });
+            textHighlight[1].addEventListener('mouseleave', () => {
+                document.getElementById('soundcloud-img').style.display = "none";
+            });
+
+        }
+
     }
+
 }
 
 /* Display navbar links for Desktop size */
@@ -82,6 +113,7 @@ window.onresize = () => {
         });
         textHighlight[0].addEventListener('mouseleave', () => {
             document.getElementById('nina-img').style.display = "none";
+            document.getElementById('soundcloud-img').style.display = "none";
         });
 
         //BLUEPRINT IMAGE
@@ -90,6 +122,7 @@ window.onresize = () => {
         });
         textHighlight[2].addEventListener('mouseleave', () => {
             document.getElementById('blueprint-img').style.display = "none";
+            document.getElementById('soundcloud-img').style.display = "none";
         });
 
         //SOUNDCLOUD PLAYER
@@ -103,6 +136,9 @@ window.onresize = () => {
         });
         textHighlight[0].addEventListener('mouseleave', () => {
             document.getElementById('nina-img').style.display = "none";
+        });
+        textHighlight[0].addEventListener('click', () => {
+            window.location.href = "../pages/about.html";
         });
 
         //BLUEPRINT IMAGE
@@ -128,7 +164,6 @@ window.onresize = () => {
         -> resize mobile => need to double-click nav toggle */
 
 navbarToggle.addEventListener('click', () => {
-    //mainNav.classList.toggle('show');
     // TODO: Make position = absolute; create style class for mobile navbar view and toggle
     if (dropDown == false) {
         mainNav.style.display = 'block';
