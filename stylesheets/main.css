@@ -74,9 +74,6 @@ h4 {
     margin-left: 40px;
 }
 .navbar-toggle {
-    /* position: absolute;
-    top: 43px;
-    right: 40px; */
     cursor: pointer;
     display: inline-block;
     margin-right: 2em;

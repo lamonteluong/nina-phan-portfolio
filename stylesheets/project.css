@@ -460,17 +460,24 @@ td {
     height: 100%;
     width: 10%;
 }
+
 #explore-btn {
     color: black;
     text-decoration: none;
     font-size: 22px;
     font-weight: 200;
     text-align: center;
+    overflow-wrap: break-word;
 }
 #explore-btn span img {
     position: relative;
     height: 100%;
     width: 6%;
+}
+
+.flip-end-btn::before {
+    content: "\A"; 
+    white-space: pre;
 }
 
 #system-diagram {
@@ -516,7 +523,71 @@ td {
     border-top: 1px solid #DDDDDD;
 }
 
+/* About Section */
+#about-quote {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic; 
+    font-family: 'Lato', sans-serif;
+    color: #555555;
+    line-height: 175%;
+    margin: 2em 0;
+    border-left: 2px solid black;
+    padding-left: 1.5em;
+    max-width: 800px;
+}
 
+#about-links {
+    margin: 4em 0 12em 0;
+}
+
+#email-btn {
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px; 
+    margin-left: 1em;
+}
+#email-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.process-btn {
+    color: #33B8A8;
+    text-decoration: none;
+    background: none;
+    font-size: 16px;
+    line-height: 175%;
+    padding: 8px 5px;
+    text-align: center;
+    border: 1px solid #33B8A8;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+.process-btn:hover {
+    background-color: #33B8A8;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
 
 /* Media queries */
 
@@ -579,6 +650,13 @@ td {
     .product-container {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .process-btn {
+        width: 250px;
+        height: 68px;
+        font-size: 16px;
+        padding: .8em 2em;
     }
 
 
@@ -763,7 +841,7 @@ td {
 
     #back-index {
         font-size: 24px;
-        margin-right: 4em;
+        margin-right: 2em;
     }
 
     #explore-btn {
@@ -772,6 +850,13 @@ td {
 
     #explore-btn span img {
         width: 4%;
+    }
+
+    .flip-end-btn::before {
+        content: " "; 
+    }
+    .flip-end-btn::after {
+        content: " "; 
     }
 
     #system-diagram {
@@ -871,6 +956,10 @@ td {
         width: 70%;
     }
 
+    #about-quote {
+        font-size: 20px;
+    }
+
 }
 
 
@@ -899,6 +988,10 @@ td {
 
     .product-container div img {
         max-width: 580px;
+    }
+
+    .process-btn {
+        font-size: 22px;
     }
 
     .hero-container {
@@ -996,6 +1089,13 @@ td {
     }
     .footer img {
         width: 100%;
+    }
+
+    #about-quote {
+        font-size: 24px;
+    }
+    #about-links {
+        margin: 8em 0 24em 0;
     }
 
 }
