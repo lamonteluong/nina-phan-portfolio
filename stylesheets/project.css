@@ -125,6 +125,7 @@ h1 {
     vertical-align: baseline;
     padding-top: 52px;
     background-color: white;
+    margin-bottom: 5em;
 }
 .navbar div {
     display: inline-block;
@@ -830,7 +831,7 @@ td {
     }
 
     .section a {
-        font-size: 22px;
+        font-size: 18px;
         margin-top: 3em;
     }
 
@@ -909,7 +910,7 @@ td {
         max-width: 800px;
     }
     .num-list li {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 175%;
         margin: 2em 0;
     }
