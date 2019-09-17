@@ -188,9 +188,9 @@ h1 {
 .wide-img {
     width: 100%;
 }
-.wide-img:nth-of-type(1) {
+/* .wide-img:nth-of-type(1) {
     margin-bottom: 0;
-}
+} */
 
 .hero-container h1 {
     font-size: 32px;
@@ -925,8 +925,8 @@ td {
     }
     .grid-container p {
         font-family: roboto-regular, sans-serif;
-        font-size: 22px;
-        line-height: 175%;
+        font-size: 18px;
+        line-height: 150%;
     }
     .grid-container img {
         max-width: 370px;
@@ -1051,6 +1051,10 @@ td {
     .flip-posters img {
         max-width: 450px;
         margin-right: 1em;
+    }
+
+    .grid-container p {
+        line-height: 175%;
     }
 
 }
@@ -1207,7 +1211,7 @@ td {
         font-size: 22px;
     }
 
-    .findings-container div h4 {
+    .findings-container div h4, .grid-container p {
         font-size: 20px;
     }
     .findings-container div ul li {
@@ -1215,10 +1219,6 @@ td {
     }
 
     .bullet-list {
-        font-size: 22px;
-    }
-
-    .num-list li {
         font-size: 22px;
     }
 
