@@ -65,6 +65,10 @@ ol li::before {
     text-align: center;
 }
 
+#delivery-num {
+    font-size: 30px; 
+}
+
 h1 {
     font-family: playfair-reglar, serif;
 }
@@ -91,6 +95,10 @@ h1 {
     display: inline-block;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+
 .margin-2 {
     margin: 2em 0;
 }
@@ -110,42 +118,48 @@ h1 {
 }
 
 .navbar {
-    padding: 31px 0;
-    margin-bottom: 5em;
-    display: flex;
+    margin: auto;
+    width: inherit;
     flex-direction: row;
     justify-content: space-between;
-    overflow-x: hidden;
-    width: 100%;
+    vertical-align: baseline;
+    padding-top: 52px;
     background-color: white;
 }
+.navbar div {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.navbar div:nth-of-type(1) {
+    float: left;
+}
+.navbar div:nth-of-type(2) {
+    float: right;
+}
+
 .logo {
     display: inline-block;
     text-decoration: none;
-    color: #555555;
-    font-size: 18px;
+    color: black;
+    font-size: 22px;
     font-weight: 500;
-    margin-left: 40px;
 }
 .navbar-toggle {
-    /* position: absolute;
-    top: 43px;
-    right: 40px; */
     cursor: pointer;
     display: inline-block;
-    margin-right: 2em;
+    padding-top: 2px;
 }
 .main-nav {
     list-style-type: none;
     display: none;
-    margin-right: 40px;
 }
 .main-nav li {
     text-align: center;
     margin: 15px auto;
 }
 .nav-link {
-    font-family: 'Lato', sans-serif;
+    font-family: lato-light, sans-serif;
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
@@ -173,14 +187,16 @@ h1 {
 .wide-img {
     width: 100%;
 }
+.wide-img:nth-of-type(1) {
+    margin-bottom: 0;
+}
 
 .hero-container h1 {
     font-size: 32px;
     line-height: 135%;
     font-weight: 400;
     color: #1A1A1A;
-    margin-bottom: 1em;
-    font-family: serif;
+    margin-bottom: .5em;
 }
 .hero-subtitle {
     font-family: lato-light, sans-serif;
@@ -196,7 +212,7 @@ h1 {
 }
 
 .project-summary {
-    margin: 2em 0;
+    margin: 2em 0 2em 0;
 }
 
 .project-info p:nth-of-type(even) {
@@ -256,7 +272,7 @@ h1 {
     font-size: 28px;
     font-weight: 400;
     line-height: 175%;
-    color: #777777;
+    color: #266D65;
     font-family: roboto-regular, sans-serif;
     margin-bottom: 1.5em;
     text-transform: uppercase;
@@ -267,7 +283,7 @@ h1 {
     line-height: 175%;
     color: #777777;
     font-family: lato-regular, sans-serif;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 .section h4 {
     font-size: 18px;
@@ -327,7 +343,6 @@ h1 {
     width: 100%;
     background-color: #F5F5F5;
     display: flex;
-    /* padding: 3em 0; */
     margin: 2em 0;
 }
 
@@ -335,7 +350,7 @@ h1 {
     line-height: 150%;
 }
 .findings-container div {
-    margin: 2em 0;
+    margin: 4.2em 0;
 }
 .findings-container div:nth-of-type(1) {
     float: left;
@@ -366,7 +381,7 @@ h1 {
     margin: 1em 0;
 }
 .bullet-list ul li {
-    margin: .5em 0;
+    margin: 1em 0;
 }
 
 .frame-container {
@@ -425,7 +440,7 @@ td {
 }
 .product-container div img {
     max-width: 300px;
-    margin: 2em 0 2em 4em;
+    margin: 4em 0 2em 4em;
 }
 
 #hidden-metric {
@@ -511,7 +526,16 @@ td {
 #explore-btn span img {
     position: relative;
     height: 100%;
-    width: 6%;
+    width: 9%;
+}
+
+#back-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 1%;
+    right: 4.75em;
+    transform: scale(0.8, 0.8);
+    cursor: pointer;
 }
 
 .flip-end-btn::before {
@@ -668,20 +692,13 @@ td {
     }
 
     .navbar {
-        display: flex;
-        justify-content: space-between;
         padding-bottom: 0;
         margin-bottom: 6em;
         height: 89px;
         align-items: center;
     }
-    .logo {
-        margin-left: 17.5%;
-        margin-top: 10px;
-    }
     .main-nav {
         display: flex;
-        margin-right: 15%;
         flex-direction: row;
         justify-content: flex-end;
     }
@@ -718,6 +735,7 @@ td {
     .product-container {
         flex-direction: row;
         justify-content: space-around;
+        margin-top: 7em;
     }
 
     .process-btn {
@@ -725,6 +743,11 @@ td {
         height: 68px;
         font-size: 16px;
         padding: .8em 2em;
+    }
+
+    #back-top-btn {
+        bottom: 5%;
+        right: 1em;
     }
 
 
@@ -774,6 +797,9 @@ td {
     .hero-subtitle {
         font-size: 24px;
     }
+    .wrap-subtitle {
+        max-width: 500px;
+    }
 
     .section {
         /* margin-bottom: 10em; */
@@ -815,7 +841,7 @@ td {
         font-size: 22px;
         line-height: 175%;
         max-width: 850px;
-        margin-bottom: 8em;
+        margin-bottom: 4em;
     }
     #heuristic {
         margin-top: 6em;
@@ -845,12 +871,9 @@ td {
 
     .findings-container {
         width: 100%;
-        /* display: flex;
-        flex-direction: row;
-        justify-content: space-around; */
     }
    .findings-container div {
-       width: 40%;
+       width: 45%;
    }
    .findings-container div h4 {
        font-size: 20px;
@@ -861,7 +884,7 @@ td {
    .findings-container div ul li {
        font-size: 20px;
        line-height: 175%;
-       margin-bottom: 1.5em;
+       margin-bottom: .5em;
    }
    .findings-container div:nth-of-type(2) {
         float: right;
@@ -919,6 +942,11 @@ td {
     #back-index {
         font-size: 24px;
         margin-right: 2em;
+
+    }
+    #back-index span img {
+        width: 10%;
+        margin-right: 15px;
     }
 
     #explore-btn {
@@ -926,7 +954,8 @@ td {
     }
 
     #explore-btn span img {
-        width: 4%;
+        width: 8%;
+        margin-left: 1.2em;
     }
 
     .flip-end-btn::before {
@@ -942,8 +971,13 @@ td {
         justify-self: center;
     }
 
+    #delivery-list {
+        max-width: 650px;
+    }
+
+
     .bullet-list {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 175%;
         max-width: 800px;
         width: 100%;
@@ -983,10 +1017,6 @@ td {
         font-size: 18px;
     }
 
-    .bullet-list {
-        font-size: 18px;
-    }
-
     #end-container {
         margin-top: 10em;
     }
@@ -1018,12 +1048,17 @@ td {
         justify-content: space-between;
     }
     .flip-posters img {
-        max-width: 50%;
+        max-width: 450px;
+        margin-right: 1em;
     }
 
 }
 
 @media screen and (min-width: 1280px) {
+
+    .container {
+        max-width: 850px;
+    }
 
     table, th, td {
         font-size: 18px;
@@ -1041,13 +1076,57 @@ td {
         font-size: 20px;
     }
 
+    .flip-posters img {
+        max-width: 500px;
+    }
+
+    #back-top-btn {
+        right: 1.5em;
+    }
+
+    .sidebar-container {
+        position: fixed;
+        bottom: 40%;
+        left: 2%;
+        display: none;
+    }
+
+    .sidebar {
+        list-style: none;
+        line-height: 25px;
+    }
+
+    .sidebar li {
+        font-family: lato-light, sans-serif;
+        font-size: 16px;
+        line-height: 25px;
+        margin: 1.5em 0;
+        height: 25px;
+    }
+
+    .sidebar li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar-active {
+        font-family: lato-bold, sans-serif !important;
+        color: #555555;
+        border-left: 1px solid #4761A3;
+        padding-left: 10px;
+    }
+
 }
 
 
 @media screen and (min-width: 1325px) {
 
     .container {
-        max-width: 1325px;
+        max-width: 975px;
+    }
+
+    .flip-posters img {
+        max-width: 600px;
     }
     
 }
@@ -1056,7 +1135,7 @@ td {
 @media screen and (min-width: 1600px) {
 
     .container {
-        max-width: 1325px;
+        max-width: 1200px;
     }
 
     h1 {
@@ -1081,13 +1160,15 @@ td {
     }
     .hero-container h1 {
         font-size: 64px;
-        line-height: 135%;
-        margin-bottom: 1em;
     }
 
     .hero-subtitle {
         font-size: 32px;
         max-width: 750px;
+    }
+
+    .sidebar li {
+        font-size: 20px;
     }
 
     .flip-posters img {
@@ -1140,13 +1221,17 @@ td {
         font-size: 22px;
     }
 
+    #delivery-list {
+        max-width: 750px;
+    }
+
     #end-container {
         margin-top: 20em;
     }
 
     #back-index {
         font-size: 32px;
-        margin-right: 8em;
+        margin-right: 5em;
     }
 
     #explore-btn {
@@ -1154,7 +1239,7 @@ td {
     }
 
     #explore-btn span img {
-        width: 3%;
+        width: 8%;
     }
 
     .footer {
@@ -1173,6 +1258,26 @@ td {
     }
     #about-links {
         margin: 8em 0 24em 0;
+    }
+
+    #back-top-btn {
+        right: 3em;
+    }
+
+}
+
+@media screen and (min-width: 1725px) {
+
+    .container {
+        max-width: 1325px;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+
+    .sidebar-container {
+        left: 4%;
     }
 
 }

@@ -9,26 +9,34 @@
     <link rel="stylesheet" href="../stylesheets/project.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="../index.html" class="logo">np.</a>
-        <span class="navbar-toggle">
-            <img src="../assets/menu.png">
-        </span>
-        <ul class="main-nav">
-            <li>
-                <a href="../pages/about.html" class="nav-link">about</a>
-            </li>
-            <li>
-                <a href="#" class="nav-link">resume</a>
-            </li>
-        </ul>
-    </nav>
+
+    <div class="container">
+        <div class="navbar">
+            <div>
+                <a href="../index.html" class="logo">np.</a>
+            </div>
+    
+            <div>
+                <ul class="main-nav">
+                    <li>
+                        <a href="../pages/about.html" class="nav-link">about</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">resume</a>
+                    </li>
+                </ul>
+                <span class="navbar-toggle">
+                    <img src="../assets/menu.png">
+                </span>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
 
         <div class="hero-container">
             <h1>Bid Form</h1> <br>
-            <p class="hero-subtitle">Transforming bid submissions for vendors of the Ministry of Government and Consumer Services.</p>
+            <p class="hero-subtitle wrap-subtitle">Transforming bid submissions for vendors of the Ministry of Government and Consumer Services.</p>
         </div>
         <img class="wide-img" src="../assets/images/bidform/bidform-mockup-1.png">
 
@@ -49,23 +57,15 @@
                 <p class="teal">COMPANY</p> <br>
                 <p>Ontario Digital Service Lab</p>
             </div>  
+
+            <div id="back-top-btn">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle id="back-top-1" cx="20" cy="20" r="19.5" stroke="black"/>
+                    <path id="back-top-2" d="M20.4419 9.55806C20.1979 9.31398 19.8021 9.31398 19.5581 9.55806L15.5806 13.5355C15.3365 13.7796 15.3365 14.1753 15.5806 14.4194C15.8247 14.6635 16.2204 14.6635 16.4645 14.4194L20 10.8839L23.5355 14.4194C23.7796 14.6635 24.1753 14.6635 24.4194 14.4194C24.6635 14.1753 24.6635 13.7796 24.4194 13.5355L20.4419 9.55806ZM20.625 30L20.625 10H19.375L19.375 30H20.625Z" fill="black"/>
+                </svg>
+            </div>
+
         </div>
-            <!-- <div class="side-nav">
-                <ul>
-                    <li>
-                        <a href="#">overview</a>
-                    </li>
-                    <li>
-                        <a href="#">user research</a>
-                    </li>
-                    <li>
-                        <a href="#">solution</a>
-                    </li>
-                    <li>
-                        <a href="#">retrospect</a>
-                    </li>
-                </ul>
-            </div> -->
 
         <div class="section">
             <h2>Role</h2>
@@ -77,24 +77,51 @@
 
         <div class="section">
             <h2>Background</h2>
-            <p>
+            <p class="hideSideNav">
                 The Government of Ontario’s enterprise-wide Vendor of Record (VOR) Program provides goods and services acquired by government ministries. The Ministry of Government and Consumer Services (MGCS) establishes agreements through open bidding, qualifying vendors to provide goods or services for a defined period, on specified terms and conditions. The Ontario Shared Services (OSS) facilitates this bidding process for the MGCS. The OSS team had approached our team at the Ontario Digital Service Lab to collaborate in improving the bidding process for vendors. 
             </p>
         </div>
 
+        <!-- Sidebar Navigation -->
+        <div class="sidebar-container fade">
+
+            <ul class="sidebar">
+                <li>
+                    <a href="#problem-section">problem</a>
+                </li>
+                <li>
+                    <a href="#evaluative-section">evaluative research</a>
+                </li>
+                <li>
+                    <a href="#user-research-section">user research</a>
+                </li>
+                <li>
+                    <a href="#solution-section">solution</a>
+                </li>
+                <li>
+                    <a href="#retrospect-section">retrospect</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <a name="problem-section" id="problem-section"></a>
+
         <div class="section">
-            <h2>Problem</h2>
+            <h2 class="sidebar-jump">Problem</h2>
             <p>
                 The OSS has observed that the current PDF form is not meeting the needs of vendors to make bid submissions when they are out of the office and do not have access to a computer. As a common result, vendors lose out on jobs because they miss the submission deadlines, and government ministries potentially lose out on the most affordable quotes. 
             </p>
 
-            <div class="block-quote">
+            <div class="block-quote section-jump">
                 How might we improve the bid submission process for vendors based on their <strong>turnaround time</strong> and <strong>overall ease</strong> of submission?
             </div>
         </div>
 
+        <a name="evaluative-section" id="evaluative-section"></a>
+
         <div class="section">
-            <h2>Evaluative Research</h2>
+            <h2 class="sidebar-jump">Evaluative Research</h2>
             <h3>Original Form</h3>
             <p>
                 The original bidding process required the OSS to fill out the first four fields, lock it, and then send it to each vendor via email along with a specification document detailing the service requested. Vendors must fill out the form on desktop and email the completed form to the OSS before the quote deadline. 
@@ -177,8 +204,10 @@
 
     <div class="container">
 
+            <a name="user-research-section" id="user-research-section"></a>
+
         <div class="section">
-            <h2>User Research</h2>
+            <h2 class="sidebar-jump">User Research</h2>
             <p>
                 We recruited <strong>eight vendors</strong> to conduct research sessions for the duration of our two week sprint. <br><br>
                 Each research session started off with a user interview to understand how vendors currently submit quotes to other public and private organizations. The user interview then led into a usability test of the prototype we had designed that week. At the end of the session, we asked for their positive and negative feedback regarding our prototype, and how our prototype compared to the original PDF bid form. 
@@ -292,10 +321,10 @@
             <div>
                 <ol class="num-list">
                     <li>
-                        <!-- <span class="teal-num">1</span> -->An <strong>email template</strong> that requires the vendor to <strong>reply in-line</strong> to questions.
+                        An <strong>email template</strong> that requires the vendor to <strong>reply in-line</strong> to questions.
                     </li>
                     <li>
-                        <!-- <span class="teal-num">2</span> -->A webform built in the <strong>form builder</strong> of Ontario.ca's Drupal content management system.
+                        A webform built in the <strong>form builder</strong> of Ontario.ca's Drupal content management system.
                     </li>
                 </ol>
             </div>
@@ -439,8 +468,10 @@
             </p>
         </div>
 
+        <a name="solution-section" id="solution-section"></a>
+
         <div class="section">
-            <h2>Solution</h2>
+            <h2 class="sidebar-jump">Solution</h2>
             <p>
                 Taking into account the positive and negative feedback from all three of our prototypes, we designed an optimal high fidelity mockup of the webform seen in week 1 for the OSS team. This method is user friendly, multi-platform accessible, allows for confirmation emails and detects form field errors. This design was passed onto our development team to prototype. 
             </p>
@@ -481,8 +512,10 @@
             </p>
         </div>
 
+        <a name="retrospect-section" id="retrospect-section"></a>
+
         <div class="section">
-            <h2>Retrospect</h2>
+            <h2 class="sidebar-jump">Retrospect</h2>
             <p>These are my main takaways during the span of this project :</p>
             <ol class="num-list">
                 <li>
@@ -503,7 +536,7 @@
             </a>
 
             <a id="explore-btn" href="./cardiaid.html">
-                Explore <strong>Cardiaid</strong> <span><img src="../assets/symbols/black-arrow-right.png"></span>
+                Explore <strong>Cardiaid</strong> <span><img src="../assets/symbols/black-arrow-right-2.png"></span>
             </a>
         </div>
 

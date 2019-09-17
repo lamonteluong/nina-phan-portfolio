@@ -199,7 +199,7 @@ navLinks.forEach((link) => {
 /* 'view my work' scroll down to projects */
 /* TODO: animate to make smooth */
 viewWork.addEventListener('click', () => {
-    document.querySelector('.project').scrollIntoView();
+    document.querySelector('#project-section').scrollIntoView();
 });
 
 // Rotate image carousel every 3 seconds

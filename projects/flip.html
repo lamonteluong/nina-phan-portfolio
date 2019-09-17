@@ -10,20 +10,27 @@
 </head>
 <body>
     
-    <nav class="navbar">
-        <a href="../index.html" class="logo">np.</a>
-        <span class="navbar-toggle">
-            <img src="../assets/menu.png">
-        </span>
-        <ul class="main-nav">
-            <li>
-                <a href="../pages/about.html" class="nav-link">about</a>
-            </li>
-            <li>
-                <a href="#" class="nav-link">resume</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="container">
+        <div class="navbar">
+            <div>
+                <a href="../index.html" class="logo">np.</a>
+            </div>
+    
+            <div>
+                <ul class="main-nav">
+                    <li>
+                        <a href="../pages/about.html" class="nav-link">about</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">resume</a>
+                    </li>
+                </ul>
+                <span class="navbar-toggle">
+                    <img src="../assets/menu.png">
+                </span>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
 
@@ -57,6 +64,13 @@
             </div>
         </div>
 
+        <div id="back-top-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle id="back-top-1" cx="20" cy="20" r="19.5" stroke="black"/>
+                <path id="back-top-2" d="M20.4419 9.55806C20.1979 9.31398 19.8021 9.31398 19.5581 9.55806L15.5806 13.5355C15.3365 13.7796 15.3365 14.1753 15.5806 14.4194C15.8247 14.6635 16.2204 14.6635 16.4645 14.4194L20 10.8839L23.5355 14.4194C23.7796 14.6635 24.1753 14.6635 24.4194 14.4194C24.6635 14.1753 24.6635 13.7796 24.4194 13.5355L20.4419 9.55806ZM20.625 30L20.625 10H19.375L19.375 30H20.625Z" fill="black"/>
+            </svg>
+        </div>
+
         <div class="section">
             <h2>Role</h2>
             <p>
@@ -77,6 +91,8 @@
                 <img src="../assets/images/flip/mip-notice-2.png" class="wide-img">
             </div>
 
+            <a class="hideSideNav"></a>
+
             <p>
                 Once a MIP has been attended, the litigant is provided a certificate of completion, which the court files in the continuing record. <br><br>
                 The lack of a provincially accepted method for delivering MIPs off-site presents an issue for clients who may not be able to attend in-person, due to injuries, travel restriction or childcare issues.
@@ -84,9 +100,35 @@
 
         </div>
 
+
+        <!-- Sidebar Navigation -->
+        <div class="sidebar-container fade">
+
+            <ul class="sidebar">
+                <li>
+                    <a href="#problem-section">problem</a>
+                </li>
+                <li>
+                    <a href="#field-research-section">field research</a>
+                </li>
+                <li>
+                    <a href="#user-research-section">user research</a>
+                </li>
+                <li>
+                    <a href="#solution-section">solution</a>
+                </li>
+                <li>
+                    <a href="#retrospect-section">retrospect</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <a name="problem-section" id="problem-section"></a>
+
         <div class="section">
 
-            <h2>Problem</h2>
+            <h2 class="sidebar-jump">Problem</h2>
             <p>
                 We have observed that MIP isn’t meeting the public’s need for early, convenient and multi-channel access to user-friendly information about the family justice system in Ontario, which is causing people to spend too much time and resources navigating the legal system. <br>
             </p>
@@ -97,9 +139,11 @@
 
         </div>
 
+        <a name="field-research-section" id="field-research-section"></a>
+
         <div class="section">
             <h2>Field Research</h2>
-            <p>
+            <p class="sidebar-jump">
                 I attended a Mandatory Information Program (MIP) session at the Waterloo Region Courthouse to observe the oral and visual delivery of the program, as well as its content design. There were <strong>10 attendees</strong>. 
             </p>
 
@@ -167,7 +211,7 @@
                     <li>
                         <strong>Digital channel for the program</strong>. As a team, we had sketching sessions together to start the ideation process. With an idea of features we wanted to implement, we started doing research into existing learning management systems.
                     </li>
-                    <li>
+                    <li class="section-jump">
                         <strong>Integrating the digital alternative with the existing court system </strong>. We looked at the entire journey a ligitant would have to go through to receive certificate of completion for the MIP, so we could connect the in-person experience of receiving the notice to the digital alternative. 
                     </li>
                 </ol>
@@ -175,10 +219,13 @@
 
         </div>
 
-        <div class="section">
-            <h2>User Research</h2>
+        <a name="user-research-section" id="user-research-section"></a>
 
-            <p>
+        <div class="section">
+
+            <h2 class="sidebar-jump">User Research</h2>
+
+            <p >
                 We designed <strong>recruitment posters</strong> for the Ministry of the Attorney General to post in the Family Law Information Centres in <strong>courthouses</strong> across Ontario. <br><br>
                 Government had a timely approval process around hosting surveys. Instead, we directed them to email us, and we responded with the survey questions. 
             </p>
@@ -505,6 +552,9 @@
                     <li>
                         Iteration of the Family Law Information Program notice is visually appealing and highlights important information effectively
                     </li>
+                    <li class="section-jump">
+                        Users navigated through this prototype with ease, expressing greater satisfaction with this prototype as opposed to the current in-person MIP and existing online resources
+                    </li>
                 </ul>
             </div>
 
@@ -523,11 +573,13 @@
         </div>
     </div>
 
+    <a name="solution-section" id="solution-section"></a>
+
     <div class="container">
 
         <div class="section">
 
-            <h2 class="margin-8-top">Solution</h2>
+            <h2 class="margin-8-top sidebar-jump">Solution</h2>
             <p>
                 At the end of the 6 week sprint, we gave a presentation to the executive team at the Ministry of the Attorney General to provide our <strong>three-part recommendation</strong> as guidance in moving forward with this project.
             </p>
@@ -571,10 +623,10 @@
 
         <div class="section">
 
-            <h3 class="teal-num">2</h3>
+            <h3 id="delivery-num" class="teal-num">2</h3>
             <h3 id="teal-delivery" class="inline">Delivery for the Mandated Program</h3>
 
-            <div class="bullet-list">
+            <div id="delivery-list" class="bullet-list">
                 <ul>
                     <li>
                         Evaluate the cost and timelines of custom development (e.g. on ontario.ca) versus acquiring software.
@@ -582,7 +634,7 @@
                     <li>
                         Secure a product manager who is technically knowledgeable to prioritize the features required for custom development.
                     </li>
-                    <li>
+                    <li class="section-jump">
                         Research eLearning platforms that are designed for offering single courses for a better user experience.
                     </li>
                 </ul>
@@ -590,9 +642,11 @@
 
         </div>
 
+        <a name="retrospect-section" id="retrospect-section"></a>
+
         <div class="section">
 
-            <h2>Retrospect</h2>
+            <h2 class="sidebar-jump">Retrospect</h2>
 
             <div>
                 <ol class="num-list">
@@ -602,7 +656,7 @@
                     <li>
                         We put a lot of effort into recruitment with anticipation that participants would be eager to sign up. When designing in a sensitive domain, such as family law, I think reaching out to family, friends and colleagues garners more guarantee for participation. The lengthy email exchange that replaced the initial plan to host a survey online may have also deterred the public from following through with signing up.  It is important to doublecheck with the team about mandatory approval processes that may exist.
                     </li>
-                    <li>
+                    <li class="section-jump">
                         Content design was a challenge for me on this project. I was unfamiliar with law and had to get up to speed very quickly. With this project, I realized that content design is one of my weak points as a designer. I am working to improve in this aspect as content heavily impacts the effectiveness of user-centred design.
                     </li>
                 </ol>
@@ -616,7 +670,7 @@
             </a>
 
             <a id="explore-btn" href="./bidform.html">
-                Explore <strong>Bid Forms</strong> <span><img src="../assets/symbols/black-arrow-right.png"></span>
+                Explore <strong>Bid Forms</strong> <span><img src="../assets/symbols/black-arrow-right-2.png"></span>
             </a>
         </div>
 
@@ -641,6 +695,6 @@
             
     </div>
 
-
+    <script type="text/javascript" src="../scripts/flip.js"></script>
 </body>
 </html>
