@@ -4,6 +4,7 @@ let displayScript2 = false;
 let userScript1 = document.getElementById('script1');
 let userScript2 = document.getElementById('script2');
 let scriptBtn = document.querySelectorAll('.script-btn');
+let backTopBtn = document.getElementById('back-top-btn');
 
 let sidebarWrapper = document.querySelector(".sidebar-container");
 let sidebar = document.querySelectorAll(".sidebar li");
@@ -18,6 +19,18 @@ let evaluativeSection = document.getElementById('evaluative-section');
 let userSection = document.getElementById('user-research-section');
 let solutionSection = document.getElementById('solution-section');
 let retrospectSection = document.getElementById('retrospect-section');
+
+let navbar = document.querySelector('.navbar');
+let mainNav = document.querySelectorAll('.main-nav');
+let navOverlay = document.querySelector('.main-nav-container');
+let navbarToggle = document.querySelector('.navbar-toggle');
+let closeBtn = document.getElementById('close-btn');
+let navLinks = document.querySelectorAll('.nav-link');
+let logo = document.querySelector('.logo');
+let dropDown = false;
+
+waveLink();
+mobileWaveLink();
 
 scriptBtn[1].style.display = 'none';
 scriptBtn[3].style.display = 'none';
@@ -52,12 +65,14 @@ btn[1].addEventListener('click', () => {
 });
 
 
-let backTopBtn = document.getElementById('back-top-btn');
-
 /* Button to scroll back to top */
 window.onscroll = () => {
 
-    displaySideNav();
+    if (document.body.clientWidth >= 1280) {
+        displaySideNav();
+    } else {
+        sidebarWrapper.style.display = "none";
+    }
 
     if (document.body.clientWidth >= 768) {
 
@@ -72,6 +87,69 @@ window.onscroll = () => {
     }
 
 };
+
+window.onresize = () => {
+
+    if (document.body.clientWidth >= 768) {
+        mainNav[0].style.display = 'flex';
+        navbarToggle.style.display = 'none';
+    } else {
+        mainNav[0].style.display = 'none';
+        navbarToggle.style.display = 'inline';
+        backTopBtn.style.display = "none";
+    }
+    
+}
+
+navbarToggle.addEventListener('click', () => {
+    if (dropDown == false) {
+        navOverlay.style.display = 'block';
+        mainNav[1].style.display = 'block';
+        navbarToggle.style.display = 'none';
+        closeBtn.style.display = 'inline';
+        dropDown = true;
+    } else {
+        navOverlay.style.display = 'none';
+        dropDown = false;
+    }
+});
+
+closeBtn.addEventListener('click', () => {
+    if (dropDown == true) {
+        navOverlay.style.display = 'none';
+        mainNav[1].style.display = 'none';
+        navbarToggle.style.display = 'inline';
+        dropDown = false;
+    } 
+});
+
+/* Change navbar link colour:hover based on the current theme */
+navLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => {
+        link.style.color = '#33B8A8';
+    });
+    link.addEventListener('mouseleave', () => {
+        if (navOverlay.style.display == "block") {
+            link.style.color = 'white';
+        } else {
+            link.style.color = 'black';
+        }
+    });
+});
+
+function waveLink() {
+    let link = document.querySelector(".contact-container");
+    link.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/ntp";
+    });
+}
+
+function mobileWaveLink() {
+    let link = document.getElementById("wave-btn");
+    link.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/ntp";
+    });
+}
 
 backTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0; // For Safari
@@ -174,7 +252,6 @@ function displaySideNav() {
 function sideNavScroll() {
     // Problem Section
     if (isInViewport(section[0])) {
-        sidebarWrapper.style.display = "block";
         sidebar[1].classList.remove('sidebar-active');
         sidebar[0].classList.add('sidebar-active');
     } 

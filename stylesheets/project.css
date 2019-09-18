@@ -128,7 +128,7 @@ h1 {
     margin-bottom: 5em;
 }
 .navbar div {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: baseline;
 }
 
@@ -137,6 +137,42 @@ h1 {
 }
 .navbar div:nth-of-type(2) {
     float: right;
+}
+
+#close-btn {
+    position: relative;
+    z-index: 1;
+    top: 45px;
+    right: 2.5em;
+    cursor: pointer;
+}
+
+#wave-btn {
+    position: relative;
+    z-index: 1;
+    top: 20em;
+    right: 3em;
+    cursor: pointer;
+}
+
+.main-nav-container {
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(34, 34, 34, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; 
+    display: none;
+    align-content: right;
+    text-align: right;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.3s;
+    animation-name: fade;
+    animation-duration: 0.3s;
 }
 
 .logo {
@@ -148,25 +184,32 @@ h1 {
 }
 .navbar-toggle {
     cursor: pointer;
-    display: inline-block;
+    display: inline;
     padding-top: 2px;
+    float: right;
 }
 .main-nav {
     list-style-type: none;
     display: none;
+    position: relative;
+    top: 20%;
+    right: 12%;
+    width: inherit;
+    max-width: inherit;
 }
 .main-nav li {
-    text-align: center;
-    margin: 15px auto;
+    text-align: right;
+    margin: 2em auto;
+    display: block;
+    transition: 0.3s;
 }
 .nav-link {
-    font-family: lato-light, sans-serif;
-    font-size: 20px;
-    font-weight: 300;
+    font-family: lato-bold, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
     text-decoration: none;
     padding-bottom: 10px;
-    color: black;
-    border-bottom: 3px solid #EEEEEE;
+    color: white;
 }
 .nav-link:hover {
     color: #33B8A8;
@@ -188,9 +231,10 @@ h1 {
 .wide-img {
     width: 100%;
 }
-/* .wide-img:nth-of-type(1) {
-    margin-bottom: 0;
-} */
+
+.sidebar-container {
+    display: none;
+}
 
 .hero-container h1 {
     font-size: 32px;
@@ -692,21 +736,34 @@ td {
         margin: auto;
     }
 
+    .main-nav-container {
+        display: none;
+    }
+
     .navbar {
         padding-bottom: 0;
         margin-bottom: 6em;
         height: 89px;
         align-items: center;
     }
-    .main-nav {
+    .main-nav:nth-of-type(1) {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        position: relative;
     }
     .main-nav li {
+        text-align: center;
         margin: 0;
     }
     .nav-link {
+        font-family: lato-light, sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid #EEEEEE;
         margin-left: 63px;
     }
     .navbar-toggle {
@@ -1093,7 +1150,6 @@ td {
         position: fixed;
         bottom: 40%;
         left: 2%;
-        display: none;
     }
 
     .sidebar {
@@ -1153,6 +1209,10 @@ td {
 
     .product-container div img {
         max-width: 580px;
+    }
+
+    .navbar {
+        margin-bottom: 11em;
     }
 
     .process-btn {

@@ -99,7 +99,7 @@ p {
     background-color: white;
 }
 .navbar div {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: baseline;
 }
 
@@ -111,7 +111,7 @@ p {
 }
 
 .logo {
-    display: inline-block;
+    display: inline;
     text-decoration: none;
     color: black;
     font-size: 22px;
@@ -119,25 +119,69 @@ p {
 }
 .navbar-toggle {
     cursor: pointer;
-    display: inline-block;
+    display: inline;
     padding-top: 2px;
+    float: right;
 }
+
+#close-btn {
+    position: relative;
+    z-index: 1;
+    top: 45px;
+    right: 2.5em;
+    cursor: pointer;
+}
+
+#wave-btn {
+    position: relative;
+    z-index: 1;
+    top: 20em;
+    right: 3em;
+    cursor: pointer;
+}
+
+.main-nav-container {
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(34, 34, 34, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; 
+    display: none;
+    align-content: right;
+    text-align: right;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.3s;
+    animation-name: fade;
+    animation-duration: 0.3s;
+}
+
 .main-nav {
     list-style-type: none;
     display: none;
+    position: relative;
+    top: 20%;
+    right: 12%;
+    width: inherit;
+    max-width: inherit;
 }
 .main-nav li {
-    text-align: center;
-    margin: 15px auto;
+    text-align: right;
+    margin: 2em auto;
+    display: block;
+    transition: 0.3s;
 }
 .nav-link {
-    font-family: lato-light, sans-serif;
-    font-size: 20px;
-    font-weight: 300;
+    font-family: lato-bold, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
     text-decoration: none;
     padding-bottom: 10px;
-    color: black;
-    border-bottom: 3px solid #EEEEEE;
+    color: white;
 }
 .nav-link:hover {
     color: #33B8A8;
@@ -235,12 +279,13 @@ p {
     margin-bottom: 26px;
 }
 .process-btn {
+    font-family: lato-regular, sans-serif;
     color: #33B8A8;
     text-decoration: none;
     background: none;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 175%;
-    padding: 8px 5px;
+    padding: 10px 40px;
     text-align: center;
     border: 1px solid #33B8A8;
     border-radius: 5px;
@@ -334,7 +379,7 @@ p {
 }
 
 #hero-container {
-    padding-top: 8em;
+    padding-top: 10em;
     margin-bottom: 20em;
 }
 #hero-container img {
@@ -420,7 +465,7 @@ p {
 
     h1 {
         font-size: 36px;
-        max-width: 700px;
+        max-width: 450px;
         margin: 0;
         line-height: 175%;
     }
@@ -435,21 +480,34 @@ p {
         margin: 0 auto 0 auto;
     }
 
+    .main-nav-container {
+        display: none;
+    }
+
     .navbar {
         padding-bottom: 0;
         margin-bottom: 6em;
         height: 89px;
         align-items: center;
     }
-    .main-nav {
+    .main-nav:nth-of-type(1) {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        position: relative;
     }
     .main-nav li {
+        text-align: center;
         margin: 0;
     }
     .nav-link {
+        font-family: lato-light, sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid #EEEEEE;
         margin-left: 63px;
     }
     .navbar-toggle {
@@ -493,10 +551,10 @@ p {
         margin-top: 5em;
     }
     .project-skill {
-        font-size: 15px;
+        font-size: 18px;
     }
     .project-name {
-        margin: 38px 0;
+        margin: .5em 0;
     }
     .project-desc {
         font-size: 15px;
@@ -569,9 +627,9 @@ p {
         margin-bottom: 22px;
     }
 
-    #soundcloud-img {
+    /* #soundcloud-img {
         max-width: 300px;
-    }
+    } */
 
     .project {
         flex-direction: row;
@@ -579,9 +637,14 @@ p {
         align-content: center;
     }
 
+    .project-content {
+        align-self: center;
+    }
+
     .project img {
         width: 500px;
         height: auto;
+        margin: 0;
     }
 
     .project-name {
@@ -605,6 +668,18 @@ p {
         right: 1.5em;
     }
 
+    #soundcloud-img iframe {
+        max-width: 350px;
+        max-height: 350px;
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .container {
+        max-width: 900px;
+    }
+
 }
 
 @media screen and (max-height: 720px) {
@@ -622,12 +697,12 @@ p {
 @media screen and (min-width: 1325px) {
 
     .container {
-        max-width: 1325px;
+        max-width: 900px;
     }
 
-    #soundcloud-img {
+    /* #soundcloud-img iframe {
         max-width: 350px;
-    }
+    } */
 
 }
 
@@ -636,12 +711,17 @@ p {
 /* Widescreen desktops */
 @media screen and (min-width: 1600px) {
 
+    .container {
+        max-width: 1325px;
+    }
+
     .margin-right-10 {
         margin-right: 13em;
     }
 
     h1 {
         font-size: 3.5rem;
+        max-width: 700px;
     }
 
     #view-work {

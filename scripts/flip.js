@@ -13,14 +13,29 @@ let userSection = document.getElementById('user-research-section');
 let solutionSection = document.getElementById('solution-section');
 let retrospectSection = document.getElementById('retrospect-section');
 
+let navbar = document.querySelector('.navbar');
+let mainNav = document.querySelectorAll('.main-nav');
+let navOverlay = document.querySelector('.main-nav-container');
+let navbarToggle = document.querySelector('.navbar-toggle');
+let closeBtn = document.getElementById('close-btn');
+let navLinks = document.querySelectorAll('.nav-link');
+let logo = document.querySelector('.logo');
+let dropDown = false;
+
+waveLink();
+mobileWaveLink();
 
 /* Button to scroll back to top */
 window.onscroll = () => {
 
-    displaySideNav();
+    if (document.body.clientWidth >= 1280) {
+        displaySideNav();
+    } else {
+        sidebarWrapper.style.display = "none";
+    }
+
 
     if (document.body.clientWidth >= 768) {
-
         if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
             backTopBtn.style.display = "block";
         } else {
@@ -32,6 +47,69 @@ window.onscroll = () => {
     }
 
 };
+
+window.onresize = () => {
+
+    if (document.body.clientWidth >= 768) {
+        mainNav[0].style.display = 'flex';
+        navbarToggle.style.display = 'none';
+    } else {
+        mainNav[0].style.display = 'none';
+        navbarToggle.style.display = 'inline';
+        backTopBtn.style.display = "none";
+    }
+    
+}
+
+navbarToggle.addEventListener('click', () => {
+    if (dropDown == false) {
+        navOverlay.style.display = 'block';
+        mainNav[1].style.display = 'block';
+        navbarToggle.style.display = 'none';
+        closeBtn.style.display = 'inline';
+        dropDown = true;
+    } else {
+        navOverlay.style.display = 'none';
+        dropDown = false;
+    }
+});
+
+closeBtn.addEventListener('click', () => {
+    if (dropDown == true) {
+        navOverlay.style.display = 'none';
+        mainNav[1].style.display = 'none';
+        navbarToggle.style.display = 'inline';
+        dropDown = false;
+    } 
+});
+
+/* Change navbar link colour:hover based on the current theme */
+navLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => {
+        link.style.color = '#33B8A8';
+    });
+    link.addEventListener('mouseleave', () => {
+        if (navOverlay.style.display == "block") {
+            link.style.color = 'white';
+        } else {
+            link.style.color = 'black';
+        }
+    });
+});
+
+function waveLink() {
+    let link = document.querySelector(".contact-container");
+    link.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/ntp";
+    });
+}
+
+function mobileWaveLink() {
+    let link = document.getElementById("wave-btn");
+    link.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/ntp";
+    });
+}
 
 backTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0; // For Safari
@@ -50,7 +128,7 @@ let isInViewport = function(elem) {
 
 
 window.onload = () => {
-
+    
     displaySideNav();
 
 }
@@ -104,6 +182,8 @@ function activeSideNav(num) {
 
 }
 
+
+
 function displaySideNav() {
 
     if (window.pageYOffset < hideSideNav.offsetTop) {
@@ -111,13 +191,32 @@ function displaySideNav() {
     } else {
         sidebarWrapper.style.display = "block";
     }
-
+    
+    
+    if (window.pageYOffset >= problemSection.offsetTop && window.pageYOffset < section[0].offsetTop) {
+        activeSideNav(0);
+    }
+    
+    if (window.pageYOffset >= section[1].offsetTop && window.pageYOffset < section[2].offsetTop) {
+        activeSideNav(1);
+    }
+    if (window.pageYOffset >= section[2].offsetTop && window.pageYOffset < section[3].offsetTop) {
+        activeSideNav(2);
+    }
+    if (window.pageYOffset >= section[3].offsetTop && window.pageYOffset < section[4].offsetTop) {
+        activeSideNav(3);
+    }
+    if (window.pageYOffset >= section[4].offsetTop) {
+        activeSideNav(4);
+    }
+    
 }
+
 
 function sideNavScroll() {
     // Problem Section
     if (isInViewport(section[0])) {
-        sidebarWrapper.style.display = "block";
+        // sidebarWrapper.style.display = "block";
         sidebar[1].classList.remove('sidebar-active');
         sidebar[0].classList.add('sidebar-active');
     } else {

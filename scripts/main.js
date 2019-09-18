@@ -1,6 +1,8 @@
 let navbar = document.querySelector('.navbar');
-let mainNav = document.querySelector('.main-nav');
+let mainNav = document.querySelectorAll('.main-nav');
+let navOverlay = document.querySelector('.main-nav-container');
 let navbarToggle = document.querySelector('.navbar-toggle');
+let closeBtn = document.getElementById('close-btn');
 let navLinks = document.querySelectorAll('.nav-link');
 let logo = document.querySelector('.logo');
 let dropDown = false;
@@ -29,7 +31,8 @@ let tabs = document.querySelectorAll('.next-img');
 
 hideSlides();
 changeImageCarousel(); 
-mailLink();
+waveLink();
+mobileWaveLink();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
@@ -99,10 +102,11 @@ window.onload = () => {
 /* Display navbar links for Desktop size */
 window.onresize = () => {
     if (document.body.clientWidth >= 768) {
-        mainNav.style.display = 'flex';
+        mainNav[0].style.display = 'flex';
+        navbarToggle.style.display = 'none';
     } else {
-        mainNav.style.display = 'none';
-
+        mainNav[0].style.display = 'none';
+        navbarToggle.style.display = 'inline';
         backTopBtn.style.display = "none";
     }
 
@@ -161,18 +165,28 @@ window.onresize = () => {
     } 
 
 }
-/* FIXME: Desktop resize to mobile -> open dropdown -> resize desktop
-        -> resize mobile => need to double-click nav toggle */
+
 
 navbarToggle.addEventListener('click', () => {
-    // TODO: Make position = absolute; create style class for mobile navbar view and toggle
     if (dropDown == false) {
-        mainNav.style.display = 'block';
+        navOverlay.style.display = 'block';
+        mainNav[1].style.display = 'block';
+        navbarToggle.style.display = 'none';
+        closeBtn.style.display = 'inline';
         dropDown = true;
     } else {
-        mainNav.style.display = 'none';
+        navOverlay.style.display = 'none';
         dropDown = false;
     }
+});
+
+closeBtn.addEventListener('click', () => {
+    if (dropDown == true) {
+        navOverlay.style.display = 'none';
+        mainNav[1].style.display = 'none';
+        navbarToggle.style.display = 'inline';
+        dropDown = false;
+    } 
 });
 
 /* Toggle for Light/Dark Mode */
@@ -187,7 +201,7 @@ navLinks.forEach((link) => {
         link.style.color = '#33B8A8';
     });
     link.addEventListener('mouseleave', () => {
-        if (darkMode == true) {
+        if (darkMode == true || navOverlay.style.display == "block") {
             link.style.color = 'white';
         } else {
             link.style.color = 'black';
@@ -211,7 +225,6 @@ function changeImageCarousel() {
         let i = 0;
         for (i = 0; i < 8; i++) {
             if (slides[i].style.display == "block") {
-                console.log(i);
                 // slides[i].style.display = "none";
             }
         }
@@ -337,8 +350,15 @@ function checkImageClick() {
 
 }
 
-function mailLink() {
+function waveLink() {
     let link = document.querySelector(".contact-container");
+    link.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/ntp";
+    });
+}
+
+function mobileWaveLink() {
+    let link = document.getElementById("wave-btn");
     link.addEventListener('click', () => {
         window.location.href = "https://www.linkedin.com/in/ntp";
     });
