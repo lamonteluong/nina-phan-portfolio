@@ -28,14 +28,14 @@ mobileWaveLink();
 /* Button to scroll back to top */
 window.onscroll = () => {
 
-    if (document.body.clientWidth >= 1280) {
+    if (document.body.clientWidth >= 1280 || window.innerWidth >= 1280) {
         displaySideNav();
     } else {
         sidebarWrapper.style.display = "none";
     }
 
 
-    if (document.body.clientWidth >= 768) {
+    if (document.body.clientWidth >= 768 || window.innerWidth >= 768) {
         if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
             backTopBtn.style.display = "block";
         } else {
@@ -50,7 +50,7 @@ window.onscroll = () => {
 
 window.onresize = () => {
 
-    if (document.body.clientWidth >= 768) {
+    if (document.body.clientWidth >= 768 || window.innerWidth >= 768) {
         mainNav[0].style.display = 'flex';
         navbarToggle.style.display = 'none';
     } else {
@@ -58,7 +58,7 @@ window.onresize = () => {
         navbarToggle.style.display = 'inline';
         backTopBtn.style.display = "none";
     }
-    
+
 }
 
 navbarToggle.addEventListener('click', () => {
@@ -128,8 +128,12 @@ let isInViewport = function(elem) {
 
 
 window.onload = () => {
-    
-    displaySideNav();
+
+    if (window.innerWidth >= 1280) {
+        displaySideNav();
+    } else {
+        sidebarWrapper.style.display = "none";
+    }
 
 }
 
@@ -183,9 +187,7 @@ function activeSideNav(num) {
 }
 
 
-
 function displaySideNav() {
-
     if (window.pageYOffset < hideSideNav.offsetTop) {
         sidebarWrapper.style.display = "none";
     } else {

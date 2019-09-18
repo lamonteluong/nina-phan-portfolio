@@ -17,6 +17,8 @@ let arrowDown = document.getElementById('arrow-down');
 
 let textHighlight = document.querySelectorAll('.text-highlight');
 let heroImage = document.querySelectorAll('.hero-img');
+let guitarText = document.getElementById('guitar-text');
+let inclusiveText = document.getElementById('inclusive-text');
 
 let backTopBtn = document.getElementById('back-top-btn');
 let backTop1 = document.getElementById('back-top-1');
@@ -39,7 +41,26 @@ window.onload = () => {
     
     if (textHighlight.length > 0) {
 
+        if (document.body.clientWidth <= 1024) {
+            guitarText.classList.remove('text-highlight');
+            guitarText.classList.add('teal');
+            inclusiveText.classList.remove('text-highlight');
+            inclusiveText.classList.add('teal');
+
+            textHighlight[0].addEventListener('click', () => {
+                window.location.href = "../pages/about.html";
+            });
+        } else {
+            guitarText.classList.remove('teal');
+            inclusiveText.classList.remove('teal');
+
+            textHighlight[0].addEventListener('click', () => {
+                window.location.href = "#";
+            });
+        }
+
         if (document.body.clientWidth >= 768) {
+
             // NINA IMAGE
             textHighlight[0].addEventListener('mouseenter', () => {
                 document.getElementById('nina-img').style.display = "block";
@@ -65,9 +86,6 @@ window.onload = () => {
                 document.getElementById('soundcloud-img').style.display = "block";
             });
         } else {
-            textHighlight[0].addEventListener('click', () => {
-                window.location.href = "../pages/about.html";
-            });
 
             // NINA IMAGE
             textHighlight[0].addEventListener('mouseenter', () => {
@@ -110,6 +128,24 @@ window.onresize = () => {
         backTopBtn.style.display = "none";
     }
 
+    if (document.body.clientWidth <= 1024) {
+        guitarText.classList.remove('text-highlight');
+        guitarText.classList.add('teal');
+        inclusiveText.classList.remove('text-highlight');
+        inclusiveText.classList.add('teal');
+
+        textHighlight[0].addEventListener('click', () => {
+            window.location.href = "../pages/about.html";
+        });
+    } else {
+        guitarText.classList.add('text-highlight');
+        inclusiveText.classList.add('text-highlight');
+
+        textHighlight[0].addEventListener('click', () => {
+            window.location.href = "#";
+        });
+    }
+
     // Remove 'Hero' images on tablets and mobile
     if (document.body.clientWidth > 1024) {
         // NINA IMAGE
@@ -132,6 +168,9 @@ window.onresize = () => {
 
         //SOUNDCLOUD PLAYER
         textHighlight[1].addEventListener('mouseenter', () => {
+            document.getElementById('soundcloud-img').style.display = "block";
+        });
+        textHighlight[1].addEventListener('mouseleave', () => {
             document.getElementById('soundcloud-img').style.display = "block";
         });
     } else {

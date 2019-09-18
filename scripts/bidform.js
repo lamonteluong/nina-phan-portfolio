@@ -165,7 +165,11 @@ window.addEventListener('scroll', (event) => {
 
 window.onload = () => {
 
-    displaySideNav();
+    if (document.body.clientWidth >= 1280) {
+        displaySideNav();
+    } else {
+        sidebarWrapper.style.display = "none";
+    }
 
 };
 

@@ -199,6 +199,10 @@ p {
     text-decoration: line-through;
     border-bottom: none;
 }
+.teal {
+    text-decoration: none;
+    color: #33B8A8;
+}
 
 .theme-toggle {
     align-self: flex-end;
@@ -671,6 +675,7 @@ p {
     #soundcloud-img iframe {
         max-width: 350px;
         max-height: 350px;
+    }
 
 }
 
@@ -735,6 +740,10 @@ p {
     #hero-container img {
         max-width: 450px;
         height: 100%;
+    }
+
+    #soundcloud-img iframe {
+        max-width: 450px;
     }
 
     #flip-title {

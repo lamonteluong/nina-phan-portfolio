@@ -458,8 +458,8 @@ table, th, td {
 }
 table {
     border-collapse: collapse;
-    width: 100%;
-    max-width: 1325px;
+    width: 600px;
+    /* max-width: 1325px; */
     margin: 3em 0;
 }
 th, td {
@@ -547,7 +547,7 @@ td {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 200;
     text-align: center;
     margin-right: .5em;
@@ -563,15 +563,18 @@ td {
 #explore-btn {
     color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 200;
-    text-align: center;
+    text-align: left;
+    display: block;
     overflow-wrap: break-word;
+    padding-left: 1.2em;
+    max-width: 15em;
 }
 #explore-btn span img {
     position: relative;
     height: 100%;
-    width: 9%;
+    width: 12%;
 }
 
 #back-top-btn {
@@ -661,12 +664,13 @@ td {
 }
 
 .process-btn {
+    font-family: lato-regular, sans-serif;
     color: #33B8A8;
     text-decoration: none;
     background: none;
     font-size: 16px;
     line-height: 175%;
-    padding: 8px 5px;
+    padding: 10px 40px;
     text-align: center;
     border: 1px solid #33B8A8;
     border-radius: 5px;
@@ -809,9 +813,8 @@ td {
     }
 
 
-    table, th, td {
-    }
     table {
+        width: 100%;
         margin: 3em 0;
     }
     th, td {
@@ -826,7 +829,7 @@ td {
     }
     td {
         vertical-align: top;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #pdf-form {
@@ -911,8 +914,6 @@ td {
 
 
     .wide-img {
-        width: 100%;
-        max-width: 1325px;
         margin-bottom: 3em;
         text-align: center;
     }
@@ -998,7 +999,7 @@ td {
     }
 
     #back-index {
-        font-size: 24px;
+        font-size: 18px;
         margin-right: 2em;
 
     }
@@ -1008,7 +1009,8 @@ td {
     }
 
     #explore-btn {
-        font-size: 24px;
+        display: inline-block;
+        font-size: 18px;
     }
 
     #explore-btn span img {
@@ -1106,7 +1108,8 @@ td {
         justify-content: space-between;
     }
     .flip-posters img {
-        max-width: 450px;
+        /* max-width: 450px; */
+        width: 45%;
         margin-right: 1em;
     }
 
@@ -1118,12 +1121,8 @@ td {
 
 @media screen and (min-width: 1280px) {
 
-    .container {
+    .container, .big-mockup {
         max-width: 850px;
-    }
-
-    table, th, td {
-        font-size: 18px;
     }
 
     .product-container div img {
@@ -1136,10 +1135,6 @@ td {
 
     #about-quote {
         font-size: 20px;
-    }
-
-    .flip-posters img {
-        max-width: 500px;
     }
 
     #back-top-btn {
@@ -1177,17 +1172,17 @@ td {
         padding-left: 10px;
     }
 
+    .section p, .num-list {
+        max-width: 75%;
+    }
+
 }
 
 
 @media screen and (min-width: 1325px) {
 
-    .container {
+    .container, .big-mockup {
         max-width: 975px;
-    }
-
-    .flip-posters img {
-        max-width: 600px;
     }
     
 }
@@ -1195,7 +1190,7 @@ td {
 /* Widescreen desktops */
 @media screen and (min-width: 1600px) {
 
-    .container {
+    .container, .big-mockup {
         max-width: 1200px;
     }
 
@@ -1206,6 +1201,9 @@ td {
         line-height: 175%;
         color: #1A1A1A;
     }
+
+    th {font-size: 20px}
+    td {font-size: 18px}
 
     .product-container div img {
         max-width: 580px;
@@ -1237,7 +1235,7 @@ td {
     }
 
     .flip-posters img {
-        width: 48%;
+        width: 47%;
     }
 
     .grey-bg {
@@ -1269,6 +1267,10 @@ td {
 
     .section p, .block-quote, .num-list li {
         font-size: 22px;
+    }
+
+    .section p, .num-list {
+        max-width: 65%;
     }
 
     .findings-container div h4, .grid-container p {
@@ -1336,6 +1338,10 @@ td {
 }
 
 @media screen and (min-width: 1920px) {
+
+    .container {
+        max-width: 69%;
+    }
 
     .sidebar-container {
         left: 4%;
