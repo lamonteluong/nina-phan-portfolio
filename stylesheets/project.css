@@ -1009,7 +1009,7 @@ td {
     }
 
     #explore-btn {
-        display: inline-block;
+        display: inline;
         font-size: 18px;
     }
 
