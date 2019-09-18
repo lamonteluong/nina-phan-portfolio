@@ -279,12 +279,12 @@ h1 {
 }
 
 .block-quote {
-    margin-top: 5em;
+    margin-top: 2em;
     border-left: 6px solid #555555;
     padding: .2em 0 .2em 2em;
     line-height: 175%;
     max-width: 850px;
-    margin-bottom: 8em;
+    margin-bottom: 5em;
 }
 
 .section {
@@ -328,7 +328,7 @@ h1 {
     line-height: 175%;
     color: #777777;
     font-family: lato-regular, sans-serif;
-    /* margin-bottom: 1em; */
+     margin-bottom: 1em; 
 }
 .section h4 {
     font-size: 18px;
@@ -547,7 +547,7 @@ td {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 200;
     text-align: center;
     margin-right: .5em;
@@ -563,7 +563,7 @@ td {
 #explore-btn {
     color: black;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 200;
     text-align: center;
     overflow-wrap: break-word;
