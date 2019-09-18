@@ -234,10 +234,10 @@ function displaySideNav() {
         sidebarWrapper.style.display = "block";
     }
     
-    if (window.pageYOffset >= problemSection.offsetTop && window.pageYOffset < section2[0].offsetTop) {
+    if (window.pageYOffset >= problemSection.offsetTop && window.pageYOffset < section2[1].offsetTop) {
         activeSideNav(0);
     }
-    if (window.pageYOffset >= section[1].offsetTop && window.pageYOffset < section[2].offsetTop) {
+    if (window.pageYOffset >= section2[1].offsetTop && window.pageYOffset < section[2].offsetTop) {
         activeSideNav(1);
     }
     if (window.pageYOffset >= section[2].offsetTop && window.pageYOffset < section[3].offsetTop) {
