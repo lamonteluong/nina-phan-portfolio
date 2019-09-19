@@ -32,6 +32,7 @@ let footer = document.querySelector('footer');
 let contactLinks = document.querySelectorAll('.contact-link');
 
 hideSlides();
+checkImageClick();
 changeImageCarousel(); 
 waveLink();
 mobileWaveLink();
@@ -256,20 +257,15 @@ viewWork.addEventListener('click', () => {
     scrollingTo('#project-section', 800);
 });
 
+let slideIndex = 0;
+
 // Rotate image carousel every 3 seconds
 function changeImageCarousel() {
 
-    setInterval(() => {
-        checkImageClick();
+    let index1 = 0;
+    let index2 = 0;
+    let index3 = 0;
 
-        let i = 0;
-        for (i = 0; i < 8; i++) {
-            if (slides[i].style.display == "block") {
-                // slides[i].style.display = "none";
-            }
-        }
-
-    }, 3000);
 
 }
 
