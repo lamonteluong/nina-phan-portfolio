@@ -555,7 +555,7 @@ td {
 
 .ref-container {
     margin-top: 4.3em;
-    width: 70%;
+    width: 100%;
     display: none;
 }
 
@@ -1242,6 +1242,10 @@ td {
 
     .grid-container p {
         line-height: 175%;
+    }
+
+    .ref-container {
+        width: 70%;
     }
 
 }
