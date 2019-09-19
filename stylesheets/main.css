@@ -292,6 +292,11 @@ p {
     max-width: 280px;
     margin-bottom: 26px;
 }
+
+#flip-title {
+    line-height: 150%;
+}
+
 .process-btn {
     font-family: lato-regular, sans-serif;
     color: #33B8A8;
@@ -629,7 +634,7 @@ p {
     .project-desc {
         font-size: 15px;
         max-width: 320px;
-        margin-bottom: 4em;
+        margin-bottom: 2.5em;
     }
     .process-btn {
         width: 250px;
