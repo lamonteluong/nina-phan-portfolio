@@ -24,12 +24,12 @@ let backTopBtn = document.getElementById('back-top-btn');
 let backTop1 = document.getElementById('back-top-1');
 let backTop2 = document.getElementById('back-top-2');
 
-let footer = document.querySelector('footer');
-let contactLinks = document.querySelectorAll('.contact-link');
-
 let slideContainers = document.querySelectorAll('.slideshow-container');
 let slides = document.querySelectorAll('.slide');
 let tabs = document.querySelectorAll('.next-img');
+
+let footer = document.querySelector('footer');
+let contactLinks = document.querySelectorAll('.contact-link');
 
 hideSlides();
 changeImageCarousel(); 
@@ -252,7 +252,8 @@ navLinks.forEach((link) => {
 /* 'view my work' scroll down to projects */
 /* TODO: animate to make smooth */
 viewWork.addEventListener('click', () => {
-    document.querySelector('#project-section').scrollIntoView();
+    // document.querySelector('#project-section').scrollIntoView();
+    scrollingTo('#project-section', 800);
 });
 
 // Rotate image carousel every 3 seconds
@@ -420,10 +421,48 @@ window.onscroll = () => {
 
 };
 backTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE & Opera
+    /* document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE & Opera */
+    scrollingTo('#hero-container', 800);
 });
 
+// From: https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
+function getElementY(query) {
+    return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
+}
+
+function scrollingTo(element, duration) {
+    var startingY = window.pageYOffset
+    var elementY = getElementY(element)
+    // If element is close to page's bottom then window will scroll only to some position above the element.
+    var targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
+        var diff = targetY - startingY
+    // Easing function: easeInOutCubic
+    // From: https://gist.github.com/gre/1650294
+    var easing = function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 }
+    var start
+
+    if (!diff) return
+
+        // Bootstrap our animation - it will get called right before next frame shall be rendered.
+        window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp
+        // Elapsed miliseconds since start of scrolling.
+        var time = timestamp - start
+            // Get percent of completion in range [0, 1].
+        var percent = Math.min(time / duration, 1)
+        // Apply the easing.
+        // It can cause bad-looking slow frames in browser performance tool, so be careful.
+        percent = easing(percent)
+
+        window.scrollTo(0, startingY + diff * percent)
+
+        // Proceed with animation as long as we wanted it to.
+        if (time < duration) {
+        window.requestAnimationFrame(step)
+        }
+    })
+}
 
 /* Change element colours based on current theme */
 function changeColours() {
