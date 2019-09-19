@@ -85,9 +85,11 @@
 
         <div class="section">
             <h2>Role</h2>
-            <p>
-                As one of two product designers at Ontario Digital Service Lab working on multiple projects, I wore many hats from project scoping, problem assessment, user recruitment, user research to ideation. <br><br>
-                On this particular project, I collaborated closely with another product design intern to assess our problem, recruit vendors for user research, design our prototypes, facilitate user interviews and usability testing, and synthesize and present our findings to clients over the span of a two week sprint. 
+            <p class="margin-10px">
+                As one of two product designers at Ontario Digital Service Lab working on multiple projects, I wore many hats from project scoping, problem assessment, user recruitment, user research to ideation.
+            </p>
+            <p class="margin-10px">
+                On this particular project, I collaborated closely with another product design intern to assess our problem, recruit vendors for user research, design our prototypes, facilitate user interviews and usability testing, and synthesize and present our findings to clients over the span of a two week sprint.
             </p>
         </div>
 
@@ -233,7 +235,7 @@
 
             <h4 class="week">Week 1</h4>
             <h3>Custom Mobile Webform</h3>
-            <p>
+            <p class="margin-40px">
                 In week one, we reused most of the fields from the original PDF form in a low fidelity custom webform prototype that we designed in Balsamiq for mobile. We chose to design for mobile to ensure that the form would be multi-plaftorm accessible as we scale up to desktop. This low fidelity custom webform was designed with respect to constraints associated with Adobe Experience Manager (AEM), a content management system that the OSS was adamant about using.
             </p>
             <div class="block-quote margin-40px">
@@ -242,18 +244,13 @@
                     AEM does not have a database, which was problematic because each bid form needs to be customized based on unique job details that an OSS member would input before sending off to vendors. After brainstorming, we decided that an OSS member would have to pass these unique job details into the webform URL as parameters in chronological order. When the vendor opens the URL, they would see these fields pre-populated.
             </div>
             <p>
-                In terms of sharing this webform with vendors, an OSS member would provide a link to this form in the body of an email that has an attached specification document and unique job details. <br><br>
-                Our goal for week 1 was to understand problems that vendors face in their user journey and <strong>determine which fields could be removed. Four vendors</strong> were recruited for user interviews and usability testing.
+                In terms of sharing this webform with vendors, an OSS member would provide a link to this form in the body of an email that has an attached specification document and unique job details. Our goal for week 1 was to understand problems that vendors face in their user journey and <strong>determine which fields could be removed. Four vendors</strong> were recruited for user interviews and usability testing.
             </p>
 
             <button>view usability testing script <span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
 
             <iframe id="script1" class="userScripts fade margin-4-top" src="../assets/images/bidform/user-testing-script-may16.pdf" width="100%" height="930px"></iframe>
         </div>
-
-        <!-- <div class="img-container">
-            <img src="../assets/images/bidform/testing-script-1.png">
-        </div> -->
 
         <div class="section">
             <h4 class="margin-4-top">Vendor Journey Map</h4>
@@ -270,10 +267,6 @@
 
     </div>
 
-        
-    <!-- <div class="img-container">
-        <img src="../assets/images/bidform/journey-map.png">
-    </div> -->
 
     <div class="container">
         <div class="section margin-6-top">
@@ -353,7 +346,7 @@
 
         <div class="section">
 
-            <h4 class="week">Week 2</h4>
+            <h4 class="week margin-4-top">Week 2</h4>
             <h3>Email Template</h3>
             <p>
                 To address the problems faced in week 1, we proposed an email alternative. This method forgoes the vendor contact information required in the original process, since the vendor’s email response in-line allows the OSS team to authenticate them. The email alternative is multi-platform accessible. The number of touchpoints in filling out the form is reduced, since the bid form is now integrated within the email unlike a PDF form or web-form. 
@@ -410,14 +403,16 @@
     <div class="container">
 
         <div class="section">
-            <h3 class="margin-8-top">Drupal CMS Webform</h3>
-            <p>
-                We also proposed using the form builder within Ontario.ca’s Drupal CMS since there is no associated cost. This method allows the OSS team to build form templates for jobs that vary in number of requested options (i.e. form A would be used for jobs that require a quote on 1 option, form B would be used for jobs that require a quote on 2 options, etc.). This is a time-efficient approach as the OSS team, as most jobs would not go beyond asking for three options.<br><br>
-                The link to this form would be stated in the body of an email, along with job information that the vendor would have to enter into the form, and the attached specification document. 
+            <h3 class="margin-4-top">Drupal CMS Webform</h3>
+            <p class="margin-10px">
+                We also proposed using the form builder within Ontario.ca’s Drupal CMS since there is no associated cost. This method allows the OSS team to build form templates for jobs that vary in number of requested options (i.e. form A would be used for jobs that require a quote on 1 option, form B would be used for jobs that require a quote on 2 options, etc.). This is a time-efficient approach as the OSS team, as most jobs would not go beyond asking for three options.
+            </p>
+            <p class="margin-10px">
+                The link to this form would be stated in the body of an email, along with job information that the vendor would have to enter into the form, and the attached specification document.
             </p>
         </div>
 
-        <div class="section margin-8-top">
+        <div class="section margin-6-top margin-0-bot">
             <h4>Drupal CMS Webform Prototype</h4>
 
             <div class="frame-container">
@@ -434,7 +429,7 @@
 
     </div>
     
-    <div class="grey-bg margin-8-top">
+    <div class="grey-bg">
         <div class="container">
             <div class="findings-container">
 
@@ -477,8 +472,8 @@
 
     <div class="container">
 
-        <div class="section margin-12-top">
-            <h4>Moving Forward</h4>
+        <div class="section">
+            <h4 class="margin-3-top">Moving Forward</h4>
             <p>
                 We decided to rule out the webform built by the form builder in Ontario.ca’s CMS due to its inability to send vendors confirmation emails detailing their successful submission and summary details. The email is a viable option with respect to business constraints and multi-platform accessibility, despite its inability to recognize errors. However, vendors had stated that they take the bidding process seriously and would rarely make any mistakes. Using these insights, we decided to spend time exploring how we could significantly improve the custom webform design from week 1, since the form builder within Ontario.ca’s CMS was no longer a viable option. 
             </p>
@@ -520,8 +515,8 @@
 
         </div>
 
-        <div class="section margin-12-top">
-            <h4>Recommendation for Future Steps</h4>
+        <div class="section">
+            <h4 class="margin-4-top">Recommendation for Future Steps</h4>
             <p class="margin-2">
                 Although the optimal solution for the vendors is the high fidelity custom webform shown above, we advised the OSS team pilot the email template as an immediate solution. Taking into account the negative feedback, the email template is still a substantial improvement from the original PDF form and has no development costs associated with it. <br><br>
                 We recommended that OSS pilot the email template with several of their vendors. If there is dissatisfaction, the OSS team should invest resources into developing our prototype of the high fidelity custom webform, and test iteratively with a few vendors before launch.
@@ -532,7 +527,7 @@
 
         <div class="section">
             <h2 class="sidebar-jump">Retrospect</h2>
-            <p>These are my main takaways during the span of this project :</p>
+            <p class="margin-40px">These are my main takaways during the span of this project :</p>
             <ol class="num-list">
                 <li>
                     It is necessary to spend considerable time exploring implementation constraints and existing tools that you can leverage before ideating from scratch to save time. There is no value in reinventing the wheel if a suitable one already exists. I failed to realize this when we decided to design a new form to develop, rather than exploring low-cost alternatives, such as email and leveraging existing technological resources available to us.

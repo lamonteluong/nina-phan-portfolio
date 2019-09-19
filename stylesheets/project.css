@@ -91,6 +91,7 @@ h1 {
     background-color: #181818;
     color: white;
 }
+
 .inline {
     display: inline-block;
 }
@@ -101,6 +102,16 @@ h1 {
 
 .margin-2 {
     margin: 2em 0;
+}
+
+.margin-2-top {
+    margin-top: 2em !important;
+}
+.margin-2a-top {
+    margin-top: 2.3em !important;
+}
+.margin-3-top {
+    margin-top: 3em !important;
 }
 .margin-4-top {
     margin-top: 4em !important;
@@ -116,6 +127,21 @@ h1 {
 }
 .margin-40px {
     margin: 1.818em 0 !important;
+}
+.margin-30px {
+    margin: 30px 0 !important;
+}
+.margin-10px {
+    margin: 10px 0 !important;
+}
+.margin-0-bot {
+    margin-bottom: 0 !important;
+}
+.margin-0-top {
+    margin-top: 0 !important;
+}
+.margin-50px-bot {
+    margin-bottom: 50px !important;
 }
 
 .container {
@@ -280,7 +306,7 @@ h1 {
     line-height: 175%;
     font-weight: 600;
     color: #3BAB9E !important;
-    margin-right: 1em;
+    margin-right: .5em;
     display: inline-block;
 }
 
@@ -310,7 +336,7 @@ h1 {
     font-size: 18px;
     margin-top: 3em;
     background-color: white;
-    margin-bottom: 4.545em;
+    margin-bottom: 2.5em;
 }
 .section a {
     display: block;
@@ -329,7 +355,7 @@ h1 {
     line-height: 175%;
     color: #266D65;
     font-family: roboto-regular, sans-serif;
-    margin-bottom: 1.5em;
+    margin-bottom: .9em;
     text-transform: uppercase;
 }
 .section h3 {
@@ -398,7 +424,7 @@ h1 {
     font-weight: 400 !important;
     line-height: 175%;
     margin-top: 3.1em;
-    margin-bottom: 15px !important;
+    margin-bottom: 10px !important;
 }
 
 .grey-bg {
@@ -443,7 +469,7 @@ h1 {
     margin: 1em 0;
 }
 .bullet-list ul li {
-    margin: 1em 0;
+    margin: .69em 0;
 }
 
 .frame-container {
@@ -506,17 +532,17 @@ td {
 }
 
 #hidden-metric {
-    padding-top: 5em;
-    margin-bottom: 20em;
+    /* padding-top: 5em; */
+    /* margin-bottom: 20em; */
     display: none;
 }
 
 #system-diagram {
-    margin: 10em 0;
+    margin: 3.1em 0;
 }
 
 .ref-container {
-    margin-top: 6em;
+    margin-top: 4.3em;
     width: 70%;
     display: none;
 }
@@ -524,7 +550,7 @@ td {
 .refs {
     display: flex;
     flex-direction: row;
-    margin: 3em 0;
+    margin: 1.5em 0;
 }
 .refs div:nth-child(odd) {
     margin-right: 3em;
@@ -868,6 +894,7 @@ td {
 
     #pdf-form {
         max-width: 675px;
+        margin: 0;
     }
 
     h2 {
@@ -891,6 +918,7 @@ td {
     }
     .hero-subtitle {
         font-size: 24px;
+        max-width: 600px;
     }
     .wrap-subtitle {
         max-width: 500px;
@@ -903,7 +931,7 @@ td {
         font-size: 22px;
         display: flex;
         align-items: initial;
-        margin: 2em 0;
+        margin: 1.5em 0;
         font-family: roboto-bold, sans-serif;
     }
     #note p {
@@ -931,7 +959,7 @@ td {
 
     .block-quote {
         margin-top: 2.3em;
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 5.7em;
     }
 
@@ -952,7 +980,7 @@ td {
         font-weight: 700;
         color: #777777;
         margin-top: 2.1em;
-        margin-bottom: 1.7em;
+        margin-bottom: .87em;
     }
 
     .findings-container {
@@ -1083,7 +1111,7 @@ td {
     }
     
     .refs div {
-        font-size: 22px !important;
+        font-size: 18px !important;
     }
     
     /* Font Sizes */
@@ -1093,7 +1121,7 @@ td {
     }
     .section h3 {
         font-size: 28px;
-        margin-bottom: 1.25em;
+        margin-bottom: 1.1em;
     }
     .section h4 {
         font-size: 24px;
@@ -1101,16 +1129,22 @@ td {
     .section h5 {
         font-size: 22px;
     }
+    .section h5 {
+        margin-bottom: .9em;
+    }
     .section h6 {
         font-size: 20px;
     }
 
-    .section p, .section a, .block-quote, .num-list li, .section button {
+    .section p, .section a, .num-list li, .section button {
         font-size: 18px;
+    }
+    .block-quote {
+        font-size: 20px;
     }
 
     .section p {
-        margin-bottom: 3.4em;
+        margin-bottom: 2.3em;
     }
 
     .findings-container div h4 {
@@ -1272,7 +1306,7 @@ td {
 
     .hero-subtitle {
         font-size: 32px;
-        max-width: 750px;
+        max-width: 800px;
     }
 
     .sidebar li {
@@ -1289,7 +1323,7 @@ td {
 
     .project-info {
         font-size: 20px;
-        margin-top: 5em;
+        /* margin-top: 5em; */
         margin-bottom: 10em;
     }
 
@@ -1313,12 +1347,20 @@ td {
         font-size: 22px;
     }
 
-    .section p, .block-quote, .num-list li, .section button {
+    .section p, .num-list li, .section button {
         font-size: 22px;
     }
 
+    .refs div {
+        font-size: 22px !important;
+    }
+
+    .block-quote {
+        font-size: 24px;
+    }
+
     .section p, .num-list {
-        max-width: 65%;
+        max-width: 60%;
     }
 
     .findings-container div h4, .grid-container p {
@@ -1393,6 +1435,10 @@ td {
 
     .sidebar-container {
         left: 4%;
+    }
+
+    .block-quote {
+        max-width: 60%;
     }
 
 }
