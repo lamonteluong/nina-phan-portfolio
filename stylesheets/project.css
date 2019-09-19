@@ -105,11 +105,17 @@ h1 {
 .margin-4-top {
     margin-top: 4em !important;
 }
+.margin-6-top {
+    margin-top: 6.3em !important;
+}
 .margin-8-top {
     margin-top: 8em !important;
 }
 .margin-12-top {
     margin-top: 12em !important;
+}
+.margin-40px {
+    margin: 1.818em 0 !important;
 }
 
 .container {
@@ -283,8 +289,11 @@ h1 {
     border-left: 6px solid #555555;
     padding: .2em 0 .2em 2em;
     line-height: 175%;
-    max-width: 850px;
+    max-width: 68%;
     margin-bottom: 5em;
+}
+.block-quote p {
+    margin: 0 !important;
 }
 
 .section {
@@ -301,6 +310,7 @@ h1 {
     font-size: 18px;
     margin-top: 3em;
     background-color: white;
+    margin-bottom: 4.545em;
 }
 .section a {
     display: block;
@@ -339,7 +349,14 @@ h1 {
     margin: 1.5em 0;
 }
 .section h5 {
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 175%;
+    color: #777777;
+    font-family: lato-regular, sans-serif;
+}
+.section h6 {
+    font-size: 15px;
     color: black;
     line-height: 175%;
     font-weight: 700;
@@ -380,8 +397,8 @@ h1 {
     font-size: 22px;
     font-weight: 400 !important;
     line-height: 175%;
-    margin-top: 7em;
-    margin-bottom: 0 !important;
+    margin-top: 3.1em;
+    margin-bottom: 15px !important;
 }
 
 .grey-bg {
@@ -802,9 +819,9 @@ td {
         flex-wrap: wrap;
     }
     .project-info {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 175%;
-        max-width: 270px;
+        max-width: 200px;
     }
 
     .table-container {
@@ -836,7 +853,7 @@ td {
     }
     th, td {
         padding: 1em;
-        line-height: 160%;
+        line-height: 150%;
         width: 240px;
     }
     th {
@@ -913,16 +930,9 @@ td {
     }
 
     .block-quote {
-        margin-top: 5em;
-        border-left: 6px solid #555555;
-        padding: .2em 0 .2em 2em;
+        margin-top: 2.3em;
         font-size: 22px;
-        line-height: 175%;
-        max-width: 850px;
-        margin-bottom: 4em;
-    }
-    #heuristic {
-        margin-top: 6em;
+        margin-bottom: 5.7em;
     }
 
     #cardiaid-img {
@@ -941,8 +951,8 @@ td {
         line-height: 175%;
         font-weight: 700;
         color: #777777;
-        margin-top: 3em;
-        margin-bottom: 1.5em;
+        margin-top: 2.1em;
+        margin-bottom: 1.7em;
     }
 
     .findings-container {
@@ -994,8 +1004,7 @@ td {
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
         justify-content: space-between;
-        grid-row-gap: 4em;
-        grid-column-gap: 6em;
+        grid-column-gap: 5em;
     }
     .grid-container p {
         font-family: roboto-regular, sans-serif;
@@ -1072,28 +1081,36 @@ td {
     .bullet-list ul li {
         padding-left: 1em;
     }
-    .section h5 {
-        font-size: 22px;
-    }
-
+    
     .refs div {
         font-size: 22px !important;
     }
-
+    
     /* Font Sizes */
     .section h2 {
         font-size: 30px;
-        margin-top: 7em;
+        margin-top: 3.7em;
     }
     .section h3 {
         font-size: 28px;
+        margin-bottom: 1.25em;
     }
     .section h4 {
         font-size: 24px;
     }
+    .section h5 {
+        font-size: 22px;
+    }
+    .section h6 {
+        font-size: 20px;
+    }
 
-    .section p, .section a, .block-quote, .num-list li {
+    .section p, .section a, .block-quote, .num-list li, .section button {
         font-size: 18px;
+    }
+
+    .section p {
+        margin-bottom: 3.4em;
     }
 
     .findings-container div h4 {
@@ -1144,11 +1161,17 @@ td {
 @media screen and (min-width: 1280px) {
 
     .container, .big-mockup {
-        max-width: 850px;
+        max-width: 860px;
     }
 
     .product-container div img {
         max-width: 450px;
+    }
+
+    .project-info .teal {font-size: 20px}
+    .project-info {
+        /* font-size: 18px; */
+        max-width: 250px;
     }
 
     #cardiaid-img {
@@ -1280,6 +1303,9 @@ td {
         font-size: 28px;
     }
     .section h5 {
+        font-size: 24px;
+    }
+    .section h6 {
         font-size: 22px;
     }
 
@@ -1287,7 +1313,7 @@ td {
         font-size: 22px;
     }
 
-    .section p, .block-quote, .num-list li {
+    .section p, .block-quote, .num-list li, .section button {
         font-size: 22px;
     }
 

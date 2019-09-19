@@ -129,7 +129,7 @@
                 The OSS has observed that the current PDF form is not meeting the needs of vendors to make bid submissions when they are out of the office and do not have access to a computer. As a common result, vendors lose out on jobs because they miss the submission deadlines, and government ministries potentially lose out on the most affordable quotes. 
             </p>
 
-            <div class="block-quote section-jump">
+            <div class="small-quote block-quote section-jump">
                 How might we improve the bid submission process for vendors based on their <strong>turnaround time</strong> and <strong>overall ease</strong> of submission?
             </div>
         </div>
@@ -138,11 +138,11 @@
 
         <div class="section">
             <h2 class="sidebar-jump">Evaluative Research</h2>
-            <h3 class="section-jump">Original Form</h3>
+            <h4 class="section-jump">Original Form</h4>
             <p>
                 The original bidding process required the OSS to fill out the first four fields, lock it, and then send it to each vendor via email along with a specification document detailing the service requested. Vendors must fill out the form on desktop and email the completed form to the OSS before the quote deadline. 
             </p>
-            <h3 id="heuristic" class="margin-4-top">Heuristic Analysis</h3>
+            <h4>Heuristic Analysis</h4>
             <p>
                 We began our research process by evaluating the existing PDF form based off of the Nielson Usability Heuristics with the OSS team. For each of the 10 heuristics, I gave an explanation of specific aspects that were hindering the experience for vendors. 
             </p>
@@ -225,22 +225,22 @@
         <div class="section">
             <h2 class="sidebar-jump">User Research</h2>
             <p>
-                We recruited <strong>eight vendors</strong> to conduct research sessions for the duration of our two week sprint. <br><br>
-                Each research session started off with a user interview to understand how vendors currently submit quotes to other public and private organizations. The user interview then led into a usability test of the prototype we had designed that week. At the end of the session, we asked for their positive and negative feedback regarding our prototype, and how our prototype compared to the original PDF bid form. 
+                We recruited <strong>eight vendors</strong> to conduct research sessions for the duration of our two week sprint. Each research session started off with a user interview to understand how vendors currently submit quotes to other public and private organizations. The user interview then led into a usability test of the prototype we had designed that week.
             </p> 
         </div>
 
         <div class="section">
 
-            <h3 class="week">Week 1</p>
+            <h4 class="week">Week 1</h4>
             <h3>Custom Mobile Webform</h3>
             <p>
                 In week one, we reused most of the fields from the original PDF form in a low fidelity custom webform prototype that we designed in Balsamiq for mobile. We chose to design for mobile to ensure that the form would be multi-plaftorm accessible as we scale up to desktop. This low fidelity custom webform was designed with respect to constraints associated with Adobe Experience Manager (AEM), a content management system that the OSS was adamant about using.
             </p>
-            <h4>Contraints of AEM</h4>
-            <p>
-                AEM does not have a database, which was problematic because each bid form needs to be customized based on unique job details that an OSS member would input before sending off to vendors. After brainstorming, we decided that an OSS member would have to pass these unique job details into the webform URL as parameters in chronological order. When the vendor opens the URL, they would see these fields pre-populated.
-            </p> <br><br><br>
+            <div class="block-quote margin-40px">
+                
+                <h5>Constraints of AEM</h5>
+                    AEM does not have a database, which was problematic because each bid form needs to be customized based on unique job details that an OSS member would input before sending off to vendors. After brainstorming, we decided that an OSS member would have to pass these unique job details into the webform URL as parameters in chronological order. When the vendor opens the URL, they would see these fields pre-populated.
+            </div>
             <p>
                 In terms of sharing this webform with vendors, an OSS member would provide a link to this form in the body of an email that has an attached specification document and unique job details. <br><br>
                 Our goal for week 1 was to understand problems that vendors face in their user journey and <strong>determine which fields could be removed. Four vendors</strong> were recruited for user interviews and usability testing.
@@ -248,7 +248,7 @@
 
             <button>view usability testing script <span class="script-btn"><img src="../assets/symbols/blue-arrow-down.png"></span> <span class="script-btn"><img src="../assets/symbols/blue-arrow-up.png"></span></button>
 
-            <iframe id="script1" class="userScripts fade" src="../assets/images/bidform/user-testing-script-may16.pdf" width="100%" height="930px"></iframe>
+            <iframe id="script1" class="userScripts fade margin-4-top" src="../assets/images/bidform/user-testing-script-may16.pdf" width="100%" height="930px"></iframe>
         </div>
 
         <!-- <div class="img-container">
@@ -256,7 +256,7 @@
         </div> -->
 
         <div class="section">
-            <h4 class="margin-8-top">Vendor Journey Map</h4>
+            <h4 class="margin-4-top">Vendor Journey Map</h4>
             <p>
                 From interviewing the four vendors about their experience going through the bidding process with the OSS, we pieced together a typical journey of a vendor who’s bid has been approved. 
             </p>
@@ -276,7 +276,7 @@
     </div> -->
 
     <div class="container">
-        <div class="section margin-8-top">
+        <div class="section margin-6-top">
             <h4>Low Fidelity Prototype</h4>
             <div class="frame-container">
                 <iframe src="https://player.vimeo.com/video/343945008" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -284,7 +284,7 @@
         </div>
     </div>
 
-    <div class="grey-bg margin-8-top">
+    <div class="grey-bg margin-2">
         <div class="container">
             <div class="findings-container">
 
@@ -292,7 +292,7 @@
                     <h4>Positive Findings</h4>
                     <ul>
                         <li>
-                            Vendors voiced content over receiving a confirmation email that summarized their bid submission. With the original process, there is no confirmation email sent verifying that their submission had been received with a summary of their bid.
+                            Vendors voiced content over receiving a confirmation email that summarized their bid submission. The original process does not provide vendors with any confirmation of their bid.
                         </li>
                         <li>
                             Most vendors were happy that they would have the option of filling out bids on their mobile device if they happened to be out of the office.
@@ -309,7 +309,7 @@
                             Vendors expressed that some mandatory fields on the Vendor Contact Information and Quote Information pages are unnecessary. They believe that more fields correspond to a higher chance of human error.
                         </li>
                         <li>
-                            There was confusion surrounding the Quote Information page. Vendors did not recognize the difference between adding a product versus adding an option. Options consist of the same product(s) with the only difference being characteristics, such as colour, material, quantity, etc.
+                            Vendors did not recognize the difference between adding a product versus adding an option. Options consist of the same product(s) with the only difference being characteristics, such as colour, material, quantity, etc.
                         </li>
                         <li>
                             As there is no storage of data in Adobe Experience Manager, the OSS team will have to pass parameters through the bid form URL, which is time-costly and inefficient.
@@ -326,7 +326,7 @@
 
     <div class="container">
 
-        <div class="section margin-12-top">
+        <div class="section margin-6-top">
             <h4>Moving Forward</h4>
             <p>
                 We had to rethink the design of vendor authentication, since using vendor ID and email failed. Vendors do not remember their vendor ID, and expressed concern about their employees using a different email to fill out the form on their behalf. Providing quote information needed to be simplified because the prototype’s UI and content was poorly designed. Vendors fill out total cost per option, usually skipping product cost and shipping cost. Overall, vendors expressed that this prototype is a step in the right direction because of its accessibility. <br><br>
@@ -353,7 +353,7 @@
 
         <div class="section">
 
-            <h3 class="week">Week 2</p>
+            <h4 class="week">Week 2</h4>
             <h3>Email Template</h3>
             <p>
                 To address the problems faced in week 1, we proposed an email alternative. This method forgoes the vendor contact information required in the original process, since the vendor’s email response in-line allows the OSS team to authenticate them. The email alternative is multi-platform accessible. The number of touchpoints in filling out the form is reduced, since the bid form is now integrated within the email unlike a PDF form or web-form. 
@@ -412,7 +412,7 @@
         <div class="section">
             <h3 class="margin-8-top">Drupal CMS Webform</h3>
             <p>
-                We also proposed using the form builder within Ontario.ca’s Drupal CMS since there is no associated cost. This method allows the OSS team to build form templates for jobs that vary in number of requested options (i.e. form A would be used for jobs that require a quote on 1 option, form B would be used for jobs that require a quote on 2 options, etc.). This is time-efficient approach as the OSS team would be unlikely to create a new bid form for each job since there are time-consuming policies put in place for hosting forms on Ontario.ca. <br><br>
+                We also proposed using the form builder within Ontario.ca’s Drupal CMS since there is no associated cost. This method allows the OSS team to build form templates for jobs that vary in number of requested options (i.e. form A would be used for jobs that require a quote on 1 option, form B would be used for jobs that require a quote on 2 options, etc.). This is a time-efficient approach as the OSS team, as most jobs would not go beyond asking for three options.<br><br>
                 The link to this form would be stated in the body of an email, along with job information that the vendor would have to enter into the form, and the attached specification document. 
             </p>
         </div>
@@ -501,13 +501,13 @@
             <img class="wide-img item5" src="../assets/images/bidform/option deselection.gif">
             <img class="wide-img item6" src="../assets/images/bidform/errormessage.gif">
             <p class="item7">
-                We added this feature to provide vendors autonomy in how they want to provide their quote. We improved the system status visibility by introducing a progress bar for document uploads. On the summary page of the form, vendors can view a list of all the documents that they have attached for their quote. 
+                This feature provides vendors autonomy in how they want to provide their quote. We improved the system status visibility by introducing a progress bar for document uploads. On the summary page of the form, vendors can view a list of all the documents that they have attached for their quote. 
             </p>
             <p class="item8">
                 In this prototype, there were two requested options for the job posted. However, vendors may not be able to provide a quote for all options. To reduce the amount of scrolling, we introduced an option deselection feature that allows vendors to bypass all the fields of the options they wish to ignore. 
             </p>
             <p class="item9">
-                Taking into account the positive and negative feedback from all three of our prototypes, we designed an optimal high fidelity mockup of the webform seen in week 1 for the OSS team. This method is user friendly, multi-platform accessible, allows for confirmation emails and detects form field errors. This design was passed onto our development team to prototype. 
+                We increased accessibility of error messages. The form sends the user to the first error on the form upon submitting if there are any. Error fields are bolded in red, accompanied with an error icon with directions for user to fix their errors.
             </p>
         </div>
 
