@@ -232,10 +232,14 @@ p {
 }
 
 .view-work-container {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     width: 144px;
     cursor: pointer;
+}
+
+.view-work-container:hover #arrow-down {
+    animation: bounce2 2s infinite;
 }
 
 .slideshow-container {
@@ -334,21 +338,43 @@ p {
     
 }
 
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
 @keyframes bounce {
-	0%, 20%, 60%, 100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
-
-	40% {
-		-webkit-transform: translateY(-20px);
-		transform: translateY(-20px);
-	}
-
-	80% {
-		-webkit-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+@-webkit-keyframes bounce2 {
+	0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(10px);
+    }
+}
+@keyframes bounce2 {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    25%, 75% {
+        transform: translateY(10px);
+    }
 }
 
 /* IDs */
@@ -359,6 +385,7 @@ p {
     padding-bottom: .5em;
     margin-right: 18px;
     border-bottom: 2px solid #DADADA;
+    display: inline-block;
 }
 
 #view-work:hover {
@@ -372,11 +399,9 @@ p {
 #arrow-down {
     align-self: center;
     transform: scale(.8, .8);
-    display: block;
-    position: relative;
-}
-#arrow-down:hover {
-    animation: bounce 1s;
+    display: inline-block;
+    /* position: relative; */
+    float: right;
 }
 
 #back-top-btn {
@@ -530,7 +555,7 @@ p {
 
     .view-work-container {
         margin-top: 14em;
-        width: 200px;
+        /* width: 200px; */
     }
 
     .theme-toggle {
