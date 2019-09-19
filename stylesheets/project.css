@@ -296,6 +296,18 @@ h1 {
     margin-bottom: 2.2em;
 }
 
+.scroll-down-container {
+    text-align: center;
+    margin-bottom: 20em;
+    transform: rotateX(180deg);
+}
+.scroll-down {
+    animation: bounce 2s infinite;
+}
+.scroll-down span {
+    cursor: pointer;
+}
+
 .userScripts {
     display: none;
 }
@@ -626,15 +638,15 @@ td {
     font-size: 18px;
     font-weight: 200;
     text-align: left;
-    display: block;
+    display: inline;
     overflow-wrap: break-word;
-    padding-left: 1.2em;
+    /* padding-left: 1.2em; */
     max-width: 15em;
 }
 #explore-btn span img {
     position: relative;
     height: 100%;
-    width: 22%;
+    width: 10%;
 }
 
 #back-top-btn {
@@ -644,6 +656,8 @@ td {
     right: 4.75em;
     transform: scale(0.8, 0.8);
     cursor: pointer;
+    animation: fade 0.3s;
+
 }
 
 .flip-end-btn::before {
@@ -759,6 +773,18 @@ td {
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
 .contact-container {
@@ -1324,7 +1350,7 @@ td {
     .project-info {
         font-size: 20px;
         /* margin-top: 5em; */
-        margin-bottom: 10em;
+        /* margin-bottom: 10em; */
     }
 
     .section h2 {
@@ -1393,6 +1419,7 @@ td {
 
     #explore-btn span img {
         width: 8%;
+        max-width: 100px;
     }
 
     .footer {

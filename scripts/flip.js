@@ -1,4 +1,6 @@
 let backTopBtn = document.getElementById('back-top-btn');
+let showScrollTop = document.querySelector('.show-scroll-top');
+let downScrollBtn = document.querySelector('.scroll-down');
 
 let sidebarWrapper = document.querySelector(".sidebar-container");
 let sidebar = document.querySelectorAll(".sidebar li");
@@ -33,10 +35,9 @@ window.onscroll = () => {
     } else {
         sidebarWrapper.style.display = "none";
     }
-
-
+    
     if (document.body.clientWidth >= 768 || window.innerWidth >= 768) {
-        if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+        if (window.pageYOffset >= showScrollTop.offsetTop) { //document.body.scrollTop > 1400 || document.documentElement.scrollTop > 1400
             backTopBtn.style.display = "block";
         } else {
             backTopBtn.style.display = "none";
@@ -111,10 +112,14 @@ function mobileWaveLink() {
     });
 }
 
+
 backTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE & Opera
 });
+
+
+
 
 let isInViewport = function(elem) {
     let distance = elem.getBoundingClientRect();
@@ -125,23 +130,66 @@ let isInViewport = function(elem) {
         distance.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 };
-
-
+    
+    
 window.onload = () => {
-
+    
     if (window.innerWidth >= 1280) {
         displaySideNav();
     } else {
         sidebarWrapper.style.display = "none";
     }
-
+    
 }
 
 window.addEventListener('scroll', (event) => {
-
+    
     sideNavScroll();
-
+    
 }, false);
+    
+downScrollBtn.addEventListener('click', () => {
+    console.log('click')
+    scrollingTo('.show-scroll-top', 1000);
+});
+
+// From: https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
+function getElementY(query) {
+    return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
+}
+
+function scrollingTo(element, duration) {
+    var startingY = window.pageYOffset
+    var elementY = getElementY(element)
+    // If element is close to page's bottom then window will scroll only to some position above the element.
+    var targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
+        var diff = targetY - startingY
+    // Easing function: easeInOutCubic
+    // From: https://gist.github.com/gre/1650294
+    var easing = function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 }
+    var start
+
+    if (!diff) return
+
+        // Bootstrap our animation - it will get called right before next frame shall be rendered.
+        window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp
+        // Elapsed miliseconds since start of scrolling.
+        var time = timestamp - start
+            // Get percent of completion in range [0, 1].
+        var percent = Math.min(time / duration, 1)
+        // Apply the easing.
+        // It can cause bad-looking slow frames in browser performance tool, so be careful.
+        percent = easing(percent)
+
+        window.scrollTo(0, startingY + diff * percent)
+
+        // Proceed with animation as long as we wanted it to.
+        if (time < duration) {
+        window.requestAnimationFrame(step)
+        }
+    })
+}
 
 
 sidebar[0].addEventListener('click', () => {
@@ -185,7 +233,6 @@ function activeSideNav(num) {
     }
 
 }
-
 
 function displaySideNav() {
     if (window.pageYOffset < hideSideNav.offsetTop) {
