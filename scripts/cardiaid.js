@@ -91,7 +91,7 @@ window.onscroll = () => {
 
     if (document.body.clientWidth >= 768 || window.innerWidth >= 768) {
 
-        if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+        if (window.pageYOffset >= showScrollTop.offsetTop) {
             backTopBtn.style.display = "block";
         } else {
             backTopBtn.style.display = "none";
@@ -167,14 +167,7 @@ function mobileWaveLink() {
 }
 
 backTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE & Opera
-});
-
-
-backTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE & Opera
+    scrollingTo('.navbar', 800);
 });
 
 window.addEventListener('scroll', (event) => {
@@ -190,7 +183,6 @@ window.onload = () => {
 };
 
 downScrollBtn.addEventListener('click', () => {
-    console.log('click')
     scrollingTo('.show-scroll-top', 1000);
 });
 

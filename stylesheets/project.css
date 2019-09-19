@@ -856,11 +856,39 @@ td {
         border-bottom: 3px solid #EEEEEE;
         margin-left: 63px;
     }
+
+    .nav-link {
+        font-family: lato-light, sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid #EEEEEE;
+        margin-left: 63px;
+        width: 3.95em;
+        text-align: center;
+    }
+
+    .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        margin-top: 10px;
+        margin-left: 63px;
+        background: #33B8A8;
+        transition: width .5s;
+        position: absolute;
+    }
+    .nav-link:hover::after {
+        width: 3.95em;
+    }
+
     .navbar-toggle {
        display: none;
     }
-    .logo:hover,
-    .nav-link:hover {
+    .logo:hover {
         color: #33B8A8;
     }
 
