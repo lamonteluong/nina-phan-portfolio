@@ -423,6 +423,7 @@ h1 {
     font-weight: 500;
     font-size: 20px;
     vertical-align: text-top;
+    white-space: nowrap;
 }
 #teal-delivery {
     width: 85%;
@@ -613,18 +614,21 @@ td {
 
 #end-container {
     margin: 8em 0 4em 0;
+    display: flex;
+    align-items: flex-end;
 }
 
 #back-index {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 200;
     text-align: center;
-    margin-right: .5em;
+    margin-right: 1em;
     color: black;
     background-color: white;
+    white-space: nowrap;
 }
 #back-index span img {
     position: relative;
@@ -635,18 +639,21 @@ td {
 #explore-btn {
     color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 200;
     text-align: left;
-    display: inline;
+    display: inline-block;
     overflow-wrap: break-word;
-    /* padding-left: 1.2em; */
-    max-width: 15em;
+    /* max-width: 15em; */
 }
 #explore-btn span img {
     position: relative;
     height: 100%;
-    width: 10%;
+    width: 14%;
+}
+
+.explore-flip {
+    max-width: 220px;
 }
 
 #back-top-btn {
@@ -658,11 +665,6 @@ td {
     cursor: pointer;
     animation: fade 0.3s;
 
-}
-
-.flip-end-btn::before {
-    content: "\A"; 
-    white-space: pre;
 }
 
 #system-diagram {
@@ -719,7 +721,7 @@ td {
     margin: 2em 0;
     border-left: 2px solid black;
     padding-left: 1.5em;
-    max-width: 800px;
+    /* max-width: 800px; */
 }
 
 #about-links {
@@ -817,6 +819,12 @@ td {
 }
 
 /* Media queries */
+
+@media screen and (min-width: 562px) {
+    .explore-flip {
+        max-width: 100%;
+    }
+}
 
 /* iPad/Tablets */
 @media screen and (min-width: 768px) {
@@ -1011,12 +1019,6 @@ td {
         margin-top: 3em;
     }
 
-    .block-quote {
-        margin-top: 2.3em;
-        font-size: 20px;
-        margin-bottom: 5.7em;
-    }
-
     #cardiaid-img {
         width: 75%;
     }
@@ -1041,7 +1043,7 @@ td {
         width: 100%;
     }
    .findings-container div {
-       width: 45%;
+       width: 46%;
    }
    .findings-container div h4 {
        font-size: 20px;
@@ -1135,13 +1137,6 @@ td {
         margin-left: 1.2em;
     }
 
-    .flip-end-btn::before {
-        content: " "; 
-    }
-    .flip-end-btn::after {
-        content: " "; 
-    }
-
     #system-diagram {
         width: 60%;
         height: auto;
@@ -1193,8 +1188,11 @@ td {
     .section p, .section a, .num-list li, .section button {
         font-size: 18px;
     }
+
     .block-quote {
-        font-size: 20px;
+        margin-top: 2.3em;
+        margin-bottom: 5.7em;
+        font-size: 18px;
     }
 
     .section p {
@@ -1214,6 +1212,9 @@ td {
 
     #back-index, #explore-btn {
         font-size: 26px;
+    }
+    #explore-btn span img {
+        width: 12%;
     }
 
     .footer {
@@ -1309,7 +1310,7 @@ td {
         padding-left: 10px;
     }
 
-    .section p, .num-list {
+    .section p, .num-list, .bullet-list, #about-quote {
         max-width: 75%;
     }
 
@@ -1414,10 +1415,10 @@ td {
     }
 
     .block-quote {
-        font-size: 24px;
+        font-size: 22px;
     }
 
-    .section p, .num-list {
+    .section p, .num-list, .bullet-list, #about-quote {
         max-width: 60%;
     }
 
