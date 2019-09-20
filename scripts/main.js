@@ -33,12 +33,12 @@ let contactLinks = document.querySelectorAll('.contact-link');
 
 hideSlides();
 checkImageClick();
-changeImageCarousel(); 
 waveLink();
 mobileWaveLink();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
+    playSlideShow();
     
     if (textHighlight.length > 0) {
 
@@ -257,15 +257,71 @@ viewWork.addEventListener('click', () => {
     scrollingTo('#project-section', 800);
 });
 
-let slideIndex = 0;
+
+
+let slideIndex1 = 0;
+let slideIndex2 = 3;
+let slideIndex3 = 6;
 
 // Rotate image carousel every 3 seconds
-function changeImageCarousel() {
+/* function changeImageCarousel(slideIndex1, slideIndex2, slideIndex3) {
 
-    let index1 = 0;
-    let index2 = 0;
-    let index3 = 0;
+    
 
+} */
+
+
+function playSlideShow() {
+
+    window.setInterval(() => {
+
+
+        let i = 0;
+        if (slideIndex1 > 2) {
+            slideIndex1 = 0;
+        }
+        
+        for (i = 0; i < 3; i++) {
+            slides[i].style.display = "none";
+            tabs[i].classList.remove("active-img");
+            if (i == slideIndex1) {
+                slides[slideIndex1].style.display = "block";
+                tabs[slideIndex1].classList.add("active-img");
+            }
+        }
+        slideIndex1++;
+    
+        i = 3;
+        if (slideIndex2 > 5) {
+            slideIndex2 = 3;
+        }
+    
+        for (i = 3; i < 6; i++) {
+            slides[i].style.display = "none";
+            tabs[i].classList.remove("active-img");
+            if (i == slideIndex2) {
+                slides[slideIndex2].style.display = "block";
+                tabs[slideIndex2].classList.add("active-img");
+            }
+        }
+        slideIndex2++;
+    
+        i = 6;
+        if (slideIndex3 > 7) {
+            slideIndex3 = 6;
+        }
+    
+        for (i = 6; i < 8; i++) {
+            slides[i].style.display = "none";
+            tabs[i].classList.remove("active-img");
+            if (i == slideIndex3) {
+                slides[slideIndex3].style.display = "block";
+                tabs[slideIndex3].classList.add("active-img");
+            }
+        }
+        slideIndex3++;
+
+    }, 3000);
 
 }
 
@@ -291,6 +347,8 @@ function hideSlides() {
 function checkImageClick() {
 
     tabs[0].addEventListener('click', () => {
+        slideIndex1 = 0;
+
         if (tabs[0].classList.contains("active-img")) {
             return;
         } else {
@@ -303,6 +361,8 @@ function checkImageClick() {
         }
     });
     tabs[1].addEventListener('click', () => {
+        slideIndex1 = 1;
+
         if (tabs[1].classList.contains("active-img")) {
             return;
         } else {
@@ -316,6 +376,8 @@ function checkImageClick() {
         }
     });
     tabs[2].addEventListener('click', () => {
+        slideIndex1 = 2;
+
         if (tabs[2].classList.contains("active-img")) {
             return;
         } else {
@@ -328,6 +390,8 @@ function checkImageClick() {
         }
     });
     tabs[3].addEventListener('click', () => {
+        slideIndex2 = 3;
+
         if (tabs[3].classList.contains("active-img")) {
             return;
         } else {
@@ -340,6 +404,8 @@ function checkImageClick() {
         }
     });
     tabs[4].addEventListener('click', () => {
+        slideIndex2 = 4;
+
         if (tabs[4].classList.contains("active-img")) {
             return;
         } else {
@@ -352,6 +418,8 @@ function checkImageClick() {
         }
     });
     tabs[5].addEventListener('click', () => {
+        slideIndex2 = 5;
+
         if (tabs[5].classList.contains("active-img")) {
             return;
         } else {
@@ -364,6 +432,8 @@ function checkImageClick() {
         }
     });
     tabs[6].addEventListener('click', () => {
+        slideIndex3 = 6;
+
         if (tabs[6].classList.contains("active-img")) {
             return;
         } else {
@@ -374,6 +444,8 @@ function checkImageClick() {
         }
     });
     tabs[7].addEventListener('click', () => {
+        slideIndex3 = 7;
+
         if (tabs[7].classList.contains("active-img")) {
             return;
         } else {
@@ -417,8 +489,6 @@ window.onscroll = () => {
 
 };
 backTopBtn.addEventListener('click', () => {
-    /* document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE & Opera */
     scrollingTo('#hero-container', 800);
 });
 
