@@ -458,9 +458,11 @@ h1 {
 }
 .findings-container div:nth-of-type(1) {
     float: left;
+    margin-bottom: 2.2em;
 }
 .findings-container div:nth-of-type(2) {
     float: left;
+    margin-top: 2.2em;
 }
 .findings-container div h4 {
     color: #2F2F2F;
@@ -1146,6 +1148,13 @@ td {
    }
    .findings-container div:nth-of-type(2) {
         float: right;
+    }
+
+    .findings-container div:nth-of-type(1) {
+        margin: 4.2em 0;
+    }
+    .findings-container div:nth-of-type(2) {
+        margin: 4.2em 0;
     }
 
    #vital-patch-findings {

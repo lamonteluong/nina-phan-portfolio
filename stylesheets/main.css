@@ -388,10 +388,11 @@ p {
     font-size: 14px;
     text-align: center;
     padding-bottom: .5em;
-    margin-right: 18px;
+    margin-right: 16px;
     border-bottom: 2px solid #DADADA;
     display: inline-block;
-    width: 6.1em;
+    width: 6.3em;
+    white-space: nowrap;
 }
 
 #view-work::after {
