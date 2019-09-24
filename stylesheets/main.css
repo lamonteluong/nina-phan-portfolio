@@ -605,8 +605,10 @@ p {
     }
 
     .slideshow-container {
-        display: block;
+        display: flex;
+        flex-direction: column;
         align-self: center;
+        align-content: space-between;
     }
 
     .project-content {
@@ -718,8 +720,12 @@ p {
         padding-bottom: 205px;
     }
 
+    .slideshow-container div {
+        padding-top: 5em;
+    }
+
     .project-content {
-        align-self: center;
+        align-self: top;
     }
 
     .project img {
@@ -732,9 +738,14 @@ p {
         font-size: 48px;
     }
 
+    .process-btn {
+        width: 500px !important;
+    }
+
     #flip-title {
         font-size: 36px;
     }
+
 
 
 }
