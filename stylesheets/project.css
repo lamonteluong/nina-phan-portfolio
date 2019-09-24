@@ -330,7 +330,7 @@ h1 {
     border-left: 6px solid #555555;
     padding: .2em 0 .2em 2em;
     line-height: 175%;
-    max-width: 68%;
+    max-width: 85%;
     margin-bottom: 5em;
 }
 .block-quote p {
@@ -470,6 +470,9 @@ h1 {
 .findings-container div ul li {
     margin: 1em 0;
 }
+.findings-container div ul {
+    margin-left: 1.1em;
+}
 
 #vital-patch-findings {
     display: flex;
@@ -544,7 +547,7 @@ td {
 }
 .product-container div img {
     max-width: 300px;
-    margin: 4em 0 2em 4em;
+    margin: 4em 0 2em 0;
 }
 
 #hidden-metric {
@@ -619,6 +622,7 @@ td {
     margin: 8em 0 4em 0;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 #back-index {
@@ -632,6 +636,7 @@ td {
     color: black;
     background-color: white;
     white-space: nowrap;
+    align-self: center;
 }
 #back-index span img {
     position: relative;
@@ -645,19 +650,25 @@ td {
     font-size: 16px;
     font-weight: 200;
     text-align: left;
-    display: inline-block;
+    display: inline;
     overflow-wrap: break-word;
-    /* max-width: 15em; */
+    justify-self: flex-end;
+    max-width: 155px; 
 }
 #explore-btn span img {
     position: relative;
     height: 100%;
     width: 14%;
+    margin-bottom: .2em;
 }
 
 .explore-flip {
-    max-width: 220px;
+    max-width: 200px !important;
 }
+.explore-flip span img {
+    margin-bottom: 0.65em !important;
+}
+
 
 #back-top-btn {
     display: none;
@@ -823,11 +834,6 @@ td {
 
 /* Media queries */
 
-@media screen and (min-width: 562px) {
-    .explore-flip {
-        max-width: 100%;
-    }
-}
 
 /* iPad/Tablets */
 @media screen and (min-width: 768px) {
@@ -847,11 +853,14 @@ td {
         height: 89px;
         align-items: center;
     }
+
+
     .main-nav:nth-of-type(1) {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         position: relative;
+        right: 0;
     }
     .main-nav li {
         text-align: center;
@@ -922,7 +931,8 @@ td {
     .product-container {
         flex-direction: row;
         justify-content: space-around;
-        margin-top: 7em;
+        margin: 7em 0 2em 4em;
+
     }
 
     .process-btn {
@@ -1054,6 +1064,9 @@ td {
        margin-bottom: 2em;
        color: #2F2F2F;
    }
+    .findings-container div ul {
+        margin-left: 1.25em;
+    }
    .findings-container div ul li {
        font-size: 20px;
        line-height: 175%;
@@ -1133,11 +1146,23 @@ td {
     #explore-btn {
         display: inline;
         font-size: 18px;
+        max-width: 285px;
     }
 
+
     #explore-btn span img {
-        width: 8%;
-        margin-left: 1.2em;
+        position: relative;
+        height: 100%;
+        width: 18%;
+        margin-bottom: 0;
+        margin-left: .5em;
+    }
+    
+    .explore-flip {
+        max-width: 320px !important;
+    }
+    .explore-flip span img {
+        margin-bottom: .65em;
     }
 
     #system-diagram {
@@ -1196,6 +1221,7 @@ td {
         margin-top: 2.3em;
         margin-bottom: 5.7em;
         font-size: 18px;
+        width: 68%;
     }
 
     .section p {
@@ -1215,9 +1241,6 @@ td {
 
     #back-index, #explore-btn {
         font-size: 26px;
-    }
-    #explore-btn span img {
-        width: 12%;
     }
 
     .footer {
@@ -1250,6 +1273,16 @@ td {
 
     .ref-container {
         width: 70%;
+    }
+
+    #end-container {
+        justify-content: unset;
+    }
+    #back-index {
+        margin-right: 4.5em;
+    }
+    #explore-btn {
+        max-width: 100%;
     }
 
 }
@@ -1316,6 +1349,15 @@ td {
     .section p, .num-list, .bullet-list, #about-quote {
         max-width: 75%;
     }
+
+    .explore-flip {
+        max-width: 100% !important;
+    }
+    .explore-flip span img {
+        width: 12% !important;
+        margin: 0 0 0 1em !important;
+    }
+    
 
 }
 

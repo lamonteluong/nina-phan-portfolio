@@ -634,7 +634,7 @@ p {
     .project-desc {
         font-size: 15px;
         max-width: 320px;
-        margin-bottom: 2.5em;
+        margin-bottom: 3.2em;
     }
     .process-btn {
         width: 250px;
@@ -714,6 +714,8 @@ p {
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
+        padding-top: 205px;
+        padding-bottom: 205px;
     }
 
     .project-content {

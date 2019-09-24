@@ -263,13 +263,6 @@ let slideIndex1 = 0;
 let slideIndex2 = 3;
 let slideIndex3 = 6;
 
-// Rotate image carousel every 3 seconds
-/* function changeImageCarousel(slideIndex1, slideIndex2, slideIndex3) {
-
-    
-
-} */
-
 
 function playSlideShow() {
 
@@ -321,7 +314,7 @@ function playSlideShow() {
         }
         slideIndex3++;
 
-    }, 3000);
+    }, 4000);
 
 }
 
