@@ -1496,8 +1496,8 @@ td {
     }
 
     #explore-btn span img {
-        width: 8%;
-        max-width: 100px;
+        /* width: 8%;
+        max-width: 100px; */
     }
 
     .footer {
