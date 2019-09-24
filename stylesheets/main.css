@@ -716,8 +716,8 @@ p {
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
-        padding-top: 205px;
-        padding-bottom: 205px;
+        padding-top: 125px;
+        padding-bottom: 125px;
     }
 
     .slideshow-container div {

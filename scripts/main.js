@@ -31,14 +31,14 @@ let tabs = document.querySelectorAll('.next-img');
 let footer = document.querySelector('footer');
 let contactLinks = document.querySelectorAll('.contact-link');
 
-hideSlides();
-checkImageClick();
+//hideSlides();
+//checkImageClick();
 waveLink();
 mobileWaveLink();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
-    playSlideShow();
+    //playSlideShow();
     
     if (textHighlight.length > 0) {
 
@@ -264,7 +264,7 @@ let slideIndex2 = 3;
 let slideIndex3 = 6;
 
 
-function playSlideShow() {
+/* function playSlideShow() {
 
     window.setInterval(() => {
 
@@ -316,10 +316,10 @@ function playSlideShow() {
 
     }, 4000);
 
-}
+} */
 
 // Sets product images to default (1st image) of each project
-function hideSlides() {
+/* function hideSlides() {
     let i = 0;
     slides.forEach((slide) => {
         if (i != 0 || i != 3 || i != 6) {
@@ -334,10 +334,10 @@ function hideSlides() {
     tabs[0].classList.add("active-img");
     tabs[3].classList.add("active-img");
     tabs[6].classList.add("active-img");
-}
+} */
 
 
-function checkImageClick() {
+/* function checkImageClick() {
 
     tabs[0].addEventListener('click', () => {
         slideIndex1 = 0;
@@ -449,7 +449,7 @@ function checkImageClick() {
         }
     });
 
-}
+} */
 
 function waveLink() {
     let link = document.querySelector(".contact-container");
