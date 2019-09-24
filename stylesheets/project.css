@@ -1331,7 +1331,7 @@ td {
 }
 
 /* Small desktops */
-@media screen and (min-width: 1024.5px) {
+@media screen and (min-width: 1026px) {
 
     #hidden-metric p {
         max-width: 925px;
@@ -1627,5 +1627,12 @@ td {
         max-width: 60%;
     }
 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) {
+    .flip-posters {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
