@@ -1629,10 +1629,22 @@ td {
 
 }
 
+/* iPad Pro Media Queries */
 @media only screen and (min-width: 1024px) and (max-width: 1024px) {
     .flip-posters {
         display: flex;
         flex-direction: column;
     }
+}
+
+@media only screen and (min-width: 1366px) and (orientation: landscape) {
+    .flip-posters {
+        display: flex;
+        flex-direction: column;
+    }
+    .flip-posters img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
 }
 
