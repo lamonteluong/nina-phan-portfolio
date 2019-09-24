@@ -1629,6 +1629,7 @@ td {
 
 }
 
+
 /* iPad Pro Media Queries */
 @media only screen and (min-width: 1024px) and (max-width: 1024px) {
     .flip-posters {
@@ -1646,5 +1647,18 @@ td {
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-}
+    }
+    
+    @media screen and (min-width: 1368px) {
+        
+        .flip-posters {
+            flex-direction: row;
+        }
 
+        .flip-posters img {
+            width: 45%;
+            margin-left: initial;
+            margin-right: initial;
+        }
+    
+    }
