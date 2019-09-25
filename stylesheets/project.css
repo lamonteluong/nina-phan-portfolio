@@ -212,7 +212,7 @@ h1 {
     display: inline-block;
     text-decoration: none;
     color: black;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
 }
 .navbar-toggle {
@@ -221,15 +221,26 @@ h1 {
     padding-top: 2px;
     float: right;
 }
+
 .main-nav {
     list-style-type: none;
     display: none;
     position: relative;
     top: 20%;
-    right: 12%;
+    /* right: 12% !important; */
     width: inherit;
     max-width: inherit;
 }
+
+ul .main-nav:nth-of-type(1) {
+    right: 0 !important;
+}
+
+.right-12 {
+    right: 12% !important;
+}
+
+
 .main-nav li {
     text-align: right;
     margin: 2em auto;
@@ -951,18 +962,7 @@ td {
     }
     .nav-link {
         font-family: lato-light, sans-serif;
-        font-size: 20px;
-        font-weight: 300;
-        text-decoration: none;
-        padding-bottom: 10px;
-        color: black;
-        border-bottom: 3px solid #EEEEEE;
-        margin-left: 63px;
-    }
-
-    .nav-link {
-        font-family: lato-light, sans-serif;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 300;
         text-decoration: none;
         padding-bottom: 10px;
@@ -1072,10 +1072,10 @@ td {
     }
 
     .hero-container h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
     .hero-subtitle {
-        font-size: 24px;
+        font-size: 20px;
         max-width: 600px;
     }
     .wrap-subtitle {
@@ -1380,7 +1380,7 @@ td {
 @media screen and (min-width: 1280px) {
 
     .container, .big-mockup {
-        max-width: 860px;
+        max-width: 900px;
     }
 
     .product-container div img {
@@ -1492,6 +1492,9 @@ td {
     .navbar {
         margin-bottom: 11em;
     }
+
+    .nav-link {font-size: 18px}
+    .logo {font-size: 20px}
 
     .process-btn {
         font-size: 22px;
