@@ -294,7 +294,7 @@ p {
 }
 
 #flip-title {
-    line-height: 150%;
+    line-height: 130%;
 }
 
 .process-btn {
@@ -608,7 +608,7 @@ p {
     .slideshow-container {
         display: flex;
         flex-direction: column;
-        align-self: center;
+        /* align-self: center; */
         align-content: space-between;
     }
 
@@ -629,13 +629,13 @@ p {
         margin-top: 5em;
     }
     .project-skill {
-        font-size: 18px;
+        /* font-size: 18px; */
     }
     .project-name {
         margin: .4em 0 .17em 0;
     }
     .project-desc {
-        font-size: 15px;
+        font-size: 14px;
         max-width: 320px;
         margin-bottom: 3.2em;
     }
@@ -736,7 +736,7 @@ p {
     }
 
     .project-name {
-        font-size: 48px;
+        font-size: 36px;
     }
 
     .process-btn {
@@ -754,7 +754,7 @@ p {
 @media screen and (min-width: 1200px) {
 
     #flip-title {
-        font-size: 40px;
+        /* font-size: 40px; */
     }
 
     #back-top-btn {
