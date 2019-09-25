@@ -120,7 +120,7 @@ p {
     display: inline;
     text-decoration: none;
     color: black;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
 }
 .navbar-toggle {
@@ -558,7 +558,7 @@ p {
     }
     .nav-link {
         font-family: lato-light, sans-serif;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 300;
         text-decoration: none;
         padding-bottom: 10px;
@@ -627,6 +627,8 @@ p {
         width: 550px;
         height: auto;
         margin-top: 5em;
+        margin-left: auto;
+        margin-right: auto;
     }
     .project-skill {
         /* font-size: 18px; */
@@ -646,12 +648,16 @@ p {
         padding: .8em 2em;
     }
 
+    #cardiaid-card {
+        padding-bottom: 50px;
+    }
+
     #flip-title {
         margin: .5em 0;
     }
 
     #bidform-phone {
-        max-width: 500px;
+        max-width: 400px;
         height: 100%;
         margin-bottom: 2em;
     }
@@ -726,7 +732,7 @@ p {
     }
 
     .project-content {
-        align-self: top;
+        align-self: center;
     }
 
     .project img {
@@ -809,6 +815,9 @@ p {
         max-width: 1325px;
     }
 
+    .nav-link {font-size: 18px}
+    .logo {font-size: 20px}
+
     .view-work-container {
         width: 180px;
     }
@@ -847,7 +856,7 @@ p {
     }
 
     #bidform-phone {
-        max-width: 600px;
+        max-width: 550px;
     }
 
     #cardiaid-img-2 {
@@ -876,10 +885,10 @@ p {
         font-size: 24px;
     }
     .project-name {
-        font-size: 56px;
+        font-size: 42px;
     }
     .project-desc {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .project img {
