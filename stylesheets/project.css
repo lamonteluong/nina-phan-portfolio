@@ -505,7 +505,7 @@ h1 {
     top: 0;
     left: 0;
     border: 0;
-    margin: 1em 0;
+    /* margin: 1em 0; */
 }
 
 .iframe-container img {
@@ -909,6 +909,11 @@ td {
 .hide-img2 {
     display: none !important;
 }
+
+/* .user-journey {
+    width: inherit;
+    height: auto;
+} */
 
 /* Media queries */
 

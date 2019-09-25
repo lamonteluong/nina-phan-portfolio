@@ -651,7 +651,7 @@ p {
     }
 
     #bidform-phone {
-        max-width: 400px;
+        max-width: 500px;
         height: 100%;
         margin-bottom: 2em;
     }
@@ -717,8 +717,8 @@ p {
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
-        padding-top: 125px;
-        padding-bottom: 125px;
+        /* padding-top: 125px; */
+        /* padding-bottom: 125px; */
     }
 
     .slideshow-container div {
