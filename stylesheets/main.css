@@ -659,7 +659,7 @@ p {
     #bidform-phone {
         max-width: 400px;
         height: 100%;
-        margin-bottom: 2em;
+        /* margin-bottom: 2em; */
     }
     #bidform-ipad {
         margin-top: 0;
