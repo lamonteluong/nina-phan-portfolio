@@ -38,85 +38,16 @@ mobileWaveLink();
 
 // Display 'Hero images when text is hovered
 window.onload = () => {
-    //playSlideShow();
-    
-    if (textHighlight.length > 0) {
-
-        if (document.body.clientWidth <= 1024) {
-            guitarText.classList.remove('text-highlight');
-            guitarText.classList.add('teal');
-            inclusiveText.classList.remove('text-highlight');
-            inclusiveText.classList.add('teal');
-
-            textHighlight[0].addEventListener('click', () => {
-                window.location.href = "../pages/about.html";
-            });
-        } else {
-            guitarText.classList.remove('teal');
-            inclusiveText.classList.remove('teal');
-
-            textHighlight[0].addEventListener('click', () => {
-                window.location.href = "#";
-            });
-        }
-
-        if (document.body.clientWidth >= 768) {
-
-            // NINA IMAGE
-            textHighlight[0].addEventListener('mouseenter', () => {
-                document.getElementById('nina-img').style.display = "block";
-                heroImage[0].style.display = "block";
-                document.getElementById('soundcloud-img').style.display = "none";
-            });
-            textHighlight[0].addEventListener('mouseleave', () => {
-                document.getElementById('nina-img').style.display = "none";
-            });
-    
-            //BLUEPRINT IMAGE
-            textHighlight[2].addEventListener('mouseenter', () => {
-                document.getElementById('blueprint-img').style.display = "block";
-                heroImage[1].style.display = "block";
-                document.getElementById('soundcloud-img').style.display = "none";
-            });
-            textHighlight[2].addEventListener('mouseleave', () => {
-                document.getElementById('blueprint-img').style.display = "none";
-            });
-    
-            //SOUNDCLOUD PLAYER
-            textHighlight[1].addEventListener('mouseenter', () => {
-                document.getElementById('soundcloud-img').style.display = "block";
-            });
-        } else {
-
-            // NINA IMAGE
-            textHighlight[0].addEventListener('mouseenter', () => {
-                document.getElementById('nina-img').style.display = "none";
-            });
-            textHighlight[0].addEventListener('mouseleave', () => {
-                document.getElementById('nina-img').style.display = "none";
-            });
-
-            //BLUEPRINT IMAGE
-            textHighlight[2].addEventListener('mouseenter', () => {
-                document.getElementById('blueprint-img').style.display = "none";
-            });
-            textHighlight[2].addEventListener('mouseleave', () => {
-                document.getElementById('blueprint-img').style.display = "none";
-            });
-
-            //SOUNDCLOUD PLAYER
-            textHighlight[1].addEventListener('mouseenter', () => {
-                document.getElementById('soundcloud-img').style.display = "none";
-            });
-            textHighlight[1].addEventListener('mouseleave', () => {
-                document.getElementById('soundcloud-img').style.display = "none";
-            });
-
-        }
-
-    }
 
 }
+
+// Links
+textHighlight[0].addEventListener('click', () => {
+    window.location.href = "../pages/about.html";
+});
+textHighlight[1].addEventListener('click', () => {
+    window.open("https://soundcloud.com/nina-phan-5", "_blank");
+});
 
 /* Display navbar links for Desktop size */
 window.onresize = () => {
@@ -128,81 +59,6 @@ window.onresize = () => {
         navbarToggle.style.display = 'inline';
         backTopBtn.style.display = "none";
     }
-
-    if (document.body.clientWidth <= 1024) {
-        guitarText.classList.remove('text-highlight');
-        guitarText.classList.add('teal');
-        inclusiveText.classList.remove('text-highlight');
-        inclusiveText.classList.add('teal');
-
-        textHighlight[0].addEventListener('click', () => {
-            window.location.href = "../pages/about.html";
-        });
-    } else {
-        guitarText.classList.add('text-highlight');
-        inclusiveText.classList.add('text-highlight');
-
-        textHighlight[0].addEventListener('click', () => {
-            window.location.href = "#";
-        });
-    }
-
-    // Remove 'Hero' images on tablets and mobile
-    if (document.body.clientWidth > 1024) {
-        // NINA IMAGE
-        textHighlight[0].addEventListener('mouseenter', () => {
-            document.getElementById('nina-img').style.display = "block";
-        });
-        textHighlight[0].addEventListener('mouseleave', () => {
-            document.getElementById('nina-img').style.display = "none";
-            document.getElementById('soundcloud-img').style.display = "none";
-        });
-
-        //BLUEPRINT IMAGE
-        textHighlight[2].addEventListener('mouseenter', () => {
-            document.getElementById('blueprint-img').style.display = "block";
-        });
-        textHighlight[2].addEventListener('mouseleave', () => {
-            document.getElementById('blueprint-img').style.display = "none";
-            document.getElementById('soundcloud-img').style.display = "none";
-        });
-
-        //SOUNDCLOUD PLAYER
-        textHighlight[1].addEventListener('mouseenter', () => {
-            document.getElementById('soundcloud-img').style.display = "block";
-        });
-        textHighlight[1].addEventListener('mouseleave', () => {
-            document.getElementById('soundcloud-img').style.display = "block";
-        });
-    } else {
-        // NINA IMAGE
-        textHighlight[0].addEventListener('mouseenter', () => {
-            document.getElementById('nina-img').style.display = "none";
-        });
-        textHighlight[0].addEventListener('mouseleave', () => {
-            document.getElementById('nina-img').style.display = "none";
-        });
-        textHighlight[0].addEventListener('click', () => {
-            window.location.href = "../pages/about.html";
-        });
-
-        //BLUEPRINT IMAGE
-        textHighlight[2].addEventListener('mouseenter', () => {
-            document.getElementById('blueprint-img').style.display = "none";
-        });
-        textHighlight[2].addEventListener('mouseleave', () => {
-            document.getElementById('blueprint-img').style.display = "none";
-        });
-
-        //SOUNDCLOUD PLAYER
-        textHighlight[1].addEventListener('mouseenter', () => {
-            document.getElementById('soundcloud-img').style.display = "none";
-        });
-        textHighlight[1].addEventListener('mouseleave', () => {
-            document.getElementById('soundcloud-img').style.display = "none";
-        });
-
-    } 
 
 }
 
