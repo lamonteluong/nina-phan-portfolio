@@ -250,7 +250,7 @@ ul .main-nav:nth-of-type(1) {
 }
 
 .slideshow-container {
-    display: none;
+    /* display: none; */
 }
 
 .slideshow-container div {
@@ -281,14 +281,17 @@ ul .main-nav:nth-of-type(1) {
     border-radius: 10px; */
     /* max-width: 1560px; */
     /* margin: 25px 22px; */
-    padding: 75px 21px 150px 17px;
+    padding: 50px 21px 150px 17px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .project img {
-    display: none;
+    display: block;
+    width: 286px;
+    /* justify-self: center; */
+    margin: 0 auto 50px auto;
 }
 
 .project-name {
