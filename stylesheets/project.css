@@ -822,6 +822,7 @@ td {
 
 #about-links {
     margin: 4em 0 12em 0;
+    /* display: flex; */
 }
 
 #email-btn {
@@ -1707,4 +1708,15 @@ td {
 
 }
 
+@media screen and (max-width: 385px) {
 
+    #email-btn {
+        margin-left: 0;
+        margin-top: 2em;
+    }
+
+    .process-btn {
+        display: block;
+    }
+
+}
