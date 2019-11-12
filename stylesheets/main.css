@@ -756,7 +756,7 @@ ul .main-nav:nth-of-type(1) {
     }
 
     .project img {
-        width: 500px;
+        width: 400px;
         height: auto;
         margin: 0;
     }
@@ -781,6 +781,10 @@ ul .main-nav:nth-of-type(1) {
 
     #back-top-btn {
         right: 1.5em;
+    }
+
+    .project img {
+        width: 500px;
     }
 
 }
