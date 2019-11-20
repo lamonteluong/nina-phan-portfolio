@@ -1410,7 +1410,7 @@ td {
     }
 
     .picture-info-container {
-        margin-bottom: 16em;
+        margin-bottom: 8em;
     }
 
     #cardiaid-img {
@@ -1531,6 +1531,10 @@ td {
     .hero-subtitle {
         font-size: 32px;
         max-width: 800px;
+    }
+
+    .picture-info-container {
+        margin-bottom: 14em;
     }
 
     .sidebar li {
