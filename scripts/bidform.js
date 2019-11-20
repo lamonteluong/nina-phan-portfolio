@@ -7,7 +7,6 @@ let scriptBtn = document.querySelectorAll('.script-btn');
 let backTopBtn = document.getElementById('back-top-btn');
 
 let showScrollTop = document.querySelector('.show-scroll-top');
-let downScrollBtn = document.querySelector('.scroll-down');
 
 let sidebarWrapper = document.querySelector(".sidebar-container");
 let sidebar = document.querySelectorAll(".sidebar li");
@@ -174,10 +173,6 @@ window.onload = () => {
     }
 
 };
-
-downScrollBtn.addEventListener('click', () => {
-    scrollingTo('.show-scroll-top', 1000);
-});
 
 // From: https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
 function getElementY(query) {

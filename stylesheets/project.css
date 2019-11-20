@@ -308,16 +308,13 @@ ul .main-nav:nth-of-type(1) {
     margin-bottom: 2.2em;
 }
 
-.scroll-down-container {
-    text-align: center;
-    margin-bottom: 20em;
-    transform: rotateX(180deg);
+.header-line {
+    margin: 2em 0;
 }
-.scroll-down {
-    animation: bounce 2s infinite;
-}
-.scroll-down span {
-    cursor: pointer;
+
+.picture-info-container {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .userScripts {
@@ -1083,9 +1080,15 @@ td {
         max-width: 500px;
     }
 
-    .section {
-        /* margin-bottom: 10em; */
+    .header-line {
+        display: none;
     }
+
+    .picture-info-container {
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+    
     #note {
         font-size: 22px;
         display: flex;
@@ -1404,6 +1407,10 @@ td {
     .project-info {
         /* font-size: 18px; */
         max-width: 250px;
+    }
+
+    .picture-info-container {
+        margin-bottom: 16em;
     }
 
     #cardiaid-img {
