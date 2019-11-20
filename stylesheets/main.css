@@ -448,7 +448,7 @@ ul .main-nav:nth-of-type(1) {
 
 #hero-container {
     padding-top: 10em;
-    margin-bottom: 18%;
+    margin-bottom: 12.5%;
 }
 #nina-img {
     display: none;
@@ -813,7 +813,7 @@ ul .main-nav:nth-of-type(1) {
 @media screen and (min-height: 720px) {
 
     #hero-container {
-        margin-bottom: 18%;
+        margin-bottom: 12.5%;
     }
 
 }
